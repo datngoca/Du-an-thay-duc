@@ -1,0 +1,5461 @@
+[
+    {
+      "name": "Sales Manager",
+      "value": 703,
+      "taxPercentage": 0.16,
+      "type": 2,
+      "amount": 219
+    },
+    {
+      "name": "Technical Writer",
+      "value": 330,
+      "taxPercentage": 0.07,
+      "type": 3,
+      "amount": 422
+    },
+    {
+      "name": "Software Developer",
+      "value": 411,
+      "taxPercentage": 0.15,
+      "type": 1,
+      "amount": 794
+    },
+    {
+      "name": "Project Manager",
+      "value": 402,
+      "taxPercentage": 0.18,
+      "type": 2,
+      "amount": 196
+    },
+    {
+      "name": "Financial Analyst",
+      "value": 77,
+      "taxPercentage": 0.11,
+      "type": 3,
+      "amount": 540
+    },
+    {
+      "name": "Human Resources Manager",
+      "value": 841,
+      "taxPercentage": 0.08,
+      "type": 2,
+      "amount": 46
+    },
+    {
+      "name": "Web Developer",
+      "value": 480,
+      "taxPercentage": 0.05,
+      "type": 1,
+      "amount": 610
+    },
+    {
+      "name": "Content Writer",
+      "value": 438,
+      "taxPercentage": 0.17,
+      "type": 2,
+      "amount": 484
+    },
+    {
+      "name": "Product Manager",
+      "value": 972,
+      "taxPercentage": 0.13,
+      "type": 3,
+      "amount": 950
+    },
+    {
+      "name": "Data Analyst",
+      "value": 618,
+      "taxPercentage": 0.12,
+      "type": 1,
+      "amount": 375
+    },
+    {
+      "name": "Social Media Manager",
+      "value": 641,
+      "taxPercentage": 0.09,
+      "type": 2,
+      "amount": 97
+    },
+    {
+      "name": "IT Technician",
+      "value": 53,
+      "taxPercentage": 0.06,
+      "type": 1,
+      "amount": 399
+    },
+    {
+      "name": "Customer Service Representative",
+      "value": 178,
+      "taxPercentage": 0.1,
+      "type": 3,
+      "amount": 752
+    },
+    {
+      "name": "Marketing Specialist",
+      "value": 221,
+      "taxPercentage": 0.15,
+      "type": 1,
+      "amount": 458
+    },
+    {
+      "name": "Quality Assurance Analyst",
+      "value": 671,
+      "taxPercentage": 0.14,
+      "type": 2,
+      "amount": 238
+    },
+    {
+      "name": "Legal Assistant",
+      "value": 928,
+      "taxPercentage": 0.1,
+      "type": 1,
+      "amount": 651
+    },
+    {
+      "name": "Graphic Designer",
+      "value": 426,
+      "taxPercentage": 0.07,
+      "type": 2,
+      "amount": 865
+    },
+    {
+      "name": "Systems Analyst",
+      "value": 327,
+      "taxPercentage": 0.16,
+      "type": 3,
+      "amount": 373
+    },
+    {
+      "name": "Network Administrator",
+      "value": 588,
+      "taxPercentage": 0.09,
+      "type": 2,
+      "amount": 731
+    },
+    {
+      "name": "Accountant",
+      "value": 732,
+      "taxPercentage": 0.1,
+      "type": 1,
+      "amount": 504
+    },
+    {
+      "name": "Customer Success Manager",
+      "value": 792,
+      "taxPercentage": 0.05,
+      "type": 3,
+      "amount": 863
+    },
+    {
+      "name": "UX Designer",
+      "value": 183,
+      "taxPercentage": 0.08,
+      "type": 1,
+      "amount": 157
+    },
+    {
+      "name": "Recruiter",
+      "value": 71,
+      "taxPercentage": 0.11,
+      "type": 2,
+      "amount": 514
+    },
+    {
+      "name": "Digital Marketing Specialist",
+      "value": 475,
+      "taxPercentage": 0.13,
+      "type": 3,
+      "amount": 368
+    },
+    {
+      "name": "Database Administrator",
+      "value": 550,
+      "taxPercentage": 0.07,
+      "type": 1,
+      "amount": 28
+    },
+    {
+      "name": "Training Specialist",
+      "value": 983,
+      "taxPercentage": 0.06,
+      "type": 2,
+      "amount": 693
+    },
+    {
+      "name": "Account Manager",
+      "value": 295,
+      "taxPercentage": 0.15,
+      "type": 1,
+      "amount": 262
+    },
+    {
+      "name": "Event Planner",
+      "value": 467,
+      "taxPercentage": 0.17,
+      "type": 2,
+      "amount": 978
+    },
+    {
+      "name": "Executive Assistant",
+      "value": 142,
+      "taxPercentage": 0.14,
+      "type": 3,
+      "amount": 906
+    },
+    {
+      "name": "Business Analyst",
+      "value": 797,
+      "taxPercentage": 0.16,
+      "type": 1,
+      "amount": 814
+    },
+    {
+      "name": "Data Scientist",
+      "value": 239,
+      "taxPercentage": 0.05,
+      "type": 2,
+      "amount": 700
+    },
+    {
+      "name": "Customer Support Specialist",
+      "value": 636,
+      "taxPercentage": 0.07,
+      "type": 1,
+      "amount": 343
+    },
+    {
+      "name": "Operations Manager",
+      "value": 220,
+      "taxPercentage": 0.18,
+      "type": 3,
+      "amount": 826
+    },
+    {
+      "name": "Content Strategist",
+      "value": 491,
+      "taxPercentage": 0.1,
+      "type": 1,
+      "amount": 252
+    },
+    {
+      "name": "Human Resources Coordinator",
+      "value": 151,
+      "taxPercentage": 0.13,
+      "type": 2,
+      "amount": 426
+    },
+    {
+      "name": "Software Engineer",
+      "value": 308,
+      "taxPercentage": 0.06,
+      "type": 1,
+      "amount": 139
+    },
+    {
+      "name": "UX Researcher",
+      "value": 153,
+      "taxPercentage": 0.08,
+      "type": 3,
+      "amount": 697
+    },
+    {
+      "name": "Sales Representative",
+      "value": 822,
+      "taxPercentage": 0.05,
+      "type": 2,
+      "amount": 900
+    },
+    {
+      "name": "IT Manager",
+      "value": 226,
+      "taxPercentage": 0.09,
+      "type": 1,
+      "amount": 220
+    },
+    {
+      "name": "Financial Manager",
+      "value": 754,
+      "taxPercentage": 0.1,
+      "type": 3,
+      "amount": 672
+    },
+    {
+      "name": "Legal Secretary",
+      "value": 511,
+      "taxPercentage": 0.07,
+      "type": 1,
+      "amount": 445
+    },
+    {
+      "name": "SEO Specialist",
+      "value": 748,
+      "taxPercentage": 0.11,
+      "type": 2,
+      "amount": 330
+    },
+    {
+      "name": "HR Specialist",
+      "value": 390,
+      "taxPercentage": 0.14,
+      "type": 3,
+      "amount": 476
+    },
+    {
+      "name": "Technical Support Engineer",
+      "value": 878,
+      "taxPercentage": 0.08,
+      "type": 1,
+      "amount": 683
+    },
+    {
+      "name": "Event Coordinator",
+      "value": 671,
+      "taxPercentage": 0.16,
+      "type": 2,
+      "amount": 795
+    },
+    {
+      "name": "Marketing Manager",
+      "value": 575,
+      "taxPercentage": 0.18,
+      "type": 1,
+      "amount": 192
+    },
+    {
+      "name": "Technical Consultant",
+      "value": 930,
+      "taxPercentage": 0.15,
+      "type": 2,
+      "amount": 99
+    },
+    {
+      "name": "Financial Planner",
+      "value": 458,
+      "taxPercentage": 0.07,
+      "type": 1,
+      "amount": 329
+    },
+    {
+      "name": "Accounting Clerk",
+      "value": 643,
+      "taxPercentage": 0.1,
+      "type": 3,
+      "amount": 588
+    },
+    {
+      "name": "Business Development Manager",
+      "value": 673,
+      "taxPercentage": 0.16,
+      "type": 2,
+      "amount": 60
+    },
+    {
+      "name": "Customer Experience Manager",
+      "value": 197,
+      "taxPercentage": 0.09,
+      "type": 1,
+      "amount": 566
+    },
+    {
+      "name": "Technical Recruiter",
+      "value": 507,
+      "taxPercentage": 0.05,
+      "type": 2,
+      "amount": 905
+    },
+    {
+      "name": "IT Support Specialist",
+      "value": 800,
+      "taxPercentage": 0.18,
+      "type": 3,
+      "amount": 286
+    },
+    {
+      "name": "Content Manager",
+      "value": 629,
+      "taxPercentage": 0.11,
+      "type": 1,
+      "amount": 675
+    },
+    {
+      "name": "Business Manager",
+      "value": 744,
+      "taxPercentage": 0.07,
+      "type": 2,
+      "amount": 188
+    },
+    {
+      "name": "Marketing Coordinator",
+      "value": 879,
+      "taxPercentage": 0.06,
+      "type": 1,
+      "amount": 414
+    },
+    {
+      "name": "Finance Manager",
+      "value": 678,
+      "taxPercentage": 0.09,
+      "type": 3,
+      "amount": 70
+    },
+    {
+      "name": "HR Coordinator",
+      "value": 152,
+      "taxPercentage": 0.17,
+      "type": 2,
+      "amount": 452
+    },
+    {
+      "name": "IT Analyst",
+      "value": 943,
+      "taxPercentage": 0.05,
+      "type": 1,
+      "amount": 614
+    },
+    {
+      "name": "Social Media Coordinator",
+      "value": 664,
+      "taxPercentage": 0.12,
+      "type": 3,
+      "amount": 268
+    },
+    {
+      "name": "Business Consultant",
+      "value": 518,
+      "taxPercentage": 0.1,
+      "type": 1,
+      "amount": 18
+    },
+    {
+      "name": "Technical Account Manager",
+      "value": 457,
+      "taxPercentage": 0.16,
+      "type": 2,
+      "amount": 702
+    },
+    {
+      "name": "Business Development Specialist",
+      "value": 385,
+      "taxPercentage": 0.08,
+      "type": 3,
+      "amount": 169
+    },
+    {
+      "name": "Accounting Manager",
+      "value": 840,
+      "taxPercentage": 0.11,
+      "type": 1,
+      "amount": 407
+    },
+    {
+      "name": "Data Entry Clerk",
+      "value": 149,
+      "taxPercentage": 0.07,
+      "type": 2,
+      "amount": 454
+    },
+    {
+      "name": "HR Generalist",
+      "value": 343,
+      "taxPercentage": 0.15,
+      "type": 1,
+      "amount": 498
+    },
+    {
+      "name": "Marketing Analyst",
+      "value": 768,
+      "taxPercentage": 0.05,
+      "type": 3,
+      "amount": 526
+    },
+    {
+      "name": "IT Specialist",
+      "value": 919,
+      "taxPercentage": 0.07,
+      "type": 1,
+      "amount": 97
+    },
+    {
+      "name": "Digital Marketing Coordinator",
+      "value": 703,
+      "taxPercentage": 0.13,
+      "type": 2,
+      "amount": 437
+    },
+    {
+      "name": "Technical Trainer",
+      "value": 732,
+      "taxPercentage": 0.17,
+      "type": 3,
+      "amount": 42
+    },
+    {
+      "name": "Financial Consultant",
+      "value": 79,
+      "taxPercentage": 0.16,
+      "type": 1,
+      "amount": 53
+    },
+    {
+      "name": "IT Director",
+      "value": 311,
+      "taxPercentage": 0.1,
+      "type": 2,
+      "amount": 703
+    },
+    {
+      "name": "Recruitment Consultant",
+      "value": 903,
+      "taxPercentage": 0.08,
+      "type": 1,
+      "amount": 511
+    },
+    {
+      "name": "Financial Controller",
+      "value": 683,
+      "taxPercentage": 0.09,
+      "type": 3,
+      "amount": 52
+    },
+    {
+      "name": "HR Manager",
+      "value": 314,
+      "taxPercentage": 0.14,
+      "type": 1,
+      "amount": 929
+    },
+    {
+      "name": "Digital Marketing Manager",
+      "value": 634,
+      "taxPercentage": 0.05,
+      "type": 2,
+      "amount": 594
+    },
+    {
+      "name": "Accounting Assistant",
+      "value": 378,
+      "taxPercentage": 0.06,
+      "type": 3,
+      "amount": 829
+    },
+    {
+      "name": "Sales Consultant",
+      "value": 108,
+      "taxPercentage": 0.07,
+      "type": 1,
+      "amount": 193
+    },
+    {
+      "name": "Technical Writer",
+      "value": 539,
+      "taxPercentage": 0.15,
+      "type": 2,
+      "amount": 784
+    },
+    {
+      "name": "Software Developer",
+      "value": 105,
+      "taxPercentage": 0.08,
+      "type": 3,
+      "amount": 648
+    },
+    {
+      "name": "Project Manager",
+      "value": 784,
+      "taxPercentage": 0.06,
+      "type": 1,
+      "amount": 56
+    },
+    {
+      "name": "Financial Analyst",
+      "value": 646,
+      "taxPercentage": 0.1,
+      "type": 2,
+      "amount": 108
+    },
+    {
+      "name": "Human Resources Manager",
+      "value": 869,
+      "taxPercentage": 0.17,
+      "type": 3,
+      "amount": 369
+    },
+    {
+      "name": "Web Developer",
+      "value": 893,
+      "taxPercentage": 0.18,
+      "type": 1,
+      "amount": 315
+    },
+    {
+      "name": "Content Writer",
+      "value": 530,
+      "taxPercentage": 0.09,
+      "type": 2,
+      "amount": 102
+    },
+    {
+      "name": "Product Manager",
+      "value": 611,
+      "taxPercentage": 0.05,
+      "type": 3,
+      "amount": 72
+    },
+    {
+      "name": "Data Analyst",
+      "value": 62,
+      "taxPercentage": 0.11,
+      "type": 1,
+      "amount": 615
+    },
+    {
+      "name": "Social Media Manager",
+      "value": 502,
+      "taxPercentage": 0.1,
+      "type": 2,
+      "amount": 241
+    },
+    {
+      "name": "IT Technician",
+      "value": 630,
+      "taxPercentage": 0.16,
+      "type": 3,
+      "amount": 450
+    },
+    {
+      "name": "Customer Service Representative",
+      "value": 518,
+      "taxPercentage": 0.07,
+      "type": 1,
+      "amount": 484
+    },
+    {
+      "name": "Marketing Specialist",
+      "value": 356,
+      "taxPercentage": 0.15,
+      "type": 2,
+      "amount": 607
+    },
+    {
+      "name": "Quality Assurance Analyst",
+      "value": 686,
+      "taxPercentage": 0.18,
+      "type": 3,
+      "amount": 986
+    },
+    {
+      "name": "Legal Assistant",
+      "value": 636,
+      "taxPercentage": 0.09,
+      "type": 1,
+      "amount": 92
+    },
+    {
+      "name": "Graphic Designer",
+      "value": 547,
+      "taxPercentage": 0.16,
+      "type": 2,
+      "amount": 131
+    },
+    {
+      "name": "Systems Analyst",
+      "value": 81,
+      "taxPercentage": 0.07,
+      "type": 3,
+      "amount": 45
+    },
+    {
+      "name": "Network Administrator",
+      "value": 291,
+      "taxPercentage": 0.06,
+      "type": 1,
+      "amount": 133
+    },
+    {
+      "name": "Accountant",
+      "value": 294,
+      "taxPercentage": 0.18,
+      "type": 2,
+      "amount": 622
+    },
+    {
+      "name": "Customer Success Manager",
+      "value": 821,
+      "taxPercentage": 0.09,
+      "type": 3,
+      "amount": 979
+    },
+    {
+      "name": "UX Designer",
+      "value": 366,
+      "taxPercentage": 0.1,
+      "type": 1,
+      "amount": 378
+    },
+    {
+      "name": "Recruiter",
+      "value": 202,
+      "taxPercentage": 0.11,
+      "type": 2,
+      "amount": 236
+    },
+    {
+      "name": "Digital Marketing Specialist",
+      "value": 455,
+      "taxPercentage": 0.16,
+      "type": 1,
+      "amount": 827
+    },
+    {
+      "name": "Database Administrator",
+      "value": 812,
+      "taxPercentage": 0.05,
+      "type": 2,
+      "amount": 481
+    },
+    {
+      "name": "Training Specialist",
+      "value": 329,
+      "taxPercentage": 0.08,
+      "type": 3,
+      "amount": 199
+    },
+    {
+      "name": "Account Manager",
+      "value": 866,
+      "taxPercentage": 0.13,
+      "type": 1,
+      "amount": 511
+    },
+    {
+      "name": "Event Planner",
+      "value": 341,
+      "taxPercentage": 0.1,
+      "type": 2,
+      "amount": 151
+    },
+    {
+      "name": "Executive Assistant",
+      "value": 830,
+      "taxPercentage": 0.14,
+      "type": 3,
+      "amount": 675
+    },
+    {
+      "name": "Business Analyst",
+      "value": 653,
+      "taxPercentage": 0.09,
+      "type": 1,
+      "amount": 730
+    },
+    {
+      "name": "Data Scientist",
+      "value": 126,
+      "taxPercentage": 0.05,
+      "type": 2,
+      "amount": 702
+    },
+    {
+      "name": "Customer Support Specialist",
+      "value": 681,
+      "taxPercentage": 0.18,
+      "type": 3,
+      "amount": 95
+    },
+    {
+      "name": "Operations Manager",
+      "value": 762,
+      "taxPercentage": 0.07,
+      "type": 1,
+      "amount": 635
+    },
+    {
+      "name": "Content Strategist",
+      "value": 744,
+      "taxPercentage": 0.16,
+      "type": 2,
+      "amount": 474
+    },
+    {
+      "name": "Human Resources Coordinator",
+      "value": 619,
+      "taxPercentage": 0.08,
+      "type": 3,
+      "amount": 137
+    },
+    {
+      "name": "Software Engineer",
+      "value": 435,
+      "taxPercentage": 0.05,
+      "type": 1,
+      "amount": 924
+    },
+    {
+      "name": "UX Researcher",
+      "value": 61,
+      "taxPercentage": 0.15,
+      "type": 2,
+      "amount": 515
+    },
+    {
+      "name": "Sales Representative",
+      "value": 495,
+      "taxPercentage": 0.09,
+      "type": 3,
+      "amount": 884
+    },
+    {
+      "name": "IT Manager",
+      "value": 445,
+      "taxPercentage": 0.07,
+      "type": 1,
+      "amount": 891
+    },
+    {
+      "name": "Financial Manager",
+      "value": 677,
+      "taxPercentage": 0.18,
+      "type": 2,
+      "amount": 194
+    },
+    {
+      "name": "Legal Secretary",
+      "value": 418,
+      "taxPercentage": 0.14,
+      "type": 3,
+      "amount": 554
+    },
+    {
+      "name": "SEO Specialist",
+      "value": 206,
+      "taxPercentage": 0.12,
+      "type": 1,
+      "amount": 362
+    },
+    {
+      "name": "HR Specialist",
+      "value": 954,
+      "taxPercentage": 0.06,
+      "type": 2,
+      "amount": 146
+    },
+    {
+      "name": "Technical Support Engineer",
+      "value": 239,
+      "taxPercentage": 0.1,
+      "type": 3,
+      "amount": 722
+    },
+    {
+      "name": "Event Coordinator",
+      "value": 863,
+      "taxPercentage": 0.16,
+      "type": 1,
+      "amount": 307
+    },
+    {
+      "name": "Marketing Manager",
+      "value": 976,
+      "taxPercentage": 0.13,
+      "type": 2,
+      "amount": 329
+    },
+    {
+      "name": "Technical Consultant",
+      "value": 219,
+      "taxPercentage": 0.05,
+      "type": 3,
+      "amount": 309
+    },
+    {
+      "name": "Financial Planner",
+      "value": 295,
+      "taxPercentage": 0.08,
+      "type": 1,
+      "amount": 218
+    },
+    {
+      "name": "Accounting Clerk",
+      "value": 456,
+      "taxPercentage": 0.1,
+      "type": 2,
+      "amount": 91
+    },
+    {
+      "name": "Business Development Manager",
+      "value": 673,
+      "taxPercentage": 0.11,
+      "type": 3,
+      "amount": 784
+    },
+    {
+      "name": "Customer Experience Manager",
+      "value": 389,
+      "taxPercentage": 0.07,
+      "type": 1,
+      "amount": 377
+    },
+    {
+      "name": "Technical Recruiter",
+      "value": 511,
+      "taxPercentage": 0.17,
+      "type": 2,
+      "amount": 307
+    },
+    {
+      "name": "IT Support Specialist",
+      "value": 886,
+      "taxPercentage": 0.06,
+      "type": 3,
+      "amount": 582
+    },
+    {
+        "name": "Sales Manager",
+        "value": 703,
+        "taxPercentage": 0.16,
+        "type": 2,
+        "amount": 219
+      },
+      {
+        "name": "Technical Writer",
+        "value": 330,
+        "taxPercentage": 0.07,
+        "type": 3,
+        "amount": 422
+      },
+      {
+        "name": "Software Developer",
+        "value": 411,
+        "taxPercentage": 0.15,
+        "type": 1,
+        "amount": 794
+      },
+      {
+        "name": "Project Manager",
+        "value": 402,
+        "taxPercentage": 0.18,
+        "type": 2,
+        "amount": 196
+      },
+      {
+        "name": "Financial Analyst",
+        "value": 77,
+        "taxPercentage": 0.11,
+        "type": 3,
+        "amount": 540
+      },
+      {
+        "name": "Human Resources Manager",
+        "value": 841,
+        "taxPercentage": 0.08,
+        "type": 2,
+        "amount": 46
+      },
+      {
+        "name": "Web Developer",
+        "value": 480,
+        "taxPercentage": 0.05,
+        "type": 1,
+        "amount": 610
+      },
+      {
+        "name": "Content Writer",
+        "value": 438,
+        "taxPercentage": 0.17,
+        "type": 2,
+        "amount": 484
+      },
+      {
+        "name": "Product Manager",
+        "value": 972,
+        "taxPercentage": 0.13,
+        "type": 3,
+        "amount": 950
+      },
+      {
+        "name": "Data Analyst",
+        "value": 618,
+        "taxPercentage": 0.12,
+        "type": 1,
+        "amount": 375
+      },
+      {
+        "name": "Social Media Manager",
+        "value": 641,
+        "taxPercentage": 0.09,
+        "type": 2,
+        "amount": 97
+      },
+      {
+        "name": "IT Technician",
+        "value": 53,
+        "taxPercentage": 0.06,
+        "type": 1,
+        "amount": 399
+      },
+      {
+        "name": "Customer Service Representative",
+        "value": 178,
+        "taxPercentage": 0.1,
+        "type": 3,
+        "amount": 752
+      },
+      {
+        "name": "Marketing Specialist",
+        "value": 221,
+        "taxPercentage": 0.15,
+        "type": 1,
+        "amount": 458
+      },
+      {
+        "name": "Quality Assurance Analyst",
+        "value": 671,
+        "taxPercentage": 0.14,
+        "type": 2,
+        "amount": 238
+      },
+      {
+        "name": "Legal Assistant",
+        "value": 928,
+        "taxPercentage": 0.1,
+        "type": 1,
+        "amount": 651
+      },
+      {
+        "name": "Graphic Designer",
+        "value": 426,
+        "taxPercentage": 0.07,
+        "type": 2,
+        "amount": 865
+      },
+      {
+        "name": "Systems Analyst",
+        "value": 327,
+        "taxPercentage": 0.16,
+        "type": 3,
+        "amount": 373
+      },
+      {
+        "name": "Network Administrator",
+        "value": 588,
+        "taxPercentage": 0.09,
+        "type": 2,
+        "amount": 731
+      },
+      {
+        "name": "Accountant",
+        "value": 732,
+        "taxPercentage": 0.1,
+        "type": 1,
+        "amount": 504
+      },
+      {
+        "name": "Customer Success Manager",
+        "value": 792,
+        "taxPercentage": 0.05,
+        "type": 3,
+        "amount": 863
+      },
+      {
+        "name": "UX Designer",
+        "value": 183,
+        "taxPercentage": 0.08,
+        "type": 1,
+        "amount": 157
+      },
+      {
+        "name": "Recruiter",
+        "value": 71,
+        "taxPercentage": 0.11,
+        "type": 2,
+        "amount": 514
+      },
+      {
+        "name": "Digital Marketing Specialist",
+        "value": 475,
+        "taxPercentage": 0.13,
+        "type": 3,
+        "amount": 368
+      },
+      {
+        "name": "Database Administrator",
+        "value": 550,
+        "taxPercentage": 0.07,
+        "type": 1,
+        "amount": 28
+      },
+      {
+        "name": "Training Specialist",
+        "value": 983,
+        "taxPercentage": 0.06,
+        "type": 2,
+        "amount": 693
+      },
+      {
+        "name": "Account Manager",
+        "value": 295,
+        "taxPercentage": 0.15,
+        "type": 1,
+        "amount": 262
+      },
+      {
+        "name": "Event Planner",
+        "value": 467,
+        "taxPercentage": 0.17,
+        "type": 2,
+        "amount": 978
+      },
+      {
+        "name": "Executive Assistant",
+        "value": 142,
+        "taxPercentage": 0.14,
+        "type": 3,
+        "amount": 906
+      },
+      {
+        "name": "Business Analyst",
+        "value": 797,
+        "taxPercentage": 0.16,
+        "type": 1,
+        "amount": 814
+      },
+      {
+        "name": "Data Scientist",
+        "value": 239,
+        "taxPercentage": 0.05,
+        "type": 2,
+        "amount": 700
+      },
+      {
+        "name": "Customer Support Specialist",
+        "value": 636,
+        "taxPercentage": 0.07,
+        "type": 1,
+        "amount": 343
+      },
+      {
+        "name": "Operations Manager",
+        "value": 220,
+        "taxPercentage": 0.18,
+        "type": 3,
+        "amount": 826
+      },
+      {
+        "name": "Content Strategist",
+        "value": 491,
+        "taxPercentage": 0.1,
+        "type": 1,
+        "amount": 252
+      },
+      {
+        "name": "Human Resources Coordinator",
+        "value": 151,
+        "taxPercentage": 0.13,
+        "type": 2,
+        "amount": 426
+      },
+      {
+        "name": "Software Engineer",
+        "value": 308,
+        "taxPercentage": 0.06,
+        "type": 1,
+        "amount": 139
+      },
+      {
+        "name": "UX Researcher",
+        "value": 153,
+        "taxPercentage": 0.08,
+        "type": 3,
+        "amount": 697
+      },
+      {
+        "name": "Sales Representative",
+        "value": 822,
+        "taxPercentage": 0.05,
+        "type": 2,
+        "amount": 900
+      },
+      {
+        "name": "IT Manager",
+        "value": 226,
+        "taxPercentage": 0.09,
+        "type": 1,
+        "amount": 220
+      },
+      {
+        "name": "Financial Manager",
+        "value": 754,
+        "taxPercentage": 0.1,
+        "type": 3,
+        "amount": 672
+      },
+      {
+        "name": "Legal Secretary",
+        "value": 511,
+        "taxPercentage": 0.07,
+        "type": 1,
+        "amount": 445
+      },
+      {
+        "name": "SEO Specialist",
+        "value": 748,
+        "taxPercentage": 0.11,
+        "type": 2,
+        "amount": 330
+      },
+      {
+        "name": "HR Specialist",
+        "value": 390,
+        "taxPercentage": 0.14,
+        "type": 3,
+        "amount": 476
+      },
+      {
+        "name": "Technical Support Engineer",
+        "value": 878,
+        "taxPercentage": 0.08,
+        "type": 1,
+        "amount": 683
+      },
+      {
+        "name": "Event Coordinator",
+        "value": 671,
+        "taxPercentage": 0.16,
+        "type": 2,
+        "amount": 795
+      },
+      {
+        "name": "Marketing Manager",
+        "value": 575,
+        "taxPercentage": 0.18,
+        "type": 1,
+        "amount": 192
+      },
+      {
+        "name": "Technical Consultant",
+        "value": 930,
+        "taxPercentage": 0.15,
+        "type": 2,
+        "amount": 99
+      },
+      {
+        "name": "Financial Planner",
+        "value": 458,
+        "taxPercentage": 0.07,
+        "type": 1,
+        "amount": 329
+      },
+      {
+        "name": "Accounting Clerk",
+        "value": 643,
+        "taxPercentage": 0.1,
+        "type": 3,
+        "amount": 588
+      },
+      {
+        "name": "Business Development Manager",
+        "value": 673,
+        "taxPercentage": 0.16,
+        "type": 2,
+        "amount": 60
+      },
+      {
+        "name": "Customer Experience Manager",
+        "value": 197,
+        "taxPercentage": 0.09,
+        "type": 1,
+        "amount": 566
+      },
+      {
+        "name": "Technical Recruiter",
+        "value": 507,
+        "taxPercentage": 0.05,
+        "type": 2,
+        "amount": 905
+      },
+      {
+        "name": "IT Support Specialist",
+        "value": 800,
+        "taxPercentage": 0.18,
+        "type": 3,
+        "amount": 286
+      },
+      {
+        "name": "Content Manager",
+        "value": 629,
+        "taxPercentage": 0.11,
+        "type": 1,
+        "amount": 675
+      },
+      {
+        "name": "Business Manager",
+        "value": 744,
+        "taxPercentage": 0.07,
+        "type": 2,
+        "amount": 188
+      },
+      {
+        "name": "Marketing Coordinator",
+        "value": 879,
+        "taxPercentage": 0.06,
+        "type": 1,
+        "amount": 414
+      },
+      {
+        "name": "Finance Manager",
+        "value": 678,
+        "taxPercentage": 0.09,
+        "type": 3,
+        "amount": 70
+      },
+      {
+        "name": "HR Coordinator",
+        "value": 152,
+        "taxPercentage": 0.17,
+        "type": 2,
+        "amount": 452
+      },
+      {
+        "name": "IT Analyst",
+        "value": 943,
+        "taxPercentage": 0.05,
+        "type": 1,
+        "amount": 614
+      },
+      {
+        "name": "Social Media Coordinator",
+        "value": 664,
+        "taxPercentage": 0.12,
+        "type": 3,
+        "amount": 268
+      },
+      {
+        "name": "Business Consultant",
+        "value": 518,
+        "taxPercentage": 0.1,
+        "type": 1,
+        "amount": 18
+      },
+      {
+        "name": "Technical Account Manager",
+        "value": 457,
+        "taxPercentage": 0.16,
+        "type": 2,
+        "amount": 702
+      },
+      {
+        "name": "Business Development Specialist",
+        "value": 385,
+        "taxPercentage": 0.08,
+        "type": 3,
+        "amount": 169
+      },
+      {
+        "name": "Accounting Manager",
+        "value": 840,
+        "taxPercentage": 0.11,
+        "type": 1,
+        "amount": 407
+      },
+      {
+        "name": "Data Entry Clerk",
+        "value": 149,
+        "taxPercentage": 0.07,
+        "type": 2,
+        "amount": 454
+      },
+      {
+        "name": "HR Generalist",
+        "value": 343,
+        "taxPercentage": 0.15,
+        "type": 1,
+        "amount": 498
+      },
+      {
+        "name": "Marketing Analyst",
+        "value": 768,
+        "taxPercentage": 0.05,
+        "type": 3,
+        "amount": 526
+      },
+      {
+        "name": "IT Specialist",
+        "value": 919,
+        "taxPercentage": 0.07,
+        "type": 1,
+        "amount": 97
+      },
+      {
+        "name": "Digital Marketing Coordinator",
+        "value": 703,
+        "taxPercentage": 0.13,
+        "type": 2,
+        "amount": 437
+      },
+      {
+        "name": "Technical Trainer",
+        "value": 732,
+        "taxPercentage": 0.17,
+        "type": 3,
+        "amount": 42
+      },
+      {
+        "name": "Financial Consultant",
+        "value": 79,
+        "taxPercentage": 0.16,
+        "type": 1,
+        "amount": 53
+      },
+      {
+        "name": "IT Director",
+        "value": 311,
+        "taxPercentage": 0.1,
+        "type": 2,
+        "amount": 703
+      },
+      {
+        "name": "Recruitment Consultant",
+        "value": 903,
+        "taxPercentage": 0.08,
+        "type": 1,
+        "amount": 511
+      },
+      {
+        "name": "Financial Controller",
+        "value": 683,
+        "taxPercentage": 0.09,
+        "type": 3,
+        "amount": 52
+      },
+      {
+        "name": "HR Manager",
+        "value": 314,
+        "taxPercentage": 0.14,
+        "type": 1,
+        "amount": 929
+      },
+      {
+        "name": "Digital Marketing Manager",
+        "value": 634,
+        "taxPercentage": 0.05,
+        "type": 2,
+        "amount": 594
+      },
+      {
+        "name": "Accounting Assistant",
+        "value": 378,
+        "taxPercentage": 0.06,
+        "type": 3,
+        "amount": 829
+      },
+      {
+        "name": "Sales Consultant",
+        "value": 108,
+        "taxPercentage": 0.07,
+        "type": 1,
+        "amount": 193
+      },
+      {
+        "name": "Technical Writer",
+        "value": 539,
+        "taxPercentage": 0.15,
+        "type": 2,
+        "amount": 784
+      },
+      {
+        "name": "Software Developer",
+        "value": 105,
+        "taxPercentage": 0.08,
+        "type": 3,
+        "amount": 648
+      },
+      {
+        "name": "Project Manager",
+        "value": 784,
+        "taxPercentage": 0.06,
+        "type": 1,
+        "amount": 56
+      },
+      {
+        "name": "Financial Analyst",
+        "value": 646,
+        "taxPercentage": 0.1,
+        "type": 2,
+        "amount": 108
+      },
+      {
+        "name": "Human Resources Manager",
+        "value": 869,
+        "taxPercentage": 0.17,
+        "type": 3,
+        "amount": 369
+      },
+      {
+        "name": "Web Developer",
+        "value": 893,
+        "taxPercentage": 0.18,
+        "type": 1,
+        "amount": 315
+      },
+      {
+        "name": "Content Writer",
+        "value": 530,
+        "taxPercentage": 0.09,
+        "type": 2,
+        "amount": 102
+      },
+      {
+        "name": "Product Manager",
+        "value": 611,
+        "taxPercentage": 0.05,
+        "type": 3,
+        "amount": 72
+      },
+      {
+        "name": "Data Analyst",
+        "value": 62,
+        "taxPercentage": 0.11,
+        "type": 1,
+        "amount": 615
+      },
+      {
+        "name": "Social Media Manager",
+        "value": 502,
+        "taxPercentage": 0.1,
+        "type": 2,
+        "amount": 241
+      },
+      {
+        "name": "IT Technician",
+        "value": 630,
+        "taxPercentage": 0.16,
+        "type": 3,
+        "amount": 450
+      },
+      {
+        "name": "Customer Service Representative",
+        "value": 518,
+        "taxPercentage": 0.07,
+        "type": 1,
+        "amount": 484
+      },
+      {
+        "name": "Marketing Specialist",
+        "value": 356,
+        "taxPercentage": 0.15,
+        "type": 2,
+        "amount": 607
+      },
+      {
+        "name": "Quality Assurance Analyst",
+        "value": 686,
+        "taxPercentage": 0.18,
+        "type": 3,
+        "amount": 986
+      },
+      {
+        "name": "Legal Assistant",
+        "value": 636,
+        "taxPercentage": 0.09,
+        "type": 1,
+        "amount": 92
+      },
+      {
+        "name": "Graphic Designer",
+        "value": 547,
+        "taxPercentage": 0.16,
+        "type": 2,
+        "amount": 131
+      },
+      {
+        "name": "Systems Analyst",
+        "value": 81,
+        "taxPercentage": 0.07,
+        "type": 3,
+        "amount": 45
+      },
+      {
+        "name": "Network Administrator",
+        "value": 291,
+        "taxPercentage": 0.06,
+        "type": 1,
+        "amount": 133
+      },
+      {
+        "name": "Accountant",
+        "value": 294,
+        "taxPercentage": 0.18,
+        "type": 2,
+        "amount": 622
+      },
+      {
+        "name": "Customer Success Manager",
+        "value": 821,
+        "taxPercentage": 0.09,
+        "type": 3,
+        "amount": 979
+      },
+      {
+        "name": "UX Designer",
+        "value": 366,
+        "taxPercentage": 0.1,
+        "type": 1,
+        "amount": 378
+      },
+      {
+        "name": "Recruiter",
+        "value": 202,
+        "taxPercentage": 0.11,
+        "type": 2,
+        "amount": 236
+      },
+      {
+        "name": "Digital Marketing Specialist",
+        "value": 455,
+        "taxPercentage": 0.16,
+        "type": 1,
+        "amount": 827
+      },
+      {
+        "name": "Database Administrator",
+        "value": 812,
+        "taxPercentage": 0.05,
+        "type": 2,
+        "amount": 481
+      },
+      {
+        "name": "Training Specialist",
+        "value": 329,
+        "taxPercentage": 0.08,
+        "type": 3,
+        "amount": 199
+      },
+      {
+        "name": "Account Manager",
+        "value": 866,
+        "taxPercentage": 0.13,
+        "type": 1,
+        "amount": 511
+      },
+      {
+        "name": "Event Planner",
+        "value": 341,
+        "taxPercentage": 0.1,
+        "type": 2,
+        "amount": 151
+      },
+      {
+        "name": "Executive Assistant",
+        "value": 830,
+        "taxPercentage": 0.14,
+        "type": 3,
+        "amount": 675
+      },
+      {
+        "name": "Business Analyst",
+        "value": 653,
+        "taxPercentage": 0.09,
+        "type": 1,
+        "amount": 730
+      },
+      {
+        "name": "Data Scientist",
+        "value": 126,
+        "taxPercentage": 0.05,
+        "type": 2,
+        "amount": 702
+      },
+      {
+        "name": "Customer Support Specialist",
+        "value": 681,
+        "taxPercentage": 0.18,
+        "type": 3,
+        "amount": 95
+      },
+      {
+        "name": "Operations Manager",
+        "value": 762,
+        "taxPercentage": 0.07,
+        "type": 1,
+        "amount": 635
+      },
+      {
+        "name": "Content Strategist",
+        "value": 744,
+        "taxPercentage": 0.16,
+        "type": 2,
+        "amount": 474
+      },
+      {
+        "name": "Human Resources Coordinator",
+        "value": 619,
+        "taxPercentage": 0.08,
+        "type": 3,
+        "amount": 137
+      },
+      {
+        "name": "Software Engineer",
+        "value": 435,
+        "taxPercentage": 0.05,
+        "type": 1,
+        "amount": 924
+      },
+      {
+        "name": "UX Researcher",
+        "value": 61,
+        "taxPercentage": 0.15,
+        "type": 2,
+        "amount": 515
+      },
+      {
+        "name": "Sales Representative",
+        "value": 495,
+        "taxPercentage": 0.09,
+        "type": 3,
+        "amount": 884
+      },
+      {
+        "name": "IT Manager",
+        "value": 445,
+        "taxPercentage": 0.07,
+        "type": 1,
+        "amount": 891
+      },
+      {
+        "name": "Financial Manager",
+        "value": 677,
+        "taxPercentage": 0.18,
+        "type": 2,
+        "amount": 194
+      },
+      {
+        "name": "Legal Secretary",
+        "value": 418,
+        "taxPercentage": 0.14,
+        "type": 3,
+        "amount": 554
+      },
+      {
+        "name": "SEO Specialist",
+        "value": 206,
+        "taxPercentage": 0.12,
+        "type": 1,
+        "amount": 362
+      },
+      {
+        "name": "HR Specialist",
+        "value": 954,
+        "taxPercentage": 0.06,
+        "type": 2,
+        "amount": 146
+      },
+      {
+        "name": "Technical Support Engineer",
+        "value": 239,
+        "taxPercentage": 0.1,
+        "type": 3,
+        "amount": 722
+      },
+      {
+        "name": "Event Coordinator",
+        "value": 863,
+        "taxPercentage": 0.16,
+        "type": 1,
+        "amount": 307
+      },
+      {
+        "name": "Marketing Manager",
+        "value": 976,
+        "taxPercentage": 0.13,
+        "type": 2,
+        "amount": 329
+      },
+      {
+        "name": "Technical Consultant",
+        "value": 219,
+        "taxPercentage": 0.05,
+        "type": 3,
+        "amount": 309
+      },
+      {
+        "name": "Financial Planner",
+        "value": 295,
+        "taxPercentage": 0.08,
+        "type": 1,
+        "amount": 218
+      },
+      {
+        "name": "Accounting Clerk",
+        "value": 456,
+        "taxPercentage": 0.1,
+        "type": 2,
+        "amount": 91
+      },
+      {
+        "name": "Business Development Manager",
+        "value": 673,
+        "taxPercentage": 0.11,
+        "type": 3,
+        "amount": 784
+      },
+      {
+        "name": "Customer Experience Manager",
+        "value": 389,
+        "taxPercentage": 0.07,
+        "type": 1,
+        "amount": 377
+      },
+      {
+        "name": "Technical Recruiter",
+        "value": 511,
+        "taxPercentage": 0.17,
+        "type": 2,
+        "amount": 307
+      },
+      {
+        "name": "IT Support Specialist",
+        "value": 886,
+        "taxPercentage": 0.06,
+        "type": 3,
+        "amount": 582
+      },{
+        "name": "Sales Manager",
+        "value": 703,
+        "taxPercentage": 0.16,
+        "type": 2,
+        "amount": 219
+      },
+      {
+        "name": "Technical Writer",
+        "value": 330,
+        "taxPercentage": 0.07,
+        "type": 3,
+        "amount": 422
+      },
+      {
+        "name": "Software Developer",
+        "value": 411,
+        "taxPercentage": 0.15,
+        "type": 1,
+        "amount": 794
+      },
+      {
+        "name": "Project Manager",
+        "value": 402,
+        "taxPercentage": 0.18,
+        "type": 2,
+        "amount": 196
+      },
+      {
+        "name": "Financial Analyst",
+        "value": 77,
+        "taxPercentage": 0.11,
+        "type": 3,
+        "amount": 540
+      },
+      {
+        "name": "Human Resources Manager",
+        "value": 841,
+        "taxPercentage": 0.08,
+        "type": 2,
+        "amount": 46
+      },
+      {
+        "name": "Web Developer",
+        "value": 480,
+        "taxPercentage": 0.05,
+        "type": 1,
+        "amount": 610
+      },
+      {
+        "name": "Content Writer",
+        "value": 438,
+        "taxPercentage": 0.17,
+        "type": 2,
+        "amount": 484
+      },
+      {
+        "name": "Product Manager",
+        "value": 972,
+        "taxPercentage": 0.13,
+        "type": 3,
+        "amount": 950
+      },
+      {
+        "name": "Data Analyst",
+        "value": 618,
+        "taxPercentage": 0.12,
+        "type": 1,
+        "amount": 375
+      },
+      {
+        "name": "Social Media Manager",
+        "value": 641,
+        "taxPercentage": 0.09,
+        "type": 2,
+        "amount": 97
+      },
+      {
+        "name": "IT Technician",
+        "value": 53,
+        "taxPercentage": 0.06,
+        "type": 1,
+        "amount": 399
+      },
+      {
+        "name": "Customer Service Representative",
+        "value": 178,
+        "taxPercentage": 0.1,
+        "type": 3,
+        "amount": 752
+      },
+      {
+        "name": "Marketing Specialist",
+        "value": 221,
+        "taxPercentage": 0.15,
+        "type": 1,
+        "amount": 458
+      },
+      {
+        "name": "Quality Assurance Analyst",
+        "value": 671,
+        "taxPercentage": 0.14,
+        "type": 2,
+        "amount": 238
+      },
+      {
+        "name": "Legal Assistant",
+        "value": 928,
+        "taxPercentage": 0.1,
+        "type": 1,
+        "amount": 651
+      },
+      {
+        "name": "Graphic Designer",
+        "value": 426,
+        "taxPercentage": 0.07,
+        "type": 2,
+        "amount": 865
+      },
+      {
+        "name": "Systems Analyst",
+        "value": 327,
+        "taxPercentage": 0.16,
+        "type": 3,
+        "amount": 373
+      },
+      {
+        "name": "Network Administrator",
+        "value": 588,
+        "taxPercentage": 0.09,
+        "type": 2,
+        "amount": 731
+      },
+      {
+        "name": "Accountant",
+        "value": 732,
+        "taxPercentage": 0.1,
+        "type": 1,
+        "amount": 504
+      },
+      {
+        "name": "Customer Success Manager",
+        "value": 792,
+        "taxPercentage": 0.05,
+        "type": 3,
+        "amount": 863
+      },
+      {
+        "name": "UX Designer",
+        "value": 183,
+        "taxPercentage": 0.08,
+        "type": 1,
+        "amount": 157
+      },
+      {
+        "name": "Recruiter",
+        "value": 71,
+        "taxPercentage": 0.11,
+        "type": 2,
+        "amount": 514
+      },
+      {
+        "name": "Digital Marketing Specialist",
+        "value": 475,
+        "taxPercentage": 0.13,
+        "type": 3,
+        "amount": 368
+      },
+      {
+        "name": "Database Administrator",
+        "value": 550,
+        "taxPercentage": 0.07,
+        "type": 1,
+        "amount": 28
+      },
+      {
+        "name": "Training Specialist",
+        "value": 983,
+        "taxPercentage": 0.06,
+        "type": 2,
+        "amount": 693
+      },
+      {
+        "name": "Account Manager",
+        "value": 295,
+        "taxPercentage": 0.15,
+        "type": 1,
+        "amount": 262
+      },
+      {
+        "name": "Event Planner",
+        "value": 467,
+        "taxPercentage": 0.17,
+        "type": 2,
+        "amount": 978
+      },
+      {
+        "name": "Executive Assistant",
+        "value": 142,
+        "taxPercentage": 0.14,
+        "type": 3,
+        "amount": 906
+      },
+      {
+        "name": "Business Analyst",
+        "value": 797,
+        "taxPercentage": 0.16,
+        "type": 1,
+        "amount": 814
+      },
+      {
+        "name": "Data Scientist",
+        "value": 239,
+        "taxPercentage": 0.05,
+        "type": 2,
+        "amount": 700
+      },
+      {
+        "name": "Customer Support Specialist",
+        "value": 636,
+        "taxPercentage": 0.07,
+        "type": 1,
+        "amount": 343
+      },
+      {
+        "name": "Operations Manager",
+        "value": 220,
+        "taxPercentage": 0.18,
+        "type": 3,
+        "amount": 826
+      },
+      {
+        "name": "Content Strategist",
+        "value": 491,
+        "taxPercentage": 0.1,
+        "type": 1,
+        "amount": 252
+      },
+      {
+        "name": "Human Resources Coordinator",
+        "value": 151,
+        "taxPercentage": 0.13,
+        "type": 2,
+        "amount": 426
+      },
+      {
+        "name": "Software Engineer",
+        "value": 308,
+        "taxPercentage": 0.06,
+        "type": 1,
+        "amount": 139
+      },
+      {
+        "name": "UX Researcher",
+        "value": 153,
+        "taxPercentage": 0.08,
+        "type": 3,
+        "amount": 697
+      },
+      {
+        "name": "Sales Representative",
+        "value": 822,
+        "taxPercentage": 0.05,
+        "type": 2,
+        "amount": 900
+      },
+      {
+        "name": "IT Manager",
+        "value": 226,
+        "taxPercentage": 0.09,
+        "type": 1,
+        "amount": 220
+      },
+      {
+        "name": "Financial Manager",
+        "value": 754,
+        "taxPercentage": 0.1,
+        "type": 3,
+        "amount": 672
+      },
+      {
+        "name": "Legal Secretary",
+        "value": 511,
+        "taxPercentage": 0.07,
+        "type": 1,
+        "amount": 445
+      },
+      {
+        "name": "SEO Specialist",
+        "value": 748,
+        "taxPercentage": 0.11,
+        "type": 2,
+        "amount": 330
+      },
+      {
+        "name": "HR Specialist",
+        "value": 390,
+        "taxPercentage": 0.14,
+        "type": 3,
+        "amount": 476
+      },
+      {
+        "name": "Technical Support Engineer",
+        "value": 878,
+        "taxPercentage": 0.08,
+        "type": 1,
+        "amount": 683
+      },
+      {
+        "name": "Event Coordinator",
+        "value": 671,
+        "taxPercentage": 0.16,
+        "type": 2,
+        "amount": 795
+      },
+      {
+        "name": "Marketing Manager",
+        "value": 575,
+        "taxPercentage": 0.18,
+        "type": 1,
+        "amount": 192
+      },
+      {
+        "name": "Technical Consultant",
+        "value": 930,
+        "taxPercentage": 0.15,
+        "type": 2,
+        "amount": 99
+      },
+      {
+        "name": "Financial Planner",
+        "value": 458,
+        "taxPercentage": 0.07,
+        "type": 1,
+        "amount": 329
+      },
+      {
+        "name": "Accounting Clerk",
+        "value": 643,
+        "taxPercentage": 0.1,
+        "type": 3,
+        "amount": 588
+      },
+      {
+        "name": "Business Development Manager",
+        "value": 673,
+        "taxPercentage": 0.16,
+        "type": 2,
+        "amount": 60
+      },
+      {
+        "name": "Customer Experience Manager",
+        "value": 197,
+        "taxPercentage": 0.09,
+        "type": 1,
+        "amount": 566
+      },
+      {
+        "name": "Technical Recruiter",
+        "value": 507,
+        "taxPercentage": 0.05,
+        "type": 2,
+        "amount": 905
+      },
+      {
+        "name": "IT Support Specialist",
+        "value": 800,
+        "taxPercentage": 0.18,
+        "type": 3,
+        "amount": 286
+      },
+      {
+        "name": "Content Manager",
+        "value": 629,
+        "taxPercentage": 0.11,
+        "type": 1,
+        "amount": 675
+      },
+      {
+        "name": "Business Manager",
+        "value": 744,
+        "taxPercentage": 0.07,
+        "type": 2,
+        "amount": 188
+      },
+      {
+        "name": "Marketing Coordinator",
+        "value": 879,
+        "taxPercentage": 0.06,
+        "type": 1,
+        "amount": 414
+      },
+      {
+        "name": "Finance Manager",
+        "value": 678,
+        "taxPercentage": 0.09,
+        "type": 3,
+        "amount": 70
+      },
+      {
+        "name": "HR Coordinator",
+        "value": 152,
+        "taxPercentage": 0.17,
+        "type": 2,
+        "amount": 452
+      },
+      {
+        "name": "IT Analyst",
+        "value": 943,
+        "taxPercentage": 0.05,
+        "type": 1,
+        "amount": 614
+      },
+      {
+        "name": "Social Media Coordinator",
+        "value": 664,
+        "taxPercentage": 0.12,
+        "type": 3,
+        "amount": 268
+      },
+      {
+        "name": "Business Consultant",
+        "value": 518,
+        "taxPercentage": 0.1,
+        "type": 1,
+        "amount": 18
+      },
+      {
+        "name": "Technical Account Manager",
+        "value": 457,
+        "taxPercentage": 0.16,
+        "type": 2,
+        "amount": 702
+      },
+      {
+        "name": "Business Development Specialist",
+        "value": 385,
+        "taxPercentage": 0.08,
+        "type": 3,
+        "amount": 169
+      },
+      {
+        "name": "Accounting Manager",
+        "value": 840,
+        "taxPercentage": 0.11,
+        "type": 1,
+        "amount": 407
+      },
+      {
+        "name": "Data Entry Clerk",
+        "value": 149,
+        "taxPercentage": 0.07,
+        "type": 2,
+        "amount": 454
+      },
+      {
+        "name": "HR Generalist",
+        "value": 343,
+        "taxPercentage": 0.15,
+        "type": 1,
+        "amount": 498
+      },
+      {
+        "name": "Marketing Analyst",
+        "value": 768,
+        "taxPercentage": 0.05,
+        "type": 3,
+        "amount": 526
+      },
+      {
+        "name": "IT Specialist",
+        "value": 919,
+        "taxPercentage": 0.07,
+        "type": 1,
+        "amount": 97
+      },
+      {
+        "name": "Digital Marketing Coordinator",
+        "value": 703,
+        "taxPercentage": 0.13,
+        "type": 2,
+        "amount": 437
+      },
+      {
+        "name": "Technical Trainer",
+        "value": 732,
+        "taxPercentage": 0.17,
+        "type": 3,
+        "amount": 42
+      },
+      {
+        "name": "Financial Consultant",
+        "value": 79,
+        "taxPercentage": 0.16,
+        "type": 1,
+        "amount": 53
+      },
+      {
+        "name": "IT Director",
+        "value": 311,
+        "taxPercentage": 0.1,
+        "type": 2,
+        "amount": 703
+      },
+      {
+        "name": "Recruitment Consultant",
+        "value": 903,
+        "taxPercentage": 0.08,
+        "type": 1,
+        "amount": 511
+      },
+      {
+        "name": "Financial Controller",
+        "value": 683,
+        "taxPercentage": 0.09,
+        "type": 3,
+        "amount": 52
+      },
+      {
+        "name": "HR Manager",
+        "value": 314,
+        "taxPercentage": 0.14,
+        "type": 1,
+        "amount": 929
+      },
+      {
+        "name": "Digital Marketing Manager",
+        "value": 634,
+        "taxPercentage": 0.05,
+        "type": 2,
+        "amount": 594
+      },
+      {
+        "name": "Accounting Assistant",
+        "value": 378,
+        "taxPercentage": 0.06,
+        "type": 3,
+        "amount": 829
+      },
+      {
+        "name": "Sales Consultant",
+        "value": 108,
+        "taxPercentage": 0.07,
+        "type": 1,
+        "amount": 193
+      },
+      {
+        "name": "Technical Writer",
+        "value": 539,
+        "taxPercentage": 0.15,
+        "type": 2,
+        "amount": 784
+      },
+      {
+        "name": "Software Developer",
+        "value": 105,
+        "taxPercentage": 0.08,
+        "type": 3,
+        "amount": 648
+      },
+      {
+        "name": "Project Manager",
+        "value": 784,
+        "taxPercentage": 0.06,
+        "type": 1,
+        "amount": 56
+      },
+      {
+        "name": "Financial Analyst",
+        "value": 646,
+        "taxPercentage": 0.1,
+        "type": 2,
+        "amount": 108
+      },
+      {
+        "name": "Human Resources Manager",
+        "value": 869,
+        "taxPercentage": 0.17,
+        "type": 3,
+        "amount": 369
+      },
+      {
+        "name": "Web Developer",
+        "value": 893,
+        "taxPercentage": 0.18,
+        "type": 1,
+        "amount": 315
+      },
+      {
+        "name": "Content Writer",
+        "value": 530,
+        "taxPercentage": 0.09,
+        "type": 2,
+        "amount": 102
+      },
+      {
+        "name": "Product Manager",
+        "value": 611,
+        "taxPercentage": 0.05,
+        "type": 3,
+        "amount": 72
+      },
+      {
+        "name": "Data Analyst",
+        "value": 62,
+        "taxPercentage": 0.11,
+        "type": 1,
+        "amount": 615
+      },
+      {
+        "name": "Social Media Manager",
+        "value": 502,
+        "taxPercentage": 0.1,
+        "type": 2,
+        "amount": 241
+      },
+      {
+        "name": "IT Technician",
+        "value": 630,
+        "taxPercentage": 0.16,
+        "type": 3,
+        "amount": 450
+      },
+      {
+        "name": "Customer Service Representative",
+        "value": 518,
+        "taxPercentage": 0.07,
+        "type": 1,
+        "amount": 484
+      },
+      {
+        "name": "Marketing Specialist",
+        "value": 356,
+        "taxPercentage": 0.15,
+        "type": 2,
+        "amount": 607
+      },
+      {
+        "name": "Quality Assurance Analyst",
+        "value": 686,
+        "taxPercentage": 0.18,
+        "type": 3,
+        "amount": 986
+      },
+      {
+        "name": "Legal Assistant",
+        "value": 636,
+        "taxPercentage": 0.09,
+        "type": 1,
+        "amount": 92
+      },
+      {
+        "name": "Graphic Designer",
+        "value": 547,
+        "taxPercentage": 0.16,
+        "type": 2,
+        "amount": 131
+      },
+      {
+        "name": "Systems Analyst",
+        "value": 81,
+        "taxPercentage": 0.07,
+        "type": 3,
+        "amount": 45
+      },
+      {
+        "name": "Network Administrator",
+        "value": 291,
+        "taxPercentage": 0.06,
+        "type": 1,
+        "amount": 133
+      },
+      {
+        "name": "Accountant",
+        "value": 294,
+        "taxPercentage": 0.18,
+        "type": 2,
+        "amount": 622
+      },
+      {
+        "name": "Customer Success Manager",
+        "value": 821,
+        "taxPercentage": 0.09,
+        "type": 3,
+        "amount": 979
+      },
+      {
+        "name": "UX Designer",
+        "value": 366,
+        "taxPercentage": 0.1,
+        "type": 1,
+        "amount": 378
+      },
+      {
+        "name": "Recruiter",
+        "value": 202,
+        "taxPercentage": 0.11,
+        "type": 2,
+        "amount": 236
+      },
+      {
+        "name": "Digital Marketing Specialist",
+        "value": 455,
+        "taxPercentage": 0.16,
+        "type": 1,
+        "amount": 827
+      },
+      {
+        "name": "Database Administrator",
+        "value": 812,
+        "taxPercentage": 0.05,
+        "type": 2,
+        "amount": 481
+      },
+      {
+        "name": "Training Specialist",
+        "value": 329,
+        "taxPercentage": 0.08,
+        "type": 3,
+        "amount": 199
+      },
+      {
+        "name": "Account Manager",
+        "value": 866,
+        "taxPercentage": 0.13,
+        "type": 1,
+        "amount": 511
+      },
+      {
+        "name": "Event Planner",
+        "value": 341,
+        "taxPercentage": 0.1,
+        "type": 2,
+        "amount": 151
+      },
+      {
+        "name": "Executive Assistant",
+        "value": 830,
+        "taxPercentage": 0.14,
+        "type": 3,
+        "amount": 675
+      },
+      {
+        "name": "Business Analyst",
+        "value": 653,
+        "taxPercentage": 0.09,
+        "type": 1,
+        "amount": 730
+      },
+      {
+        "name": "Data Scientist",
+        "value": 126,
+        "taxPercentage": 0.05,
+        "type": 2,
+        "amount": 702
+      },
+      {
+        "name": "Customer Support Specialist",
+        "value": 681,
+        "taxPercentage": 0.18,
+        "type": 3,
+        "amount": 95
+      },
+      {
+        "name": "Operations Manager",
+        "value": 762,
+        "taxPercentage": 0.07,
+        "type": 1,
+        "amount": 635
+      },
+      {
+        "name": "Content Strategist",
+        "value": 744,
+        "taxPercentage": 0.16,
+        "type": 2,
+        "amount": 474
+      },
+      {
+        "name": "Human Resources Coordinator",
+        "value": 619,
+        "taxPercentage": 0.08,
+        "type": 3,
+        "amount": 137
+      },
+      {
+        "name": "Software Engineer",
+        "value": 435,
+        "taxPercentage": 0.05,
+        "type": 1,
+        "amount": 924
+      },
+      {
+        "name": "UX Researcher",
+        "value": 61,
+        "taxPercentage": 0.15,
+        "type": 2,
+        "amount": 515
+      },
+      {
+        "name": "Sales Representative",
+        "value": 495,
+        "taxPercentage": 0.09,
+        "type": 3,
+        "amount": 884
+      },
+      {
+        "name": "IT Manager",
+        "value": 445,
+        "taxPercentage": 0.07,
+        "type": 1,
+        "amount": 891
+      },
+      {
+        "name": "Financial Manager",
+        "value": 677,
+        "taxPercentage": 0.18,
+        "type": 2,
+        "amount": 194
+      },
+      {
+        "name": "Legal Secretary",
+        "value": 418,
+        "taxPercentage": 0.14,
+        "type": 3,
+        "amount": 554
+      },
+      {
+        "name": "SEO Specialist",
+        "value": 206,
+        "taxPercentage": 0.12,
+        "type": 1,
+        "amount": 362
+      },
+      {
+        "name": "HR Specialist",
+        "value": 954,
+        "taxPercentage": 0.06,
+        "type": 2,
+        "amount": 146
+      },
+      {
+        "name": "Technical Support Engineer",
+        "value": 239,
+        "taxPercentage": 0.1,
+        "type": 3,
+        "amount": 722
+      },
+      {
+        "name": "Event Coordinator",
+        "value": 863,
+        "taxPercentage": 0.16,
+        "type": 1,
+        "amount": 307
+      },
+      {
+        "name": "Marketing Manager",
+        "value": 976,
+        "taxPercentage": 0.13,
+        "type": 2,
+        "amount": 329
+      },
+      {
+        "name": "Technical Consultant",
+        "value": 219,
+        "taxPercentage": 0.05,
+        "type": 3,
+        "amount": 309
+      },
+      {
+        "name": "Financial Planner",
+        "value": 295,
+        "taxPercentage": 0.08,
+        "type": 1,
+        "amount": 218
+      },
+      {
+        "name": "Accounting Clerk",
+        "value": 456,
+        "taxPercentage": 0.1,
+        "type": 2,
+        "amount": 91
+      },
+      {
+        "name": "Business Development Manager",
+        "value": 673,
+        "taxPercentage": 0.11,
+        "type": 3,
+        "amount": 784
+      },
+      {
+        "name": "Customer Experience Manager",
+        "value": 389,
+        "taxPercentage": 0.07,
+        "type": 1,
+        "amount": 377
+      },
+      {
+        "name": "Technical Recruiter",
+        "value": 511,
+        "taxPercentage": 0.17,
+        "type": 2,
+        "amount": 307
+      },
+      {
+        "name": "IT Support Specialist",
+        "value": 886,
+        "taxPercentage": 0.06,
+        "type": 3,
+        "amount": 582
+      },
+      {
+        "name": "Sales Manager",
+        "value": 703,
+        "taxPercentage": 0.16,
+        "type": 2,
+        "amount": 219
+      },
+      {
+        "name": "Technical Writer",
+        "value": 330,
+        "taxPercentage": 0.07,
+        "type": 3,
+        "amount": 422
+      },
+      {
+        "name": "Software Developer",
+        "value": 411,
+        "taxPercentage": 0.15,
+        "type": 1,
+        "amount": 794
+      },
+      {
+        "name": "Project Manager",
+        "value": 402,
+        "taxPercentage": 0.18,
+        "type": 2,
+        "amount": 196
+      },
+      {
+        "name": "Financial Analyst",
+        "value": 77,
+        "taxPercentage": 0.11,
+        "type": 3,
+        "amount": 540
+      },
+      {
+        "name": "Human Resources Manager",
+        "value": 841,
+        "taxPercentage": 0.08,
+        "type": 2,
+        "amount": 46
+      },
+      {
+        "name": "Web Developer",
+        "value": 480,
+        "taxPercentage": 0.05,
+        "type": 1,
+        "amount": 610
+      },
+      {
+        "name": "Content Writer",
+        "value": 438,
+        "taxPercentage": 0.17,
+        "type": 2,
+        "amount": 484
+      },
+      {
+        "name": "Product Manager",
+        "value": 972,
+        "taxPercentage": 0.13,
+        "type": 3,
+        "amount": 950
+      },
+      {
+        "name": "Data Analyst",
+        "value": 618,
+        "taxPercentage": 0.12,
+        "type": 1,
+        "amount": 375
+      },
+      {
+        "name": "Social Media Manager",
+        "value": 641,
+        "taxPercentage": 0.09,
+        "type": 2,
+        "amount": 97
+      },
+      {
+        "name": "IT Technician",
+        "value": 53,
+        "taxPercentage": 0.06,
+        "type": 1,
+        "amount": 399
+      },
+      {
+        "name": "Customer Service Representative",
+        "value": 178,
+        "taxPercentage": 0.1,
+        "type": 3,
+        "amount": 752
+      },
+      {
+        "name": "Marketing Specialist",
+        "value": 221,
+        "taxPercentage": 0.15,
+        "type": 1,
+        "amount": 458
+      },
+      {
+        "name": "Quality Assurance Analyst",
+        "value": 671,
+        "taxPercentage": 0.14,
+        "type": 2,
+        "amount": 238
+      },
+      {
+        "name": "Legal Assistant",
+        "value": 928,
+        "taxPercentage": 0.1,
+        "type": 1,
+        "amount": 651
+      },
+      {
+        "name": "Graphic Designer",
+        "value": 426,
+        "taxPercentage": 0.07,
+        "type": 2,
+        "amount": 865
+      },
+      {
+        "name": "Systems Analyst",
+        "value": 327,
+        "taxPercentage": 0.16,
+        "type": 3,
+        "amount": 373
+      },
+      {
+        "name": "Network Administrator",
+        "value": 588,
+        "taxPercentage": 0.09,
+        "type": 2,
+        "amount": 731
+      },
+      {
+        "name": "Accountant",
+        "value": 732,
+        "taxPercentage": 0.1,
+        "type": 1,
+        "amount": 504
+      },
+      {
+        "name": "Customer Success Manager",
+        "value": 792,
+        "taxPercentage": 0.05,
+        "type": 3,
+        "amount": 863
+      },
+      {
+        "name": "UX Designer",
+        "value": 183,
+        "taxPercentage": 0.08,
+        "type": 1,
+        "amount": 157
+      },
+      {
+        "name": "Recruiter",
+        "value": 71,
+        "taxPercentage": 0.11,
+        "type": 2,
+        "amount": 514
+      },
+      {
+        "name": "Digital Marketing Specialist",
+        "value": 475,
+        "taxPercentage": 0.13,
+        "type": 3,
+        "amount": 368
+      },
+      {
+        "name": "Database Administrator",
+        "value": 550,
+        "taxPercentage": 0.07,
+        "type": 1,
+        "amount": 28
+      },
+      {
+        "name": "Training Specialist",
+        "value": 983,
+        "taxPercentage": 0.06,
+        "type": 2,
+        "amount": 693
+      },
+      {
+        "name": "Account Manager",
+        "value": 295,
+        "taxPercentage": 0.15,
+        "type": 1,
+        "amount": 262
+      },
+      {
+        "name": "Event Planner",
+        "value": 467,
+        "taxPercentage": 0.17,
+        "type": 2,
+        "amount": 978
+      },
+      {
+        "name": "Executive Assistant",
+        "value": 142,
+        "taxPercentage": 0.14,
+        "type": 3,
+        "amount": 906
+      },
+      {
+        "name": "Business Analyst",
+        "value": 797,
+        "taxPercentage": 0.16,
+        "type": 1,
+        "amount": 814
+      },
+      {
+        "name": "Data Scientist",
+        "value": 239,
+        "taxPercentage": 0.05,
+        "type": 2,
+        "amount": 700
+      },
+      {
+        "name": "Customer Support Specialist",
+        "value": 636,
+        "taxPercentage": 0.07,
+        "type": 1,
+        "amount": 343
+      },
+      {
+        "name": "Operations Manager",
+        "value": 220,
+        "taxPercentage": 0.18,
+        "type": 3,
+        "amount": 826
+      },
+      {
+        "name": "Content Strategist",
+        "value": 491,
+        "taxPercentage": 0.1,
+        "type": 1,
+        "amount": 252
+      },
+      {
+        "name": "Human Resources Coordinator",
+        "value": 151,
+        "taxPercentage": 0.13,
+        "type": 2,
+        "amount": 426
+      },
+      {
+        "name": "Software Engineer",
+        "value": 308,
+        "taxPercentage": 0.06,
+        "type": 1,
+        "amount": 139
+      },
+      {
+        "name": "UX Researcher",
+        "value": 153,
+        "taxPercentage": 0.08,
+        "type": 3,
+        "amount": 697
+      },
+      {
+        "name": "Sales Representative",
+        "value": 822,
+        "taxPercentage": 0.05,
+        "type": 2,
+        "amount": 900
+      },
+      {
+        "name": "IT Manager",
+        "value": 226,
+        "taxPercentage": 0.09,
+        "type": 1,
+        "amount": 220
+      },
+      {
+        "name": "Financial Manager",
+        "value": 754,
+        "taxPercentage": 0.1,
+        "type": 3,
+        "amount": 672
+      },
+      {
+        "name": "Legal Secretary",
+        "value": 511,
+        "taxPercentage": 0.07,
+        "type": 1,
+        "amount": 445
+      },
+      {
+        "name": "SEO Specialist",
+        "value": 748,
+        "taxPercentage": 0.11,
+        "type": 2,
+        "amount": 330
+      },
+      {
+        "name": "HR Specialist",
+        "value": 390,
+        "taxPercentage": 0.14,
+        "type": 3,
+        "amount": 476
+      },
+      {
+        "name": "Technical Support Engineer",
+        "value": 878,
+        "taxPercentage": 0.08,
+        "type": 1,
+        "amount": 683
+      },
+      {
+        "name": "Event Coordinator",
+        "value": 671,
+        "taxPercentage": 0.16,
+        "type": 2,
+        "amount": 795
+      },
+      {
+        "name": "Marketing Manager",
+        "value": 575,
+        "taxPercentage": 0.18,
+        "type": 1,
+        "amount": 192
+      },
+      {
+        "name": "Technical Consultant",
+        "value": 930,
+        "taxPercentage": 0.15,
+        "type": 2,
+        "amount": 99
+      },
+      {
+        "name": "Financial Planner",
+        "value": 458,
+        "taxPercentage": 0.07,
+        "type": 1,
+        "amount": 329
+      },
+      {
+        "name": "Accounting Clerk",
+        "value": 643,
+        "taxPercentage": 0.1,
+        "type": 3,
+        "amount": 588
+      },
+      {
+        "name": "Business Development Manager",
+        "value": 673,
+        "taxPercentage": 0.16,
+        "type": 2,
+        "amount": 60
+      },
+      {
+        "name": "Customer Experience Manager",
+        "value": 197,
+        "taxPercentage": 0.09,
+        "type": 1,
+        "amount": 566
+      },
+      {
+        "name": "Technical Recruiter",
+        "value": 507,
+        "taxPercentage": 0.05,
+        "type": 2,
+        "amount": 905
+      },
+      {
+        "name": "IT Support Specialist",
+        "value": 800,
+        "taxPercentage": 0.18,
+        "type": 3,
+        "amount": 286
+      },
+      {
+        "name": "Content Manager",
+        "value": 629,
+        "taxPercentage": 0.11,
+        "type": 1,
+        "amount": 675
+      },
+      {
+        "name": "Business Manager",
+        "value": 744,
+        "taxPercentage": 0.07,
+        "type": 2,
+        "amount": 188
+      },
+      {
+        "name": "Marketing Coordinator",
+        "value": 879,
+        "taxPercentage": 0.06,
+        "type": 1,
+        "amount": 414
+      },
+      {
+        "name": "Finance Manager",
+        "value": 678,
+        "taxPercentage": 0.09,
+        "type": 3,
+        "amount": 70
+      },
+      {
+        "name": "HR Coordinator",
+        "value": 152,
+        "taxPercentage": 0.17,
+        "type": 2,
+        "amount": 452
+      },
+      {
+        "name": "IT Analyst",
+        "value": 943,
+        "taxPercentage": 0.05,
+        "type": 1,
+        "amount": 614
+      },
+      {
+        "name": "Social Media Coordinator",
+        "value": 664,
+        "taxPercentage": 0.12,
+        "type": 3,
+        "amount": 268
+      },
+      {
+        "name": "Business Consultant",
+        "value": 518,
+        "taxPercentage": 0.1,
+        "type": 1,
+        "amount": 18
+      },
+      {
+        "name": "Technical Account Manager",
+        "value": 457,
+        "taxPercentage": 0.16,
+        "type": 2,
+        "amount": 702
+      },
+      {
+        "name": "Business Development Specialist",
+        "value": 385,
+        "taxPercentage": 0.08,
+        "type": 3,
+        "amount": 169
+      },
+      {
+        "name": "Accounting Manager",
+        "value": 840,
+        "taxPercentage": 0.11,
+        "type": 1,
+        "amount": 407
+      },
+      {
+        "name": "Data Entry Clerk",
+        "value": 149,
+        "taxPercentage": 0.07,
+        "type": 2,
+        "amount": 454
+      },
+      {
+        "name": "HR Generalist",
+        "value": 343,
+        "taxPercentage": 0.15,
+        "type": 1,
+        "amount": 498
+      },
+      {
+        "name": "Marketing Analyst",
+        "value": 768,
+        "taxPercentage": 0.05,
+        "type": 3,
+        "amount": 526
+      },
+      {
+        "name": "IT Specialist",
+        "value": 919,
+        "taxPercentage": 0.07,
+        "type": 1,
+        "amount": 97
+      },
+      {
+        "name": "Digital Marketing Coordinator",
+        "value": 703,
+        "taxPercentage": 0.13,
+        "type": 2,
+        "amount": 437
+      },
+      {
+        "name": "Technical Trainer",
+        "value": 732,
+        "taxPercentage": 0.17,
+        "type": 3,
+        "amount": 42
+      },
+      {
+        "name": "Financial Consultant",
+        "value": 79,
+        "taxPercentage": 0.16,
+        "type": 1,
+        "amount": 53
+      },
+      {
+        "name": "IT Director",
+        "value": 311,
+        "taxPercentage": 0.1,
+        "type": 2,
+        "amount": 703
+      },
+      {
+        "name": "Recruitment Consultant",
+        "value": 903,
+        "taxPercentage": 0.08,
+        "type": 1,
+        "amount": 511
+      },
+      {
+        "name": "Financial Controller",
+        "value": 683,
+        "taxPercentage": 0.09,
+        "type": 3,
+        "amount": 52
+      },
+      {
+        "name": "HR Manager",
+        "value": 314,
+        "taxPercentage": 0.14,
+        "type": 1,
+        "amount": 929
+      },
+      {
+        "name": "Digital Marketing Manager",
+        "value": 634,
+        "taxPercentage": 0.05,
+        "type": 2,
+        "amount": 594
+      },
+      {
+        "name": "Accounting Assistant",
+        "value": 378,
+        "taxPercentage": 0.06,
+        "type": 3,
+        "amount": 829
+      },
+      {
+        "name": "Sales Consultant",
+        "value": 108,
+        "taxPercentage": 0.07,
+        "type": 1,
+        "amount": 193
+      },
+      {
+        "name": "Technical Writer",
+        "value": 539,
+        "taxPercentage": 0.15,
+        "type": 2,
+        "amount": 784
+      },
+      {
+        "name": "Software Developer",
+        "value": 105,
+        "taxPercentage": 0.08,
+        "type": 3,
+        "amount": 648
+      },
+      {
+        "name": "Project Manager",
+        "value": 784,
+        "taxPercentage": 0.06,
+        "type": 1,
+        "amount": 56
+      },
+      {
+        "name": "Financial Analyst",
+        "value": 646,
+        "taxPercentage": 0.1,
+        "type": 2,
+        "amount": 108
+      },
+      {
+        "name": "Human Resources Manager",
+        "value": 869,
+        "taxPercentage": 0.17,
+        "type": 3,
+        "amount": 369
+      },
+      {
+        "name": "Web Developer",
+        "value": 893,
+        "taxPercentage": 0.18,
+        "type": 1,
+        "amount": 315
+      },
+      {
+        "name": "Content Writer",
+        "value": 530,
+        "taxPercentage": 0.09,
+        "type": 2,
+        "amount": 102
+      },
+      {
+        "name": "Product Manager",
+        "value": 611,
+        "taxPercentage": 0.05,
+        "type": 3,
+        "amount": 72
+      },
+      {
+        "name": "Data Analyst",
+        "value": 62,
+        "taxPercentage": 0.11,
+        "type": 1,
+        "amount": 615
+      },
+      {
+        "name": "Social Media Manager",
+        "value": 502,
+        "taxPercentage": 0.1,
+        "type": 2,
+        "amount": 241
+      },
+      {
+        "name": "IT Technician",
+        "value": 630,
+        "taxPercentage": 0.16,
+        "type": 3,
+        "amount": 450
+      },
+      {
+        "name": "Customer Service Representative",
+        "value": 518,
+        "taxPercentage": 0.07,
+        "type": 1,
+        "amount": 484
+      },
+      {
+        "name": "Marketing Specialist",
+        "value": 356,
+        "taxPercentage": 0.15,
+        "type": 2,
+        "amount": 607
+      },
+      {
+        "name": "Quality Assurance Analyst",
+        "value": 686,
+        "taxPercentage": 0.18,
+        "type": 3,
+        "amount": 986
+      },
+      {
+        "name": "Legal Assistant",
+        "value": 636,
+        "taxPercentage": 0.09,
+        "type": 1,
+        "amount": 92
+      },
+      {
+        "name": "Graphic Designer",
+        "value": 547,
+        "taxPercentage": 0.16,
+        "type": 2,
+        "amount": 131
+      },
+      {
+        "name": "Systems Analyst",
+        "value": 81,
+        "taxPercentage": 0.07,
+        "type": 3,
+        "amount": 45
+      },
+      {
+        "name": "Network Administrator",
+        "value": 291,
+        "taxPercentage": 0.06,
+        "type": 1,
+        "amount": 133
+      },
+      {
+        "name": "Accountant",
+        "value": 294,
+        "taxPercentage": 0.18,
+        "type": 2,
+        "amount": 622
+      },
+      {
+        "name": "Customer Success Manager",
+        "value": 821,
+        "taxPercentage": 0.09,
+        "type": 3,
+        "amount": 979
+      },
+      {
+        "name": "UX Designer",
+        "value": 366,
+        "taxPercentage": 0.1,
+        "type": 1,
+        "amount": 378
+      },
+      {
+        "name": "Recruiter",
+        "value": 202,
+        "taxPercentage": 0.11,
+        "type": 2,
+        "amount": 236
+      },
+      {
+        "name": "Digital Marketing Specialist",
+        "value": 455,
+        "taxPercentage": 0.16,
+        "type": 1,
+        "amount": 827
+      },
+      {
+        "name": "Database Administrator",
+        "value": 812,
+        "taxPercentage": 0.05,
+        "type": 2,
+        "amount": 481
+      },
+      {
+        "name": "Training Specialist",
+        "value": 329,
+        "taxPercentage": 0.08,
+        "type": 3,
+        "amount": 199
+      },
+      {
+        "name": "Account Manager",
+        "value": 866,
+        "taxPercentage": 0.13,
+        "type": 1,
+        "amount": 511
+      },
+      {
+        "name": "Event Planner",
+        "value": 341,
+        "taxPercentage": 0.1,
+        "type": 2,
+        "amount": 151
+      },
+      {
+        "name": "Executive Assistant",
+        "value": 830,
+        "taxPercentage": 0.14,
+        "type": 3,
+        "amount": 675
+      },
+      {
+        "name": "Business Analyst",
+        "value": 653,
+        "taxPercentage": 0.09,
+        "type": 1,
+        "amount": 730
+      },
+      {
+        "name": "Data Scientist",
+        "value": 126,
+        "taxPercentage": 0.05,
+        "type": 2,
+        "amount": 702
+      },
+      {
+        "name": "Customer Support Specialist",
+        "value": 681,
+        "taxPercentage": 0.18,
+        "type": 3,
+        "amount": 95
+      },
+      {
+        "name": "Operations Manager",
+        "value": 762,
+        "taxPercentage": 0.07,
+        "type": 1,
+        "amount": 635
+      },
+      {
+        "name": "Content Strategist",
+        "value": 744,
+        "taxPercentage": 0.16,
+        "type": 2,
+        "amount": 474
+      },
+      {
+        "name": "Human Resources Coordinator",
+        "value": 619,
+        "taxPercentage": 0.08,
+        "type": 3,
+        "amount": 137
+      },
+      {
+        "name": "Software Engineer",
+        "value": 435,
+        "taxPercentage": 0.05,
+        "type": 1,
+        "amount": 924
+      },
+      {
+        "name": "UX Researcher",
+        "value": 61,
+        "taxPercentage": 0.15,
+        "type": 2,
+        "amount": 515
+      },
+      {
+        "name": "Sales Representative",
+        "value": 495,
+        "taxPercentage": 0.09,
+        "type": 3,
+        "amount": 884
+      },
+      {
+        "name": "IT Manager",
+        "value": 445,
+        "taxPercentage": 0.07,
+        "type": 1,
+        "amount": 891
+      },
+      {
+        "name": "Financial Manager",
+        "value": 677,
+        "taxPercentage": 0.18,
+        "type": 2,
+        "amount": 194
+      },
+      {
+        "name": "Legal Secretary",
+        "value": 418,
+        "taxPercentage": 0.14,
+        "type": 3,
+        "amount": 554
+      },
+      {
+        "name": "SEO Specialist",
+        "value": 206,
+        "taxPercentage": 0.12,
+        "type": 1,
+        "amount": 362
+      },
+      {
+        "name": "HR Specialist",
+        "value": 954,
+        "taxPercentage": 0.06,
+        "type": 2,
+        "amount": 146
+      },
+      {
+        "name": "Technical Support Engineer",
+        "value": 239,
+        "taxPercentage": 0.1,
+        "type": 3,
+        "amount": 722
+      },
+      {
+        "name": "Event Coordinator",
+        "value": 863,
+        "taxPercentage": 0.16,
+        "type": 1,
+        "amount": 307
+      },
+      {
+        "name": "Marketing Manager",
+        "value": 976,
+        "taxPercentage": 0.13,
+        "type": 2,
+        "amount": 329
+      },
+      {
+        "name": "Technical Consultant",
+        "value": 219,
+        "taxPercentage": 0.05,
+        "type": 3,
+        "amount": 309
+      },
+      {
+        "name": "Financial Planner",
+        "value": 295,
+        "taxPercentage": 0.08,
+        "type": 1,
+        "amount": 218
+      },
+      {
+        "name": "Accounting Clerk",
+        "value": 456,
+        "taxPercentage": 0.1,
+        "type": 2,
+        "amount": 91
+      },
+      {
+        "name": "Business Development Manager",
+        "value": 673,
+        "taxPercentage": 0.11,
+        "type": 3,
+        "amount": 784
+      },
+      {
+        "name": "Customer Experience Manager",
+        "value": 389,
+        "taxPercentage": 0.07,
+        "type": 1,
+        "amount": 377
+      },
+      {
+        "name": "Technical Recruiter",
+        "value": 511,
+        "taxPercentage": 0.17,
+        "type": 2,
+        "amount": 307
+      },
+      {
+        "name": "IT Support Specialist",
+        "value": 886,
+        "taxPercentage": 0.06,
+        "type": 3,
+        "amount": 582
+      },
+      {
+        "name": "Sales Manager",
+        "value": 703,
+        "taxPercentage": 0.16,
+        "type": 2,
+        "amount": 219
+      },
+      {
+        "name": "Technical Writer",
+        "value": 330,
+        "taxPercentage": 0.07,
+        "type": 3,
+        "amount": 422
+      },
+      {
+        "name": "Software Developer",
+        "value": 411,
+        "taxPercentage": 0.15,
+        "type": 1,
+        "amount": 794
+      },
+      {
+        "name": "Project Manager",
+        "value": 402,
+        "taxPercentage": 0.18,
+        "type": 2,
+        "amount": 196
+      },
+      {
+        "name": "Financial Analyst",
+        "value": 77,
+        "taxPercentage": 0.11,
+        "type": 3,
+        "amount": 540
+      },
+      {
+        "name": "Human Resources Manager",
+        "value": 841,
+        "taxPercentage": 0.08,
+        "type": 2,
+        "amount": 46
+      },
+      {
+        "name": "Web Developer",
+        "value": 480,
+        "taxPercentage": 0.05,
+        "type": 1,
+        "amount": 610
+      },
+      {
+        "name": "Content Writer",
+        "value": 438,
+        "taxPercentage": 0.17,
+        "type": 2,
+        "amount": 484
+      },
+      {
+        "name": "Product Manager",
+        "value": 972,
+        "taxPercentage": 0.13,
+        "type": 3,
+        "amount": 950
+      },
+      {
+        "name": "Data Analyst",
+        "value": 618,
+        "taxPercentage": 0.12,
+        "type": 1,
+        "amount": 375
+      },
+      {
+        "name": "Social Media Manager",
+        "value": 641,
+        "taxPercentage": 0.09,
+        "type": 2,
+        "amount": 97
+      },
+      {
+        "name": "IT Technician",
+        "value": 53,
+        "taxPercentage": 0.06,
+        "type": 1,
+        "amount": 399
+      },
+      {
+        "name": "Customer Service Representative",
+        "value": 178,
+        "taxPercentage": 0.1,
+        "type": 3,
+        "amount": 752
+      },
+      {
+        "name": "Marketing Specialist",
+        "value": 221,
+        "taxPercentage": 0.15,
+        "type": 1,
+        "amount": 458
+      },
+      {
+        "name": "Quality Assurance Analyst",
+        "value": 671,
+        "taxPercentage": 0.14,
+        "type": 2,
+        "amount": 238
+      },
+      {
+        "name": "Legal Assistant",
+        "value": 928,
+        "taxPercentage": 0.1,
+        "type": 1,
+        "amount": 651
+      },
+      {
+        "name": "Graphic Designer",
+        "value": 426,
+        "taxPercentage": 0.07,
+        "type": 2,
+        "amount": 865
+      },
+      {
+        "name": "Systems Analyst",
+        "value": 327,
+        "taxPercentage": 0.16,
+        "type": 3,
+        "amount": 373
+      },
+      {
+        "name": "Network Administrator",
+        "value": 588,
+        "taxPercentage": 0.09,
+        "type": 2,
+        "amount": 731
+      },
+      {
+        "name": "Accountant",
+        "value": 732,
+        "taxPercentage": 0.1,
+        "type": 1,
+        "amount": 504
+      },
+      {
+        "name": "Customer Success Manager",
+        "value": 792,
+        "taxPercentage": 0.05,
+        "type": 3,
+        "amount": 863
+      },
+      {
+        "name": "UX Designer",
+        "value": 183,
+        "taxPercentage": 0.08,
+        "type": 1,
+        "amount": 157
+      },
+      {
+        "name": "Recruiter",
+        "value": 71,
+        "taxPercentage": 0.11,
+        "type": 2,
+        "amount": 514
+      },
+      {
+        "name": "Digital Marketing Specialist",
+        "value": 475,
+        "taxPercentage": 0.13,
+        "type": 3,
+        "amount": 368
+      },
+      {
+        "name": "Database Administrator",
+        "value": 550,
+        "taxPercentage": 0.07,
+        "type": 1,
+        "amount": 28
+      },
+      {
+        "name": "Training Specialist",
+        "value": 983,
+        "taxPercentage": 0.06,
+        "type": 2,
+        "amount": 693
+      },
+      {
+        "name": "Account Manager",
+        "value": 295,
+        "taxPercentage": 0.15,
+        "type": 1,
+        "amount": 262
+      },
+      {
+        "name": "Event Planner",
+        "value": 467,
+        "taxPercentage": 0.17,
+        "type": 2,
+        "amount": 978
+      },
+      {
+        "name": "Executive Assistant",
+        "value": 142,
+        "taxPercentage": 0.14,
+        "type": 3,
+        "amount": 906
+      },
+      {
+        "name": "Business Analyst",
+        "value": 797,
+        "taxPercentage": 0.16,
+        "type": 1,
+        "amount": 814
+      },
+      {
+        "name": "Data Scientist",
+        "value": 239,
+        "taxPercentage": 0.05,
+        "type": 2,
+        "amount": 700
+      },
+      {
+        "name": "Customer Support Specialist",
+        "value": 636,
+        "taxPercentage": 0.07,
+        "type": 1,
+        "amount": 343
+      },
+      {
+        "name": "Operations Manager",
+        "value": 220,
+        "taxPercentage": 0.18,
+        "type": 3,
+        "amount": 826
+      },
+      {
+        "name": "Content Strategist",
+        "value": 491,
+        "taxPercentage": 0.1,
+        "type": 1,
+        "amount": 252
+      },
+      {
+        "name": "Human Resources Coordinator",
+        "value": 151,
+        "taxPercentage": 0.13,
+        "type": 2,
+        "amount": 426
+      },
+      {
+        "name": "Software Engineer",
+        "value": 308,
+        "taxPercentage": 0.06,
+        "type": 1,
+        "amount": 139
+      },
+      {
+        "name": "UX Researcher",
+        "value": 153,
+        "taxPercentage": 0.08,
+        "type": 3,
+        "amount": 697
+      },
+      {
+        "name": "Sales Representative",
+        "value": 822,
+        "taxPercentage": 0.05,
+        "type": 2,
+        "amount": 900
+      },
+      {
+        "name": "IT Manager",
+        "value": 226,
+        "taxPercentage": 0.09,
+        "type": 1,
+        "amount": 220
+      },
+      {
+        "name": "Financial Manager",
+        "value": 754,
+        "taxPercentage": 0.1,
+        "type": 3,
+        "amount": 672
+      },
+      {
+        "name": "Legal Secretary",
+        "value": 511,
+        "taxPercentage": 0.07,
+        "type": 1,
+        "amount": 445
+      },
+      {
+        "name": "SEO Specialist",
+        "value": 748,
+        "taxPercentage": 0.11,
+        "type": 2,
+        "amount": 330
+      },
+      {
+        "name": "HR Specialist",
+        "value": 390,
+        "taxPercentage": 0.14,
+        "type": 3,
+        "amount": 476
+      },
+      {
+        "name": "Technical Support Engineer",
+        "value": 878,
+        "taxPercentage": 0.08,
+        "type": 1,
+        "amount": 683
+      },
+      {
+        "name": "Event Coordinator",
+        "value": 671,
+        "taxPercentage": 0.16,
+        "type": 2,
+        "amount": 795
+      },
+      {
+        "name": "Marketing Manager",
+        "value": 575,
+        "taxPercentage": 0.18,
+        "type": 1,
+        "amount": 192
+      },
+      {
+        "name": "Technical Consultant",
+        "value": 930,
+        "taxPercentage": 0.15,
+        "type": 2,
+        "amount": 99
+      },
+      {
+        "name": "Financial Planner",
+        "value": 458,
+        "taxPercentage": 0.07,
+        "type": 1,
+        "amount": 329
+      },
+      {
+        "name": "Accounting Clerk",
+        "value": 643,
+        "taxPercentage": 0.1,
+        "type": 3,
+        "amount": 588
+      },
+      {
+        "name": "Business Development Manager",
+        "value": 673,
+        "taxPercentage": 0.16,
+        "type": 2,
+        "amount": 60
+      },
+      {
+        "name": "Customer Experience Manager",
+        "value": 197,
+        "taxPercentage": 0.09,
+        "type": 1,
+        "amount": 566
+      },
+      {
+        "name": "Technical Recruiter",
+        "value": 507,
+        "taxPercentage": 0.05,
+        "type": 2,
+        "amount": 905
+      },
+      {
+        "name": "IT Support Specialist",
+        "value": 800,
+        "taxPercentage": 0.18,
+        "type": 3,
+        "amount": 286
+      },
+      {
+        "name": "Content Manager",
+        "value": 629,
+        "taxPercentage": 0.11,
+        "type": 1,
+        "amount": 675
+      },
+      {
+        "name": "Business Manager",
+        "value": 744,
+        "taxPercentage": 0.07,
+        "type": 2,
+        "amount": 188
+      },
+      {
+        "name": "Marketing Coordinator",
+        "value": 879,
+        "taxPercentage": 0.06,
+        "type": 1,
+        "amount": 414
+      },
+      {
+        "name": "Finance Manager",
+        "value": 678,
+        "taxPercentage": 0.09,
+        "type": 3,
+        "amount": 70
+      },
+      {
+        "name": "HR Coordinator",
+        "value": 152,
+        "taxPercentage": 0.17,
+        "type": 2,
+        "amount": 452
+      },
+      {
+        "name": "IT Analyst",
+        "value": 943,
+        "taxPercentage": 0.05,
+        "type": 1,
+        "amount": 614
+      },
+      {
+        "name": "Social Media Coordinator",
+        "value": 664,
+        "taxPercentage": 0.12,
+        "type": 3,
+        "amount": 268
+      },
+      {
+        "name": "Business Consultant",
+        "value": 518,
+        "taxPercentage": 0.1,
+        "type": 1,
+        "amount": 18
+      },
+      {
+        "name": "Technical Account Manager",
+        "value": 457,
+        "taxPercentage": 0.16,
+        "type": 2,
+        "amount": 702
+      },
+      {
+        "name": "Business Development Specialist",
+        "value": 385,
+        "taxPercentage": 0.08,
+        "type": 3,
+        "amount": 169
+      },
+      {
+        "name": "Accounting Manager",
+        "value": 840,
+        "taxPercentage": 0.11,
+        "type": 1,
+        "amount": 407
+      },
+      {
+        "name": "Data Entry Clerk",
+        "value": 149,
+        "taxPercentage": 0.07,
+        "type": 2,
+        "amount": 454
+      },
+      {
+        "name": "HR Generalist",
+        "value": 343,
+        "taxPercentage": 0.15,
+        "type": 1,
+        "amount": 498
+      },
+      {
+        "name": "Marketing Analyst",
+        "value": 768,
+        "taxPercentage": 0.05,
+        "type": 3,
+        "amount": 526
+      },
+      {
+        "name": "IT Specialist",
+        "value": 919,
+        "taxPercentage": 0.07,
+        "type": 1,
+        "amount": 97
+      },
+      {
+        "name": "Digital Marketing Coordinator",
+        "value": 703,
+        "taxPercentage": 0.13,
+        "type": 2,
+        "amount": 437
+      },
+      {
+        "name": "Technical Trainer",
+        "value": 732,
+        "taxPercentage": 0.17,
+        "type": 3,
+        "amount": 42
+      },
+      {
+        "name": "Financial Consultant",
+        "value": 79,
+        "taxPercentage": 0.16,
+        "type": 1,
+        "amount": 53
+      },
+      {
+        "name": "IT Director",
+        "value": 311,
+        "taxPercentage": 0.1,
+        "type": 2,
+        "amount": 703
+      },
+      {
+        "name": "Recruitment Consultant",
+        "value": 903,
+        "taxPercentage": 0.08,
+        "type": 1,
+        "amount": 511
+      },
+      {
+        "name": "Financial Controller",
+        "value": 683,
+        "taxPercentage": 0.09,
+        "type": 3,
+        "amount": 52
+      },
+      {
+        "name": "HR Manager",
+        "value": 314,
+        "taxPercentage": 0.14,
+        "type": 1,
+        "amount": 929
+      },
+      {
+        "name": "Digital Marketing Manager",
+        "value": 634,
+        "taxPercentage": 0.05,
+        "type": 2,
+        "amount": 594
+      },
+      {
+        "name": "Accounting Assistant",
+        "value": 378,
+        "taxPercentage": 0.06,
+        "type": 3,
+        "amount": 829
+      },
+      {
+        "name": "Sales Consultant",
+        "value": 108,
+        "taxPercentage": 0.07,
+        "type": 1,
+        "amount": 193
+      },
+      {
+        "name": "Technical Writer",
+        "value": 539,
+        "taxPercentage": 0.15,
+        "type": 2,
+        "amount": 784
+      },
+      {
+        "name": "Software Developer",
+        "value": 105,
+        "taxPercentage": 0.08,
+        "type": 3,
+        "amount": 648
+      },
+      {
+        "name": "Project Manager",
+        "value": 784,
+        "taxPercentage": 0.06,
+        "type": 1,
+        "amount": 56
+      },
+      {
+        "name": "Financial Analyst",
+        "value": 646,
+        "taxPercentage": 0.1,
+        "type": 2,
+        "amount": 108
+      },
+      {
+        "name": "Human Resources Manager",
+        "value": 869,
+        "taxPercentage": 0.17,
+        "type": 3,
+        "amount": 369
+      },
+      {
+        "name": "Web Developer",
+        "value": 893,
+        "taxPercentage": 0.18,
+        "type": 1,
+        "amount": 315
+      },
+      {
+        "name": "Content Writer",
+        "value": 530,
+        "taxPercentage": 0.09,
+        "type": 2,
+        "amount": 102
+      },
+      {
+        "name": "Product Manager",
+        "value": 611,
+        "taxPercentage": 0.05,
+        "type": 3,
+        "amount": 72
+      },
+      {
+        "name": "Data Analyst",
+        "value": 62,
+        "taxPercentage": 0.11,
+        "type": 1,
+        "amount": 615
+      },
+      {
+        "name": "Social Media Manager",
+        "value": 502,
+        "taxPercentage": 0.1,
+        "type": 2,
+        "amount": 241
+      },
+      {
+        "name": "IT Technician",
+        "value": 630,
+        "taxPercentage": 0.16,
+        "type": 3,
+        "amount": 450
+      },
+      {
+        "name": "Customer Service Representative",
+        "value": 518,
+        "taxPercentage": 0.07,
+        "type": 1,
+        "amount": 484
+      },
+      {
+        "name": "Marketing Specialist",
+        "value": 356,
+        "taxPercentage": 0.15,
+        "type": 2,
+        "amount": 607
+      },
+      {
+        "name": "Quality Assurance Analyst",
+        "value": 686,
+        "taxPercentage": 0.18,
+        "type": 3,
+        "amount": 986
+      },
+      {
+        "name": "Legal Assistant",
+        "value": 636,
+        "taxPercentage": 0.09,
+        "type": 1,
+        "amount": 92
+      },
+      {
+        "name": "Graphic Designer",
+        "value": 547,
+        "taxPercentage": 0.16,
+        "type": 2,
+        "amount": 131
+      },
+      {
+        "name": "Systems Analyst",
+        "value": 81,
+        "taxPercentage": 0.07,
+        "type": 3,
+        "amount": 45
+      },
+      {
+        "name": "Network Administrator",
+        "value": 291,
+        "taxPercentage": 0.06,
+        "type": 1,
+        "amount": 133
+      },
+      {
+        "name": "Accountant",
+        "value": 294,
+        "taxPercentage": 0.18,
+        "type": 2,
+        "amount": 622
+      },
+      {
+        "name": "Customer Success Manager",
+        "value": 821,
+        "taxPercentage": 0.09,
+        "type": 3,
+        "amount": 979
+      },
+      {
+        "name": "UX Designer",
+        "value": 366,
+        "taxPercentage": 0.1,
+        "type": 1,
+        "amount": 378
+      },
+      {
+        "name": "Recruiter",
+        "value": 202,
+        "taxPercentage": 0.11,
+        "type": 2,
+        "amount": 236
+      },
+      {
+        "name": "Digital Marketing Specialist",
+        "value": 455,
+        "taxPercentage": 0.16,
+        "type": 1,
+        "amount": 827
+      },
+      {
+        "name": "Database Administrator",
+        "value": 812,
+        "taxPercentage": 0.05,
+        "type": 2,
+        "amount": 481
+      },
+      {
+        "name": "Training Specialist",
+        "value": 329,
+        "taxPercentage": 0.08,
+        "type": 3,
+        "amount": 199
+      },
+      {
+        "name": "Account Manager",
+        "value": 866,
+        "taxPercentage": 0.13,
+        "type": 1,
+        "amount": 511
+      },
+      {
+        "name": "Event Planner",
+        "value": 341,
+        "taxPercentage": 0.1,
+        "type": 2,
+        "amount": 151
+      },
+      {
+        "name": "Executive Assistant",
+        "value": 830,
+        "taxPercentage": 0.14,
+        "type": 3,
+        "amount": 675
+      },
+      {
+        "name": "Business Analyst",
+        "value": 653,
+        "taxPercentage": 0.09,
+        "type": 1,
+        "amount": 730
+      },
+      {
+        "name": "Data Scientist",
+        "value": 126,
+        "taxPercentage": 0.05,
+        "type": 2,
+        "amount": 702
+      },
+      {
+        "name": "Customer Support Specialist",
+        "value": 681,
+        "taxPercentage": 0.18,
+        "type": 3,
+        "amount": 95
+      },
+      {
+        "name": "Operations Manager",
+        "value": 762,
+        "taxPercentage": 0.07,
+        "type": 1,
+        "amount": 635
+      },
+      {
+        "name": "Content Strategist",
+        "value": 744,
+        "taxPercentage": 0.16,
+        "type": 2,
+        "amount": 474
+      },
+      {
+        "name": "Human Resources Coordinator",
+        "value": 619,
+        "taxPercentage": 0.08,
+        "type": 3,
+        "amount": 137
+      },
+      {
+        "name": "Software Engineer",
+        "value": 435,
+        "taxPercentage": 0.05,
+        "type": 1,
+        "amount": 924
+      },
+      {
+        "name": "UX Researcher",
+        "value": 61,
+        "taxPercentage": 0.15,
+        "type": 2,
+        "amount": 515
+      },
+      {
+        "name": "Sales Representative",
+        "value": 495,
+        "taxPercentage": 0.09,
+        "type": 3,
+        "amount": 884
+      },
+      {
+        "name": "IT Manager",
+        "value": 445,
+        "taxPercentage": 0.07,
+        "type": 1,
+        "amount": 891
+      },
+      {
+        "name": "Financial Manager",
+        "value": 677,
+        "taxPercentage": 0.18,
+        "type": 2,
+        "amount": 194
+      },
+      {
+        "name": "Legal Secretary",
+        "value": 418,
+        "taxPercentage": 0.14,
+        "type": 3,
+        "amount": 554
+      },
+      {
+        "name": "SEO Specialist",
+        "value": 206,
+        "taxPercentage": 0.12,
+        "type": 1,
+        "amount": 362
+      },
+      {
+        "name": "HR Specialist",
+        "value": 954,
+        "taxPercentage": 0.06,
+        "type": 2,
+        "amount": 146
+      },
+      {
+        "name": "Technical Support Engineer",
+        "value": 239,
+        "taxPercentage": 0.1,
+        "type": 3,
+        "amount": 722
+      },
+      {
+        "name": "Event Coordinator",
+        "value": 863,
+        "taxPercentage": 0.16,
+        "type": 1,
+        "amount": 307
+      },
+      {
+        "name": "Marketing Manager",
+        "value": 976,
+        "taxPercentage": 0.13,
+        "type": 2,
+        "amount": 329
+      },
+      {
+        "name": "Technical Consultant",
+        "value": 219,
+        "taxPercentage": 0.05,
+        "type": 3,
+        "amount": 309
+      },
+      {
+        "name": "Financial Planner",
+        "value": 295,
+        "taxPercentage": 0.08,
+        "type": 1,
+        "amount": 218
+      },
+      {
+        "name": "Accounting Clerk",
+        "value": 456,
+        "taxPercentage": 0.1,
+        "type": 2,
+        "amount": 91
+      },
+      {
+        "name": "Business Development Manager",
+        "value": 673,
+        "taxPercentage": 0.11,
+        "type": 3,
+        "amount": 784
+      },
+      {
+        "name": "Customer Experience Manager",
+        "value": 389,
+        "taxPercentage": 0.07,
+        "type": 1,
+        "amount": 377
+      },
+      {
+        "name": "Technical Recruiter",
+        "value": 511,
+        "taxPercentage": 0.17,
+        "type": 2,
+        "amount": 307
+      },
+      {
+        "name": "IT Support Specialist",
+        "value": 886,
+        "taxPercentage": 0.06,
+        "type": 3,
+        "amount": 582
+      },
+      {
+        "name": "Sales Manager",
+        "value": 703,
+        "taxPercentage": 0.16,
+        "type": 2,
+        "amount": 219
+      },
+      {
+        "name": "Technical Writer",
+        "value": 330,
+        "taxPercentage": 0.07,
+        "type": 3,
+        "amount": 422
+      },
+      {
+        "name": "Software Developer",
+        "value": 411,
+        "taxPercentage": 0.15,
+        "type": 1,
+        "amount": 794
+      },
+      {
+        "name": "Project Manager",
+        "value": 402,
+        "taxPercentage": 0.18,
+        "type": 2,
+        "amount": 196
+      },
+      {
+        "name": "Financial Analyst",
+        "value": 77,
+        "taxPercentage": 0.11,
+        "type": 3,
+        "amount": 540
+      },
+      {
+        "name": "Human Resources Manager",
+        "value": 841,
+        "taxPercentage": 0.08,
+        "type": 2,
+        "amount": 46
+      },
+      {
+        "name": "Web Developer",
+        "value": 480,
+        "taxPercentage": 0.05,
+        "type": 1,
+        "amount": 610
+      },
+      {
+        "name": "Content Writer",
+        "value": 438,
+        "taxPercentage": 0.17,
+        "type": 2,
+        "amount": 484
+      },
+      {
+        "name": "Product Manager",
+        "value": 972,
+        "taxPercentage": 0.13,
+        "type": 3,
+        "amount": 950
+      },
+      {
+        "name": "Data Analyst",
+        "value": 618,
+        "taxPercentage": 0.12,
+        "type": 1,
+        "amount": 375
+      },
+      {
+        "name": "Social Media Manager",
+        "value": 641,
+        "taxPercentage": 0.09,
+        "type": 2,
+        "amount": 97
+      },
+      {
+        "name": "IT Technician",
+        "value": 53,
+        "taxPercentage": 0.06,
+        "type": 1,
+        "amount": 399
+      },
+      {
+        "name": "Customer Service Representative",
+        "value": 178,
+        "taxPercentage": 0.1,
+        "type": 3,
+        "amount": 752
+      },
+      {
+        "name": "Marketing Specialist",
+        "value": 221,
+        "taxPercentage": 0.15,
+        "type": 1,
+        "amount": 458
+      },
+      {
+        "name": "Quality Assurance Analyst",
+        "value": 671,
+        "taxPercentage": 0.14,
+        "type": 2,
+        "amount": 238
+      },
+      {
+        "name": "Legal Assistant",
+        "value": 928,
+        "taxPercentage": 0.1,
+        "type": 1,
+        "amount": 651
+      },
+      {
+        "name": "Graphic Designer",
+        "value": 426,
+        "taxPercentage": 0.07,
+        "type": 2,
+        "amount": 865
+      },
+      {
+        "name": "Systems Analyst",
+        "value": 327,
+        "taxPercentage": 0.16,
+        "type": 3,
+        "amount": 373
+      },
+      {
+        "name": "Network Administrator",
+        "value": 588,
+        "taxPercentage": 0.09,
+        "type": 2,
+        "amount": 731
+      },
+      {
+        "name": "Accountant",
+        "value": 732,
+        "taxPercentage": 0.1,
+        "type": 1,
+        "amount": 504
+      },
+      {
+        "name": "Customer Success Manager",
+        "value": 792,
+        "taxPercentage": 0.05,
+        "type": 3,
+        "amount": 863
+      },
+      {
+        "name": "UX Designer",
+        "value": 183,
+        "taxPercentage": 0.08,
+        "type": 1,
+        "amount": 157
+      },
+      {
+        "name": "Recruiter",
+        "value": 71,
+        "taxPercentage": 0.11,
+        "type": 2,
+        "amount": 514
+      },
+      {
+        "name": "Digital Marketing Specialist",
+        "value": 475,
+        "taxPercentage": 0.13,
+        "type": 3,
+        "amount": 368
+      },
+      {
+        "name": "Database Administrator",
+        "value": 550,
+        "taxPercentage": 0.07,
+        "type": 1,
+        "amount": 28
+      },
+      {
+        "name": "Training Specialist",
+        "value": 983,
+        "taxPercentage": 0.06,
+        "type": 2,
+        "amount": 693
+      },
+      {
+        "name": "Account Manager",
+        "value": 295,
+        "taxPercentage": 0.15,
+        "type": 1,
+        "amount": 262
+      },
+      {
+        "name": "Event Planner",
+        "value": 467,
+        "taxPercentage": 0.17,
+        "type": 2,
+        "amount": 978
+      },
+      {
+        "name": "Executive Assistant",
+        "value": 142,
+        "taxPercentage": 0.14,
+        "type": 3,
+        "amount": 906
+      },
+      {
+        "name": "Business Analyst",
+        "value": 797,
+        "taxPercentage": 0.16,
+        "type": 1,
+        "amount": 814
+      },
+      {
+        "name": "Data Scientist",
+        "value": 239,
+        "taxPercentage": 0.05,
+        "type": 2,
+        "amount": 700
+      },
+      {
+        "name": "Customer Support Specialist",
+        "value": 636,
+        "taxPercentage": 0.07,
+        "type": 1,
+        "amount": 343
+      },
+      {
+        "name": "Operations Manager",
+        "value": 220,
+        "taxPercentage": 0.18,
+        "type": 3,
+        "amount": 826
+      },
+      {
+        "name": "Content Strategist",
+        "value": 491,
+        "taxPercentage": 0.1,
+        "type": 1,
+        "amount": 252
+      },
+      {
+        "name": "Human Resources Coordinator",
+        "value": 151,
+        "taxPercentage": 0.13,
+        "type": 2,
+        "amount": 426
+      },
+      {
+        "name": "Software Engineer",
+        "value": 308,
+        "taxPercentage": 0.06,
+        "type": 1,
+        "amount": 139
+      },
+      {
+        "name": "UX Researcher",
+        "value": 153,
+        "taxPercentage": 0.08,
+        "type": 3,
+        "amount": 697
+      },
+      {
+        "name": "Sales Representative",
+        "value": 822,
+        "taxPercentage": 0.05,
+        "type": 2,
+        "amount": 900
+      },
+      {
+        "name": "IT Manager",
+        "value": 226,
+        "taxPercentage": 0.09,
+        "type": 1,
+        "amount": 220
+      },
+      {
+        "name": "Financial Manager",
+        "value": 754,
+        "taxPercentage": 0.1,
+        "type": 3,
+        "amount": 672
+      },
+      {
+        "name": "Legal Secretary",
+        "value": 511,
+        "taxPercentage": 0.07,
+        "type": 1,
+        "amount": 445
+      },
+      {
+        "name": "SEO Specialist",
+        "value": 748,
+        "taxPercentage": 0.11,
+        "type": 2,
+        "amount": 330
+      },
+      {
+        "name": "HR Specialist",
+        "value": 390,
+        "taxPercentage": 0.14,
+        "type": 3,
+        "amount": 476
+      },
+      {
+        "name": "Technical Support Engineer",
+        "value": 878,
+        "taxPercentage": 0.08,
+        "type": 1,
+        "amount": 683
+      },
+      {
+        "name": "Event Coordinator",
+        "value": 671,
+        "taxPercentage": 0.16,
+        "type": 2,
+        "amount": 795
+      },
+      {
+        "name": "Marketing Manager",
+        "value": 575,
+        "taxPercentage": 0.18,
+        "type": 1,
+        "amount": 192
+      },
+      {
+        "name": "Technical Consultant",
+        "value": 930,
+        "taxPercentage": 0.15,
+        "type": 2,
+        "amount": 99
+      },
+      {
+        "name": "Financial Planner",
+        "value": 458,
+        "taxPercentage": 0.07,
+        "type": 1,
+        "amount": 329
+      },
+      {
+        "name": "Accounting Clerk",
+        "value": 643,
+        "taxPercentage": 0.1,
+        "type": 3,
+        "amount": 588
+      },
+      {
+        "name": "Business Development Manager",
+        "value": 673,
+        "taxPercentage": 0.16,
+        "type": 2,
+        "amount": 60
+      },
+      {
+        "name": "Customer Experience Manager",
+        "value": 197,
+        "taxPercentage": 0.09,
+        "type": 1,
+        "amount": 566
+      },
+      {
+        "name": "Technical Recruiter",
+        "value": 507,
+        "taxPercentage": 0.05,
+        "type": 2,
+        "amount": 905
+      },
+      {
+        "name": "IT Support Specialist",
+        "value": 800,
+        "taxPercentage": 0.18,
+        "type": 3,
+        "amount": 286
+      },
+      {
+        "name": "Content Manager",
+        "value": 629,
+        "taxPercentage": 0.11,
+        "type": 1,
+        "amount": 675
+      },
+      {
+        "name": "Business Manager",
+        "value": 744,
+        "taxPercentage": 0.07,
+        "type": 2,
+        "amount": 188
+      },
+      {
+        "name": "Marketing Coordinator",
+        "value": 879,
+        "taxPercentage": 0.06,
+        "type": 1,
+        "amount": 414
+      },
+      {
+        "name": "Finance Manager",
+        "value": 678,
+        "taxPercentage": 0.09,
+        "type": 3,
+        "amount": 70
+      },
+      {
+        "name": "HR Coordinator",
+        "value": 152,
+        "taxPercentage": 0.17,
+        "type": 2,
+        "amount": 452
+      },
+      {
+        "name": "IT Analyst",
+        "value": 943,
+        "taxPercentage": 0.05,
+        "type": 1,
+        "amount": 614
+      },
+      {
+        "name": "Social Media Coordinator",
+        "value": 664,
+        "taxPercentage": 0.12,
+        "type": 3,
+        "amount": 268
+      },
+      {
+        "name": "Business Consultant",
+        "value": 518,
+        "taxPercentage": 0.1,
+        "type": 1,
+        "amount": 18
+      },
+      {
+        "name": "Technical Account Manager",
+        "value": 457,
+        "taxPercentage": 0.16,
+        "type": 2,
+        "amount": 702
+      },
+      {
+        "name": "Business Development Specialist",
+        "value": 385,
+        "taxPercentage": 0.08,
+        "type": 3,
+        "amount": 169
+      },
+      {
+        "name": "Accounting Manager",
+        "value": 840,
+        "taxPercentage": 0.11,
+        "type": 1,
+        "amount": 407
+      },
+      {
+        "name": "Data Entry Clerk",
+        "value": 149,
+        "taxPercentage": 0.07,
+        "type": 2,
+        "amount": 454
+      },
+      {
+        "name": "HR Generalist",
+        "value": 343,
+        "taxPercentage": 0.15,
+        "type": 1,
+        "amount": 498
+      },
+      {
+        "name": "Marketing Analyst",
+        "value": 768,
+        "taxPercentage": 0.05,
+        "type": 3,
+        "amount": 526
+      },
+      {
+        "name": "IT Specialist",
+        "value": 919,
+        "taxPercentage": 0.07,
+        "type": 1,
+        "amount": 97
+      },
+      {
+        "name": "Digital Marketing Coordinator",
+        "value": 703,
+        "taxPercentage": 0.13,
+        "type": 2,
+        "amount": 437
+      },
+      {
+        "name": "Technical Trainer",
+        "value": 732,
+        "taxPercentage": 0.17,
+        "type": 3,
+        "amount": 42
+      },
+      {
+        "name": "Financial Consultant",
+        "value": 79,
+        "taxPercentage": 0.16,
+        "type": 1,
+        "amount": 53
+      },
+      {
+        "name": "IT Director",
+        "value": 311,
+        "taxPercentage": 0.1,
+        "type": 2,
+        "amount": 703
+      },
+      {
+        "name": "Recruitment Consultant",
+        "value": 903,
+        "taxPercentage": 0.08,
+        "type": 1,
+        "amount": 511
+      },
+      {
+        "name": "Financial Controller",
+        "value": 683,
+        "taxPercentage": 0.09,
+        "type": 3,
+        "amount": 52
+      },
+      {
+        "name": "HR Manager",
+        "value": 314,
+        "taxPercentage": 0.14,
+        "type": 1,
+        "amount": 929
+      },
+      {
+        "name": "Digital Marketing Manager",
+        "value": 634,
+        "taxPercentage": 0.05,
+        "type": 2,
+        "amount": 594
+      },
+      {
+        "name": "Accounting Assistant",
+        "value": 378,
+        "taxPercentage": 0.06,
+        "type": 3,
+        "amount": 829
+      },
+      {
+        "name": "Sales Consultant",
+        "value": 108,
+        "taxPercentage": 0.07,
+        "type": 1,
+        "amount": 193
+      },
+      {
+        "name": "Technical Writer",
+        "value": 539,
+        "taxPercentage": 0.15,
+        "type": 2,
+        "amount": 784
+      },
+      {
+        "name": "Software Developer",
+        "value": 105,
+        "taxPercentage": 0.08,
+        "type": 3,
+        "amount": 648
+      },
+      {
+        "name": "Project Manager",
+        "value": 784,
+        "taxPercentage": 0.06,
+        "type": 1,
+        "amount": 56
+      },
+      {
+        "name": "Financial Analyst",
+        "value": 646,
+        "taxPercentage": 0.1,
+        "type": 2,
+        "amount": 108
+      },
+      {
+        "name": "Human Resources Manager",
+        "value": 869,
+        "taxPercentage": 0.17,
+        "type": 3,
+        "amount": 369
+      },
+      {
+        "name": "Web Developer",
+        "value": 893,
+        "taxPercentage": 0.18,
+        "type": 1,
+        "amount": 315
+      },
+      {
+        "name": "Content Writer",
+        "value": 530,
+        "taxPercentage": 0.09,
+        "type": 2,
+        "amount": 102
+      },
+      {
+        "name": "Product Manager",
+        "value": 611,
+        "taxPercentage": 0.05,
+        "type": 3,
+        "amount": 72
+      },
+      {
+        "name": "Data Analyst",
+        "value": 62,
+        "taxPercentage": 0.11,
+        "type": 1,
+        "amount": 615
+      },
+      {
+        "name": "Social Media Manager",
+        "value": 502,
+        "taxPercentage": 0.1,
+        "type": 2,
+        "amount": 241
+      },
+      {
+        "name": "IT Technician",
+        "value": 630,
+        "taxPercentage": 0.16,
+        "type": 3,
+        "amount": 450
+      },
+      {
+        "name": "Customer Service Representative",
+        "value": 518,
+        "taxPercentage": 0.07,
+        "type": 1,
+        "amount": 484
+      },
+      {
+        "name": "Marketing Specialist",
+        "value": 356,
+        "taxPercentage": 0.15,
+        "type": 2,
+        "amount": 607
+      },
+      {
+        "name": "Quality Assurance Analyst",
+        "value": 686,
+        "taxPercentage": 0.18,
+        "type": 3,
+        "amount": 986
+      },
+      {
+        "name": "Legal Assistant",
+        "value": 636,
+        "taxPercentage": 0.09,
+        "type": 1,
+        "amount": 92
+      },
+      {
+        "name": "Graphic Designer",
+        "value": 547,
+        "taxPercentage": 0.16,
+        "type": 2,
+        "amount": 131
+      },
+      {
+        "name": "Systems Analyst",
+        "value": 81,
+        "taxPercentage": 0.07,
+        "type": 3,
+        "amount": 45
+      },
+      {
+        "name": "Network Administrator",
+        "value": 291,
+        "taxPercentage": 0.06,
+        "type": 1,
+        "amount": 133
+      },
+      {
+        "name": "Accountant",
+        "value": 294,
+        "taxPercentage": 0.18,
+        "type": 2,
+        "amount": 622
+      },
+      {
+        "name": "Customer Success Manager",
+        "value": 821,
+        "taxPercentage": 0.09,
+        "type": 3,
+        "amount": 979
+      },
+      {
+        "name": "UX Designer",
+        "value": 366,
+        "taxPercentage": 0.1,
+        "type": 1,
+        "amount": 378
+      },
+      {
+        "name": "Recruiter",
+        "value": 202,
+        "taxPercentage": 0.11,
+        "type": 2,
+        "amount": 236
+      },
+      {
+        "name": "Digital Marketing Specialist",
+        "value": 455,
+        "taxPercentage": 0.16,
+        "type": 1,
+        "amount": 827
+      },
+      {
+        "name": "Database Administrator",
+        "value": 812,
+        "taxPercentage": 0.05,
+        "type": 2,
+        "amount": 481
+      },
+      {
+        "name": "Training Specialist",
+        "value": 329,
+        "taxPercentage": 0.08,
+        "type": 3,
+        "amount": 199
+      },
+      {
+        "name": "Account Manager",
+        "value": 866,
+        "taxPercentage": 0.13,
+        "type": 1,
+        "amount": 511
+      },
+      {
+        "name": "Event Planner",
+        "value": 341,
+        "taxPercentage": 0.1,
+        "type": 2,
+        "amount": 151
+      },
+      {
+        "name": "Executive Assistant",
+        "value": 830,
+        "taxPercentage": 0.14,
+        "type": 3,
+        "amount": 675
+      },
+      {
+        "name": "Business Analyst",
+        "value": 653,
+        "taxPercentage": 0.09,
+        "type": 1,
+        "amount": 730
+      },
+      {
+        "name": "Data Scientist",
+        "value": 126,
+        "taxPercentage": 0.05,
+        "type": 2,
+        "amount": 702
+      },
+      {
+        "name": "Customer Support Specialist",
+        "value": 681,
+        "taxPercentage": 0.18,
+        "type": 3,
+        "amount": 95
+      },
+      {
+        "name": "Operations Manager",
+        "value": 762,
+        "taxPercentage": 0.07,
+        "type": 1,
+        "amount": 635
+      },
+      {
+        "name": "Content Strategist",
+        "value": 744,
+        "taxPercentage": 0.16,
+        "type": 2,
+        "amount": 474
+      },
+      {
+        "name": "Human Resources Coordinator",
+        "value": 619,
+        "taxPercentage": 0.08,
+        "type": 3,
+        "amount": 137
+      },
+      {
+        "name": "Software Engineer",
+        "value": 435,
+        "taxPercentage": 0.05,
+        "type": 1,
+        "amount": 924
+      },
+      {
+        "name": "UX Researcher",
+        "value": 61,
+        "taxPercentage": 0.15,
+        "type": 2,
+        "amount": 515
+      },
+      {
+        "name": "Sales Representative",
+        "value": 495,
+        "taxPercentage": 0.09,
+        "type": 3,
+        "amount": 884
+      },
+      {
+        "name": "IT Manager",
+        "value": 445,
+        "taxPercentage": 0.07,
+        "type": 1,
+        "amount": 891
+      },
+      {
+        "name": "Financial Manager",
+        "value": 677,
+        "taxPercentage": 0.18,
+        "type": 2,
+        "amount": 194
+      },
+      {
+        "name": "Legal Secretary",
+        "value": 418,
+        "taxPercentage": 0.14,
+        "type": 3,
+        "amount": 554
+      },
+      {
+        "name": "SEO Specialist",
+        "value": 206,
+        "taxPercentage": 0.12,
+        "type": 1,
+        "amount": 362
+      },
+      {
+        "name": "HR Specialist",
+        "value": 954,
+        "taxPercentage": 0.06,
+        "type": 2,
+        "amount": 146
+      },
+      {
+        "name": "Technical Support Engineer",
+        "value": 239,
+        "taxPercentage": 0.1,
+        "type": 3,
+        "amount": 722
+      },
+      {
+        "name": "Event Coordinator",
+        "value": 863,
+        "taxPercentage": 0.16,
+        "type": 1,
+        "amount": 307
+      },
+      {
+        "name": "Marketing Manager",
+        "value": 976,
+        "taxPercentage": 0.13,
+        "type": 2,
+        "amount": 329
+      },
+      {
+        "name": "Technical Consultant",
+        "value": 219,
+        "taxPercentage": 0.05,
+        "type": 3,
+        "amount": 309
+      },
+      {
+        "name": "Financial Planner",
+        "value": 295,
+        "taxPercentage": 0.08,
+        "type": 1,
+        "amount": 218
+      },
+      {
+        "name": "Accounting Clerk",
+        "value": 456,
+        "taxPercentage": 0.1,
+        "type": 2,
+        "amount": 91
+      },
+      {
+        "name": "Business Development Manager",
+        "value": 673,
+        "taxPercentage": 0.11,
+        "type": 3,
+        "amount": 784
+      },
+      {
+        "name": "Customer Experience Manager",
+        "value": 389,
+        "taxPercentage": 0.07,
+        "type": 1,
+        "amount": 377
+      },
+      {
+        "name": "Technical Recruiter",
+        "value": 511,
+        "taxPercentage": 0.17,
+        "type": 2,
+        "amount": 307
+      },
+      {
+        "name": "IT Support Specialist",
+        "value": 886,
+        "taxPercentage": 0.06,
+        "type": 3,
+        "amount": 582
+      }
+]

@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\HRWebApp",
+    "\\HRWebApp\\HRWebApp",
+    "\\HRWebApp\\HRWebApp\\App_Data",
+    "\\HRWebApp\\HRWebApp\\HRWebApp",
+    "\\HRWebApp\\HRWebApp\\Scripts",
+    "\\HRWebApp\\HRWebApp\\Views",
+    "\\HRWebApp\\HRWebApp\\Views\\Admin",
+    "\\HRWebApp\\HRWebApp\\Views\\Login",
+    "\\HRWebApp\\HRWebApp\\Views\\Shared"
+  ],
+  "SelectedNode": "\\HRWebApp\\HRWebApp\\Views\\Login\\Login.cshtml",
+  "PreviewInSolutionExplorer": false
+}
