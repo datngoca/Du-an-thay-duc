@@ -1,4 +1,6 @@
 import Employee from "../models/Employee.js";
+import mysql from 'mysql2';
+import { connectToMySQL } from "../mysqlConfig.js";
 import sqlConfig from "../sqlConfig.js";
 import sql from 'mssql'; // Import thư viện để kết nối với SQL Server
 import dotenv from 'dotenv';

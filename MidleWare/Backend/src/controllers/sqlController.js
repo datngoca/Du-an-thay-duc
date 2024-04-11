@@ -4,13 +4,12 @@ dotenv.config();
 
 const config = {
   user: 'sa',
-  password: 'truong123',
-  server: 'DESKTOP-VLSVRCN\\TRANTRUONG',
+  password: '123',
+  server: 'DESKTOP-T93ML2P',
   database: 'HR',
   options: {
-      encrypt: true, 
-      trustServerCertificate: true 
-    }
+    encrypt: false
+  }
 };
 const getPersonalData = async (req, res) => {
   try {
