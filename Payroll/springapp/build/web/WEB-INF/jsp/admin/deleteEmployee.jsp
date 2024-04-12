@@ -24,12 +24,6 @@
                 </div>
                 
                     <div class="module-body">
-                        <c:if test="${not empty successMessage}">
-                            <div class="alert alert-success">${successMessage}</div>
-                        </c:if>
-                        <c:if test="${not empty errorMessage}">
-                            <div class="alert alert-success">${errorMessage}</div>
-                        </c:if>
                         <form:form method="POST" action="${contextPath}/admin/employee/delete.html?employeeNumber=${employee.employeeNumber}" commandName="employee" cssClass="form-horizontal row-fluid">
                         <!--<form class="form-horizontal row-fluid">-->
                            
@@ -118,3 +112,4 @@
         </div><!--/.content-->
     </tiles:putAttribute>
 </tiles:insertDefinition>
+

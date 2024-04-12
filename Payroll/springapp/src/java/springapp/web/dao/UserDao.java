@@ -7,8 +7,10 @@ package springapp.web.dao;
 
 import java.util.List;
 import org.hibernate.Session;
+import springapp.web.model.Employee;
 import springapp.web.model.HibernateUtil;
 import springapp.web.model.Users;
+
 
 /**
  *
@@ -55,4 +57,6 @@ public class UserDao extends Users {
         }
         return list;
     }
+
+  
 }

@@ -11,10 +11,13 @@
     <tiles:putAttribute name="body">
         <div class="content">
             <div class="module">
+               
                 <div class="module-head">
                     <h3>Employee</h3>
-                    <h4> - <a href="add.html">Create New</a></h4>
                 </div>
+                 <!-- Create button -->
+                <h4> - <a href="add.html">Create New</a></h4>
+
                 <div class="module-body table">
                     <table cellpadding="0" cellspacing="0" border="0" class="datatable-1 table table-bordered table-striped	 display" width="100%">
                         <thead>
@@ -24,7 +27,6 @@
                                 <th>SSN</th>
                                 <th>Pay Rate</th>
                                 <th>Vacation_Days</th>
-                                <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -35,9 +37,10 @@
                                     <td>${employee.ssn}</td>
                                     <td class="center">${employee.payRate}</td>
                                     <td class="center">${employee.vacationDays}</td>
-                                    <td class=" ">                                     
-                                         <a href="edit.html?employeeNumber=${employee.employeeNumber}">Edit</a> |
+                                    <td class=" ">
+                                         <<a href="edit.html?employeeNumber=${employee.employeeNumber}">Edit</a> |
                                         <a href="delete.html?employeeNumber=${employee.employeeNumber}">Delete</a>
+
                                     </td>
                                 </tr>
                             </core:forEach>
@@ -46,5 +49,6 @@
                 </div>
             </div><!--/.module-->
         </div>
+
     </tiles:putAttribute>
 </tiles:insertDefinition>

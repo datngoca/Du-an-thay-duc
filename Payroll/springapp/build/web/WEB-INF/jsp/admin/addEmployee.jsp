@@ -1,9 +1,14 @@
+<%-- 
+    Document   : addEmployee
+    Created on : 09-Apr-2024, 20:05:42
+    Author     : Administrator
+--%>
+
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="core" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles" %>
 <core:set var="contextPath" value="${pageContext.request.contextPath}"/>
-<!DOCTYPE html>
 <tiles:insertDefinition name="layouts">
     <tiles:putAttribute name="body">
         <div class="content">
@@ -11,17 +16,13 @@
                 <div class="module-head">
                     <h3>Create Employee</h3>
                 </div>
-                <!-- Sửa đường dẫn action thành ${contextPath}/admin/employee/add -->
-                <form:form action="${contextPath}/admin/employee/add.html" method="post" modelAttribute="employee" cssClass="form-horizontal row-fluid">
+                
                     <div class="module-body">
-                        <!-- Hiển thị message thành công nếu có -->
-                        <c:if test="${not empty successMessage}">
-                            <div class="alert alert-success">${successMessage}</div>
-                        </c:if>
-                        
-                        <form:errors path="*" cssClass="text-danger"/>
+                        <form:form method="POST" action="add.html" commandName="employee" cssClass="form-horizontal row-fluid">
+                            <form:errors path="*" cssClass="text-danger"/>
+                        <!--<form class="form-horizontal row-fluid">-->
                             <div class="control-group">
-                            <label class="control-label" for="idEmployee">id Employee</label>
+                            <label class="control-label" for="idEmployee">idEmployee</label>
                             <div class="controls">
                                 <form:input path="idEmployee" cssClass="span6" />
                                 <form:errors path="idEmployee" cssClass="text-danger"/> 
@@ -91,17 +92,30 @@
                                 <form:errors path="paidLastYear" cssClass="text-danger"/>
                             </div>
                         </div>
-
-                        <div class="control-group">
+                            <div class="control-group">
                             <div class="col-md-offset-2 controls">
                                 <input type="submit" value="Create" class="btn btn-default" />
                                 <a href="${contextPath}/admin/employee/list.html" class="btn btn-default">Back to List</a>
                             </div>
                         </div>
+                        </form:form>
                     </div>
-                </form:form>
             </div>
         </div><!--/.content-->
     </tiles:putAttribute>
 </tiles:insertDefinition>
+<!-- Thêm mã JavaScript để ẩn message box sau 3 giây -->
+<script type="text/javascript">
+    // Function to hide success message after 3 seconds
+    function hideSuccessMessage() {
+        var successMessage = document.getElementById("successMessage");
+        if (successMessage) {
+            setTimeout(function() {
+                successMessage.style.display = "none";
+            }, 3000); // 3 seconds
+        }
+    }
 
+    // Call hideSuccessMessage function on page load
+    window.onload = hideSuccessMessage;
+</script>

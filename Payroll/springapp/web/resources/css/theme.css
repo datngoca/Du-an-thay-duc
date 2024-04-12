@@ -444,7 +444,7 @@ transition: all .2s ease-in-out;
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
-	user-select: none
+	/*user-select: none*/
 }
 .btn.active:focus, .btn:active:focus, .btn:focus {
 	outline: thin dotted;
@@ -1111,16 +1111,16 @@ border-top-left-radius: 3px;
 .stream.new-update, .stream.load-more {
 	padding: 0
 }
-.stream.new-update a, .stream.load-more a {
-	background: #f7f7f7;;
-	
-	color: #555;
-	font-weight: 600;
-	font-size: 14px;
-	display: block;
-	padding: 20px;
-	text-align: center;
-	text-decoration: none!important
+.stream.new-update a,
+.stream.load-more a {
+    background: #f7f7f7;
+    color: #555;
+    font-weight: 600;
+    font-size: 14px;
+    display: block;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none!important;
 }
 .stream.new-update a i, .stream.load-more a i {
 	font-size: 18px;

@@ -35,5 +35,6 @@
         <property name="paidLastYear" type="java.lang.Byte">
             <column name="Paid_Last_Year" precision="2" scale="0" />
         </property>
+       
     </class>
 </hibernate-mapping>
