@@ -19,23 +19,13 @@
                 </div>
                 
                     <div class="module-body">
-                        <c:if test="${not empty successMessage}">
-                            <div class="alert alert-success">${successMessage}</div>
-                        </c:if>
-                        <c:if test="${not empty errorMessage}">
-                            <div class="alert alert-success">${errorMessage}</div>
-                        </c:if>
-                        <c:if test="${not empty warningMessage}">
-                            <div class="alert alert-success">${warningMessage}</div>
-                        </c:if>
-                        
                         <form:form method="POST" action="${contextPath}/admin/employee/edit.html?employeeNumber=${employee.employeeNumber}" commandName="employee" cssClass="form-horizontal row-fluid">
                         <!--<form class="form-horizontal row-fluid">-->
                            
                             <form:errors path="*" cssClass="text-danger"/>
                         <!--<form class="form-horizontal row-fluid">-->
                             <div class="control-group">
-                            <label class="control-label" for="idEmployee">id Employee</label>
+                            <label class="control-label" for="idEmployee">idEmployee</label>
                             <div class="controls">
                                 <form:input path="idEmployee" cssClass="span6" />
                                 <form:errors path="idEmployee" cssClass="text-danger"/> 
@@ -108,7 +98,7 @@
                             <div class="control-group">
                             <div class="col-md-offset-2 controls">
                                 <input type="submit" value="Edit" class="btn btn-default" />
-                               
+                               <a href="${contextPath}/admin/employee/list.html" class="btn btn-default">Back to List</a>
                             </div>
                         </div>
                         </form:form>
