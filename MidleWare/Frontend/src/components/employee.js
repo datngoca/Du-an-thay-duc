@@ -10,20 +10,25 @@ import React, { useState, useEffect } from "react";
 
 const Employee = () => {
     const [items, setItems] = useState([]);
-
+    const [currentPage, setCurrentPage] = useState(1);
+    const itemsPerPage = 10; 
     useEffect(() => {
         fetchEmployee();
     }, []);
 
     const fetchEmployee = async () => {
+        setLoading(true);
         try {
-            let response = await axios.get('http://localhost:4000/api/mergedData');
+            let response = await axios.get('http://localhost:4000/api/employee/combionedData');
             console.log(">>>check data: ", response);
-            setItems(response.data);
+            setItems(response.data || []);
         } catch (error) {
             console.error('Error fetching data:', error);
+            setItems([]);
         }
+        setLoading(false);
     };
+
     const renderPagination = () => {
         const pageNumbers = [];
         for (let i = 1; i <= Math.ceil(items.length / itemsPerPage); i++) {
@@ -42,7 +47,8 @@ const Employee = () => {
             </div>
         );
     };
-    
+
+    const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
     return (
         <div>
@@ -134,36 +140,38 @@ const Employee = () => {
                                     <table className="datatable-1 table table-bordered table-striped display" width="100%">
                                         <thead>
                                             <tr>
-                                                <th>First Name</th>
-                                                <th>Last Name</th>
+                                                <th>Full Name</th>
+                                                <th>SSN</th>
+                                                <th>Pay Rate</th>
+                                                <th>Pay Rates ID</th>
                                                 <th>Vacation Days</th>
                                                 <th>Paid To Date</th>
                                                 <th>Paid Last Year</th>
-                                                <th>Pay Rate</th>
-                                                <th>Pay Rate ID</th>
-                                                <th>Middle Initial</th>
-                                                <th>Address1</th>
-                                                <th>Address2</th>
-                                                <th>City"</th>
-                                                <th>State"</th>
+                                                <th>Employment Status</th>
+                                                <th>Hire Date</th>
+                                                <th>Workers Comp Code</th>
+                                                <th>Termination Date</th>
+                                                <th>Rehire Date</th>
+                                                <th>Last Review Date</th>
                                                 <th></th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            {items && items.map((item, index) => (
+                                        {Array.isArray(items) && items.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage).map((item, index) => (
                                                 <tr key={index} className="odd gradeX">
-                                                    <td>{item.First_Name}</td>
-                                                    <td>{item.Last_Name}</td>
+                                                    <td>{item.First_Name} {item.Last_Name}</td>
+                                                    <td>{item.SSN}</td>
+                                                    <td>{item.Pay_Rate}</td>
+                                                    <td>{item.PayRates_id}</td>
                                                     <td>{item.Vacation_Days}</td>
                                                     <td>{item.Paid_To_Date}</td>
                                                     <td>{item.Paid_Last_Year}</td>
-                                                    <td>{item.Pay_Rate}</td>
-                                                    <td>{item.PayRates_id}</td>
-                                                    <td>{item.personalInfo ? item.personalInfo.Middle_Initial : ""}</td>
-                                                    <td>{item.personalInfo ? item.personalInfo.Address1 : ""}</td>
-                                                    <td>{item.personalInfo ? item.personalInfo.Address2 : ""}</td>
-                                                    <td>{item.personalInfo ? item.personalInfo.City : ""}</td>
-                                                    <td>{item.personalInfo ? item.personalInfo.State : ""}</td>
+                                                    <td>{item.Employment_Status}</td>
+                                                    <td>{item.Hire_Date}</td>
+                                                    <td>{item.Workers_Comp_Code}</td>
+                                                    <td>{item.Termination_Date}</td>
+                                                    <td>{item.Rehire_Date}</td>
+                                                    <td>{item.Last_Review_Date}</td>
                                                     <td>
                                                         <div className='Edit-Detail-Delete'>
                                                             <a>Edit</a>
@@ -174,20 +182,18 @@ const Employee = () => {
                                                 </tr>
                                             ))}
                                         </tbody>
-                                        
                                     </table>
-                                    
                                 </div>
-                            <div class="pagination">
-                                {/* Pagination */}
-                                {renderPagination()}
+                                <div className="pagination">
+                                    {/* Pagination */}
+                                    {renderPagination()}
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    <div className="footer">
+            <div className="footer">
                 <div className="container">
                     <b className="copyright">&copy; 2014 Admin - DaoNguyen </b>All rights reserved.
                 </div>

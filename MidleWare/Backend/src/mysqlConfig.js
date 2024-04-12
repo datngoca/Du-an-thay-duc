@@ -18,7 +18,7 @@ const mysqlConfig = {
   password: MySQL_SERVER_CONFIG.password,
   database: MySQL_SERVER_CONFIG.database,
 };
-const pool = mysql.createPool(mysqlConfig);
+export const pool = mysql.createPool(mysqlConfig);
 
 // Hàm kết nối đến MySQL
 async function connectToMySQL() {
