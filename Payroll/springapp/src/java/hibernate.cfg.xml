@@ -8,7 +8,7 @@
     <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
     <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/payroll</property>
     <property name="hibernate.connection.username">root</property>
-<property name="hibernate.connection.password">Nhan2792003@</property>
+<property name="hibernate.connection.password">ngocdat02052003</property>
     <property name="hibernate.current_session_context_class">thread</property>
     <mapping resource="springapp/web/model/Employee.hbm.xml"/>
     <mapping resource="springapp/web/model/PayRates.hbm.xml"/>
