@@ -398,55 +398,72 @@ export const updateCombinedData = async (req, res) => {
             Paid_Last_Year
         } = req.body;
     
-        // Cập nhật thông tin trong bảng Personal
-        await sql.connect(sqlConfig).query(`
+        // Connect to SQL Server
+        await sql.connect(sqlConfig);
+    
+        // Update data in the 'Personal' table
+        await sql.query`
             UPDATE Personal
             SET
-                First_Name = '${First_Name}',
-                Last_Name = '${Last_Name}',
-                Middle_Initial = '${Middle_Initial}',
-                Address1 = '${Address1}',
-                Address2 = '${Address2}',
-                City = '${City}',
-                State = '${State}',
-                Zip = '${Zip}',
-                Email = '${Email}',
-                Phone_Number = '${Phone_Number}',
-                Social_Security_Number = '${Social_Security_Number}',
-                Drivers_License = '${Drivers_License}',
-                Marital_Status = '${Marital_Status}',
-                Gender = '${Gender}',
-                Shareholder_Status = '${Shareholder_Status}',
+                First_Name = ${First_Name},
+                Last_Name = ${Last_Name},
+                Middle_Initial = ${Middle_Initial},
+                Address1 = ${Address1},
+                Address2 = ${Address2},
+                City = ${City},
+                State = ${State},
+                Zip = ${Zip},
+                Email = ${Email},
+                Phone_Number = ${Phone_Number},
+                Social_Security_Number = ${Social_Security_Number},
+                Drivers_License = ${Drivers_License},
+                Marital_Status = ${Marital_Status},
+                Gender = ${Gender},
+                Shareholder_Status = ${Shareholder_Status},
                 Benefit_Plans = ${Benefit_Plans},
-                Ethnicity = '${Ethnicity}'
-            WHERE Employee_ID = ${Employee_ID}
-        `);
+                Ethnicity = ${Ethnicity}
+            WHERE Employee_ID = ${Employee_ID};
+        `;
     
-        // Cập nhật thông tin trong bảng Employee
+        // Connect to MySQL
+        await connectToMySQL();
+    
+        // Update data in the 'Employee' table
         await pool.promise().query(`
-            UPDATE Employee
+            UPDATE employee
             SET
-                Last_Name = '${Last_Name}',
-                First_Name = '${First_Name}',
-                SSN = '${Social_Security_Number}',
-                Pay_Rate = '${Pay_Rate}',
-                PayRates_id = ${PayRates_id},
-                Vacation_Days = ${Vacation_Days},
-                Paid_To_Date = ${Paid_To_Date},
-                Paid_Last_Year = ${Paid_Last_Year}
-            WHERE idEmployee = ${Employee_ID}
-        `);
+                Last_Name = ?,
+                First_Name = ?,
+                SSN = ?,
+                Pay_Rate = ?,
+                PayRates_id = ?,
+                Vacation_Days = ?,
+                Paid_To_Date = ?,
+                Paid_Last_Year = ?
+            WHERE idEmployee = ?
+        `, [
+            Last_Name,
+            First_Name,
+            Social_Security_Number,
+            Pay_Rate,
+            PayRates_id,
+            Vacation_Days,
+            Paid_To_Date,
+            Paid_Last_Year,
+            Employee_ID
+        ]);
     
-        // Trả về kết quả thành công
-        res.json({ success: true, message: 'Dữ liệu đã được cập nhật thành công.' });
+        // Close SQL Server connection
+        await sql.close();
+    
+        // Return success response
+        res.json({ success: true, message: 'Data updated successfully.' });
     } catch (error) {
         console.error(error);
-        // Trả về thông báo lỗi nếu có
-        res.status(500).json({ success: false, message: 'Đã xảy ra lỗi khi cập nhật dữ liệu.' });
-    } finally {
-        sql.close(); // Đóng kết nối với SQL Server
+        res.status(500).json({ success: false, message: 'An error occurred while updating data.' });
     }
 };
+
 export const deleteCombinedData = async (req, res) => {
     try {
         const { Employee_ID } = req.params;

@@ -7,7 +7,7 @@ const mysqlConfig = {
   host: 'localhost',  // Hostname của MySQL
   user: 'root',
   port: '3306',    
-  password: 'bes@dat111',  // Mật khẩu MySQL
+  password: 'ngocdat02052003',  // Mật khẩu MySQL
   database: 'payroll'  // Tên cơ sở dữ liệu MySQL
 };
 
