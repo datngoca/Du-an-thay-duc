@@ -1027,7 +1027,6 @@ border-top-left-radius: 3px;
 
 	
 }
-  
 .module-head h3 {
 	font-size: 14px;
 	line-height: 20px;
@@ -1045,7 +1044,6 @@ border-top-left-radius: 3px;
 .module-body.table {
 	padding: 15px 0;
 	overflow-x: auto;
-
 }
 .module-body.table .table th, .module-body.table .table td {
 	padding-left: 15px;
@@ -1112,12 +1110,10 @@ border-top-left-radius: 3px;
 	margin-top: 0
 }
 .stream.new-update, .stream.load-more {
-	padding: 0;
-	overflow-x :auto
-
+	padding: 0
 }
 .stream.new-update a, .stream.load-more a {
-	background: #f7f7f7;;
+	background:  #f7f7f7;;
 	
 	color: #555;
 	font-weight: 600;
@@ -1130,7 +1126,6 @@ border-top-left-radius: 3px;
 .stream.new-update a i, .stream.load-more a i {
 	font-size: 18px;
 	margin-right: 10px
-	
 }
 .stream.load-more {
 	margin-top: 10px

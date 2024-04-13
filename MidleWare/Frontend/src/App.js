@@ -10,26 +10,38 @@ import {
 } from "react-router-dom";
 import Admin from './components/admin';
 import Employee from './components/employee';
+
 import CreateEmployee from './components/createEmployee';
+import EditEmployee from './components/editEmployee';
+
+import DetailEmployee from './components/detailEmployee';
+import DeleteEmployee from './components/deleteEmployee';
 import BenefitPlans from './components/BenefitPlans';
 import JobHistory from './components/JobHistory'
-const router = createBrowserRouter(
-  createRoutesFromElements(
-    <Route>
-      <Route path='/'>
-        <Route index element={<Admin />}></Route>
-        <Route path="/employee" element={<Employee />}></Route>
-        <Route path="/createEmployee" element={<CreateEmployee />}></Route>
-        <Route path="/BenefitPlans" element={<BenefitPlans />}></Route>
-        <Route path="/JobHistory" element={<JobHistory />}></Route>
+import { useParams } from 'react-router-dom';
 
-        
+const App = () => {
+  const { id } = useParams();
+
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <Route>
+        <Route path='/'>
+          <Route index element={<Admin />} />
+          <Route path="/employee" element={<Employee />} />
+          <Route path="/createEmployee" element={<CreateEmployee />} />
+
+          <Route path="/detailEmployee/:id" element={<DetailEmployee />} />
+          <Route path="/deleteEmployee" element={<DeleteEmployee />} />
+          <Route path="/editEmployee/:id" element={<EditEmployee />} />
+
+          <Route path="/BenefitPlans" element={<BenefitPlans />} />
+          <Route path="/JobHistory" element={<JobHistory />} />
+        </Route>
       </Route>
-    </Route>
-  )
-)
+    )
+  );
 
-function App() {
   return (
     <div className="font-bodyFont">
       <RouterProvider router={router} />
