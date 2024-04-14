@@ -1,41 +1,61 @@
 import '../util/bootstrap/css/bootstrap-responsive.min.css';
 import '../util/bootstrap/css/bootstrap.min.css';
-// import '../util/bootstrap/js/bootstrap.min.js';
-// import '../util/bootstrap/img'
-import '../util/bootstrap.3.0.0/content/Content/bootstrap.css';
-import '../util/bootstrap.3.0.0/content/Content/bootstrap.min.css';
-// import '../util/bootstrap.3.0.0/content/Scripts'
-// import '../util/bootstrap.3.0.0/content/fonts'
-import '../util/Content/bootstrap.css';
-import '../util/Content/bootstrap.min.css';
-import '../util/Content/Site.css';
-import '../util/css/theme.css';
-// import '../util/fonts'
-import '../util/images/icons/css/font-awesome.css';
-// import '../util/images/jquery-ui'
-// import '../util/jQuery.1.10.2/Content'
-// import '../util/jQuery.1.10.2/Tools'
 import axios from 'axios';
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import { useParams } from 'react-router-dom';
 
 const CreateEmployee = () => {
-    const [items, setItems] = useState([]);
-    useEffect(() => {
-        const fetchEmployee = async () => {
-            try {
-                let response = await axios.get('http://localhost:4000/api/employee');
-                setItems(response.data.data);
-            } catch (error) {
-                console.log('Error fetching data : ', error);
-            }
-        }
-        fetchEmployee();
-    }, [])
+    const { id } = useParams();
+    const [formData, setFormData] = useState({
+        First_Name: '',
+        Last_Name: '',
+        Middle_Initial: '',
+        Address1: '',
+        Address2: '',
+        City: '',
+        State: '',
+        Zip: '',
+        Email: '',
+        Phone_Number: '',
+        Social_Security_Number: '',
+        Drivers_License: '',
+        Marital_Status: '',
+        Gender: false,
+        Shareholder_Status: false,
+        Benefit_Plans: '',
+        Ethnicity: '',
+        SSN: '',
+        Pay_Rate: '',
+        PayRates_id: '',
+        Vacation_Days: '',
+        Paid_To_Date: '',
+        Paid_Last_Year: ''
+    });
 
-    const handleCreateEmployee = () => {
-        alert('me')
-    }
-    // dataEmployee = res.data.data;
+    const handleChange = (e) => {
+        const { name, value, type, checked } = e.target;
+        setFormData(prevState => ({
+            ...prevState,
+            [name]: type === 'checkbox' ? checked : value
+        }));
+    };
+
+    const handleBackToList = () => {
+        window.location.href = "http://localhost:3000/employee";
+    };
+
+    const handleCreateEmployee = async (e) => {
+        e.preventDefault();
+        try {
+            let response = await axios.post(`http://localhost:4000/api/employee`, formData);
+            console.log('Employee created successfully:', response.data);
+            alert('Employee created successfully');
+            handleBackToList();
+        } catch (error) {
+            console.log('Error creating employee:', error);
+            alert('Error creating employee. Please try again.');
+        }
+    };
 
     return (
         <div>
@@ -44,7 +64,8 @@ const CreateEmployee = () => {
                     <div className="container">
                         <a className="btn btn-navbar" data-toggle="collapse" data-target=".navbar-inverse-collapse">
                             <i className="icon-reorder shaded"></i>
-                        </a><a className="brand" href="~/">Admin </a>
+                        </a>
+                        <a className="brand" href="~/">Admin </a>
                         <div className="nav-collapse collapse navbar-inverse-collapse">
                             <ul className="nav nav-icons">
                                 <li className="active"><a href="#"><i className="icon-envelope"></i></a></li>
@@ -52,7 +73,6 @@ const CreateEmployee = () => {
                                 <li><a href="#"><i className="icon-bar-chart"></i></a></li>
                             </ul>
                             <form className="navbar-search pull-left input-append" action="#">
-                                {/* <input type="text" className="span3"> */}
                                 <input type="text" className="span3"></input>
                                 <button className="btn" type="button">
                                     <i className="icon-search"></i>
@@ -76,7 +96,6 @@ const CreateEmployee = () => {
                         </div>
                     </div>
                 </div>
-
             </div>
             <div className="wrapper">
                 <div className="container">
@@ -120,132 +139,341 @@ const CreateEmployee = () => {
                                     <li><a href="#"><i className="menu-icon icon-signout"></i>Logout </a></li>
                                 </ul>
                             </div>
-                            {/* <!--/.sidebar--> */}
                         </div>
-                        {/* <!--/.span3--> */}
-
-                        {/* <!--/.span9--> */}
                         <div className='span9'>
-                            <div class="content">
-                                <div class="module">
-                                    <div class="module-head">
+                            <div className="content">
+                                <div className="module">
+                                    <div className="module-head">
                                         <h2>Create Personal</h2>
                                     </div>
-                                    {/* @using (Html.BeginForm("Create", "Personals", FormMethod.Post, new { @class = "form-horizontal row-fluid" }))
-        {
-            @Html.AntiForgeryToken() */}
-
-                                    <div class="module-body">
-                                        <form class="form-horizontal row-fluid">
-                                            {/* @Html.ValidationSummary(true, "", new { @class = "text-danger" }) */}
-                                            <div class="control-group">
-                                                {/* @*@Html.LabelFor(model => model.Employee_ID, htmlAttributes: new { @class = "control-label" })*@ */}
-                                                <label class="control-label" for="EmployeeID">Employee ID</label>
-                                                <div class="controls">
-                                                    <input className='span6'></input>
-                                                    {/* @Html.EditorFor(model => model.Employee_ID, new { htmlAttributes = new { @class = "span6" } }) */}
-                                                    {/* @Html.ValidationMessageFor(model => model.Employee_ID, "", new { @class = "text-danger" }) */}
+                                    <div className="module-body">
+                                        <form className="form-horizontal row-fluid">
+                                            <div className="control-group">
+                                                <label className="control-label" htmlFor="First_Name">First Name</label>
+                                                <div className="controls">
+                                                    <input 
+                                                        className="span6" 
+                                                        type="text" 
+                                                        id="First_Name" 
+                                                        name="First_Name" 
+                                                        value={formData.First_Name}
+                                                        onChange={(e) => handleChange(e)} 
+                                                    />
                                                 </div>
-                                            </div>
-
-                                            <div class="control-group">
-                                                <label class="control-label" for="EmployeeID">First Name</label>
-                                                <div class="controls">
-                                                <input className='span6'></input>
-                                                    {/* @Html.EditorFor(model => model.First_Name, new { htmlAttributes = new { @class = "span6" } }) */}
-                                                    {/* @Html.ValidationMessageFor(model => model.First_Name, "", new { @class = "text-danger" }) */}
+                                                <div className="control-group">
+                                                    <label className="control-label" htmlFor="Last_Name">Last Name</label>
+                                                    <div className="controls">
+                                                        <input 
+                                                            className="span6" 
+                                                            type="text" 
+                                                            id="Last_Name" 
+                                                            name="Last_Name" 
+                                                            value={formData.Last_Name}
+                                                            onChange={(e) => handleChange(e)} 
+                                                        />
+                                                    </div>
                                                 </div>
-                                            </div>
 
-                                            <div class="control-group">
-                                                <label class="control-label">Last Name</label>
-                                                {/* @Html.LabelFor(model => model.Last_Name, htmlAttributes: new { @class = "control-label col-md-2" }) */}
-                                                <div class="controls">
-                                                    <input className='span6'></input>
-                                                    {/* @Html.EditorFor(model => model.Last_Name, new { htmlAttributes = new { @class = "span6" } }) */}
-                                                    {/* @Html.ValidationMessageFor(model => model.Last_Name, "", new { @class = "text-danger" }) */}
+                                                <div className="control-group">
+                                                    <label className="control-label" htmlFor="Middle_Initial">Middle_Initial</label>
+                                                    <div className="controls">
+                                                        <input 
+                                                            className="span6" 
+                                                            type="text" 
+                                                            id="Middle_Initial" 
+                                                            name="Middle_Initial" 
+                                                            value={formData.Middle_Initial}
+                                                            onChange={(e) => handleChange(e)} 
+                                                        />
+                                                    </div>
                                                 </div>
-                                            </div>
 
-
-                                            <div class="control-group">
-                                                <label class="control-label">vacationDays</label>
-                                                {/* @Html.LabelFor(model => model.Address1, htmlAttributes: new { @class = "control-label col-md-2" }) */}
-                                                <div class="controls">
-                                                    <input className='span6'></input>
-                                                    {/* @Html.EditorFor(model => model.Address1, new { htmlAttributes = new { @class = "span6" } }) */}
-                                                    {/* @Html.ValidationMessageFor(model => model.Address1, "", new { @class = "text-danger" }) */}
+                                                <div className="control-group">
+                                                    <label className="control-label" htmlFor="Address1">Address1</label>
+                                                    <div className="controls">
+                                                        <input 
+                                                            className="span6" 
+                                                            type="text" 
+                                                            id="Address1" 
+                                                            name="Address1" 
+                                                            value={formData.Address1}
+                                                            onChange={(e) => handleChange(e)} 
+                                                        />
+                                                    </div>
                                                 </div>
-                                            </div>
 
-
-                                            <div class="control-group">
-                                                <label class="control-label">paidToDate</label>
-                                                {/* @Html.LabelFor(model => model.City, htmlAttributes: new { @class = "control-label col-md-2" }) */}
-                                                <div class="controls">
-                                                    <input className='span6'></input>
-                                                    {/* @Html.EditorFor(model => model.City, new { htmlAttributes = new { @class = "span6" } }) */}
-                                                    {/* @Html.ValidationMessageFor(model => model.City, "", new { @class = "text-danger" }) */}
+                                                <div className="control-group">
+                                                    <label className="control-label" htmlFor="Address2">Address2</label>
+                                                    <div className="controls">
+                                                        <input 
+                                                            className="span6" 
+                                                            type="text" 
+                                                            id="Address2" 
+                                                            name="Address2" 
+                                                            value={formData.Address2}
+                                                            onChange={(e) => handleChange(e)} 
+                                                        />
+                                                    </div>
                                                 </div>
-                                            </div>
 
-                                            <div class="control-group">
-                                                <label class="control-label">paidLastYear</label> 
-                                                {/* @Html.LabelFor(model => model.State, htmlAttributes: new { @class = "control-label col-md-2" }) */}
-                                                <div class="controls">
-                                                    <input className='span6'></input>
-                                                    {/* @Html.EditorFor(model => model.State, new { htmlAttributes = new { @class = "span6" } }) */}
-                                                    {/* @Html.ValidationMessageFor(model => model.State, "", new { @class = "text-danger" }) */}
+                                                <div className="control-group">
+                                                    <label className="control-label" htmlFor="City">City</label>
+                                                    <div className="controls">
+                                                        <input 
+                                                            className="span6" 
+                                                            type="text" 
+                                                            id="City" 
+                                                            name="City" 
+                                                            value={formData.City}
+                                                            onChange={(e) => handleChange(e)} 
+                                                        />
+                                                    </div>
                                                 </div>
-                                            </div>
 
-
-
-                                            <div class="control-group">
-                                                <label class="control-label">payRate</label> 
-                                                {/* @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" }) */}
-                                                <div class="controls">
-                                                <input className='span6'></input>
-                                                    {/* @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "span6" } }) */}
-                                                    {/* @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" }) */}
+                                                <div className="control-group">
+                                                    <label className="control-label" htmlFor="State">State</label>
+                                                    <div className="controls">
+                                                        <input 
+                                                            className="span6" 
+                                                            type="text" 
+                                                            id="State" 
+                                                            name="State" 
+                                                            value={formData.State}
+                                                            onChange={(e) => handleChange(e)} 
+                                                        />
+                                                    </div>
                                                 </div>
-                                            </div>
-
-                                            <div class="control-group">
-                                                <label class="control-label">payRateId</label> 
-                                                {/* @Html.LabelFor(model => model.Phone_Number, htmlAttributes: new { @class = "control-label col-md-2" }) */}
-                                                <div class="controls">
-                                                    <input className='span6'></input>
-                                                    {/* @Html.EditorFor(model => model.Phone_Number, new { htmlAttributes = new { @class = "span6" } }) */}
-                                                    {/* @Html.ValidationMessageFor(model => model.Phone_Number, "", new { @class = "text-danger" }) */}
+                                                <div className="control-group">
+                                                    <label className="control-label" htmlFor="Zip">Zip</label>
+                                                    <div className="controls">
+                                                        <input 
+                                                            className="span6" 
+                                                            type="text" 
+                                                            id="Zip" 
+                                                            name="Zip" 
+                                                            value={formData.Zip}
+                                                            onChange={(e) => handleChange(e)} 
+                                                        />
+                                                    </div>
                                                 </div>
+
+                                                <div className="control-group">
+                                                    <label className="control-label" htmlFor="Email">Email</label>
+                                                    <div className="controls">
+                                                        <input 
+                                                            className="span6" 
+                                                            type="text" 
+                                                            id="Email" 
+                                                            name="Email" 
+                                                            value={formData.Email}
+                                                            onChange={(e) => handleChange(e)} 
+                                                        />
+                                                    </div>
+                                                </div>
+
+                                                <div className="control-group">
+                                                    <label className="control-label" htmlFor="Phone_Number">Phone Number</label>
+                                                    <div className="controls">
+                                                        <input 
+                                                            className="span6" 
+                                                            type="text" 
+                                                            id="Phone_Number" 
+                                                            name="Phone_Number" 
+                                                            value={formData.Phone_Number}
+                                                            onChange={(e) => handleChange(e)} 
+                                                        />
+                                                    </div>
+                                                </div>
+
+                                                <div className="control-group">
+                                                    <label className="control-label" htmlFor="Social_Security_Number">Social Security Number</label>
+                                                    <div className="controls">
+                                                        <input 
+                                                            className="span6" 
+                                                            type="text" 
+                                                            id="Social_Security_Number" 
+                                                            name="Social_Security_Number" 
+                                                            value={formData.Social_Security_Number}
+                                                            onChange={(e) => handleChange(e)} 
+                                                        />
+                                                    </div>
+                                                </div>
+                                                <div className="control-group">
+                                                    <label className="control-label" htmlFor="Drivers_License">Drivers License</label>
+                                                    <div className="controls">
+                                                        <input 
+                                                            className="span6" 
+                                                            type="text" 
+                                                            id="Drivers_License" 
+                                                            name="Drivers_License" 
+                                                            value={formData.Drivers_License}
+                                                            onChange={(e) => handleChange(e)} 
+                                                        />
+                                                    </div>
+                                                </div>
+
+                                                <div className="control-group">
+                                                    <label className="control-label" htmlFor="Marital_Status">Marital Status</label>
+                                                    <div className="controls">
+                                                        <input 
+                                                            className="span6" 
+                                                            type="text" 
+                                                            id="Marital_Status" 
+                                                            name="Marital_Status" 
+                                                            value={formData.Marital_Status}
+                                                            onChange={(e) => handleChange(e)} 
+                                                        />
+                                                    </div>
+                                                </div>
+
+                                                <div className="control-group">
+                                                    <label className="control-label" htmlFor="Gender">Gender</label>
+                                                    <div className="controls">
+                                                        <input 
+                                                            className="span6" 
+                                                            type="checkbox" 
+                                                            id="Gender" 
+                                                            name="Gender" 
+                                                            checked={formData.Gender} 
+                                                            onChange={(e) => handleChange(e)} 
+                                                        />
+                                                    </div>
+                                                </div>
+
+                                                <div className="control-group">
+                                                    <label className="control-label" htmlFor="Shareholder_Status">Shareholder Status</label>
+                                                    <div className="controls">
+                                                        <input 
+                                                            className="span6" 
+                                                            type="checkbox" 
+                                                            id="Shareholder_Status" 
+                                                            name="Shareholder_Status" 
+                                                            checked={formData.Shareholder_Status} 
+                                                            onChange={(e) => handleChange(e)} 
+                                                        />
+                                                    </div>
+                                                </div>
+                                                <div className="control-group">
+                                                    <label className="control-label" htmlFor="Benefit_Plans">Benefit Plans</label>
+                                                    <div className="controls">
+                                                        <input 
+                                                            className="span6" 
+                                                            type="text" 
+                                                            id="Benefit_Plans" 
+                                                            name="Benefit_Plans" 
+                                                            value={formData.Benefit_Plans}
+                                                            onChange={(e) => handleChange(e)} 
+                                                        />
+                                                    </div>
+                                                </div>
+
+                                                <div className="control-group">
+                                                    <label className="control-label" htmlFor="Ethnicity">Ethnicity</label>
+                                                    <div className="controls">
+                                                        <input 
+                                                            className="span6" 
+                                                            type="text" 
+                                                            id="Ethnicity" 
+                                                            name="Ethnicity" 
+                                                            value={formData.Ethnicity}
+                                                            onChange={(e) => handleChange(e)} 
+                                                        />
+                                                    </div>
+                                                </div>
+
+                                                <div className="control-group">
+                                                    <label className="control-label" htmlFor="Pay_Rate">Pay Rate</label>
+                                                    <div className="controls">
+                                                        <input 
+                                                            className="span6" 
+                                                            type="text" 
+                                                            id="Pay_Rate" 
+                                                            name="Pay_Rate" 
+                                                            value={formData.Pay_Rate}
+                                                            onChange={(e) => handleChange(e)} 
+                                                        />
+                                                    </div>
+                                                </div>
+                                                <div className="control-group">
+                                                    <label className="control-label" htmlFor="PayRates_id">Pay Rates ID</label>
+                                                    <div className="controls">
+                                                        <input 
+                                                            className="span6" 
+                                                            type="text" 
+                                                            id="PayRates_id" 
+                                                            name="PayRates_id" 
+                                                            value={formData.PayRates_id}
+                                                            onChange={(e) => handleChange(e)} 
+                                                        />
+                                                    </div>
+                                                </div>
+
+                                                <div className="control-group">
+                                                    <label className="control-label" htmlFor="Vacation_Days">Vacation Days</label>
+                                                    <div className="controls">
+                                                        <input 
+                                                            className="span6" 
+                                                            type="text" 
+                                                            id="Vacation_Days" 
+                                                            name="Vacation_Days" 
+                                                            value={formData.Vacation_Days}
+                                                            onChange={(e) => handleChange(e)} 
+                                                        />
+                                                    </div>
+                                                </div>
+
+                                                <div className="control-group">
+                                                    <label className="control-label" htmlFor="Paid_To_Date">Paid To Date</label>
+                                                    <div className="controls">
+                                                        <input 
+                                                            className="span6" 
+                                                            type="text" 
+                                                            id="Paid_To_Date" 
+                                                            name="Paid_To_Date" 
+                                                            value={formData.Paid_To_Date}
+                                                            onChange={(e) => handleChange(e)} 
+                                                        />
+                                                    </div>
+                                                </div>
+
+                                                <div className="control-group">
+                                                    <label className="control-label" htmlFor="Paid_Last_Year">Paid Last Year</label>
+                                                    <div className="controls">
+                                                        <input 
+                                                            className="span6" 
+                                                            type="text" 
+                                                            id="Paid_Last_Year" 
+                                                            name="Paid_Last_Year" 
+                                                            value={formData.Paid_Last_Year}
+                                                            onChange={(e) => handleChange(e)} 
+                                                        />
+                                                    </div>
+                                                </div>
+
+
+
                                             </div>
-
-                                            <div class="control-group">
-                                                <div class="col-md-offset-2 controls">
-                                                    <input type="submit" value="Create" class="btn btn-default"
-                                                    onClick={()=>handleCreateEmployee()}/>
-                                                    {/* @Html.ActionLink("Back to List", "Index", "", new { @class = "btn btn-default" }) */}
-
+                                            {/* Add other input fields similarly */}
+                                            <div className="control-group">
+                                                <div className="col-md-offset-2 controls">
+                                                    <input type="submit" value="Create" className="btn btn-default" onClick={handleCreateEmployee}/>
+                                                    <input type="button" value="Back to list" className="btn btn-default" onClick={handleBackToList} />
                                                 </div>
                                             </div>
                                         </form>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                {/* <!--/.container--> */}
-
             </div>
             <div className="footer">
                 <div className="container">
                     <b className="copyright">&copy; 2014 Admin - DaoNguyen </b>All rights reserved.
                 </div>
             </div>
-        </div >
+        </div>
     );
 }
 

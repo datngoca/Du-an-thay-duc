@@ -1,4 +1,4 @@
-namespace HRWebApp.Models
+﻿namespace HRWebApp.Models
 {
     using System;
     using System.Collections.Generic;
@@ -15,6 +15,7 @@ namespace HRWebApp.Models
         }
 
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)] // Thông báo cho EF rằng Employee_ID tự động tăng
         [Column(TypeName = "numeric")]
         public decimal Employee_ID { get; set; }
 
