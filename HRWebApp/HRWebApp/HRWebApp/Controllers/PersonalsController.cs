@@ -55,6 +55,7 @@ namespace HRWebApp.Controllers
         {
             if (ModelState.IsValid)
             {
+                db.Database.ExecuteSqlCommand("SET IDENTITY_INSERT dbo.Personal ON");
                 db.Personals.Add(personal);
                 db.SaveChanges();
                 TempData["SuccessMessage"] = "Tạo thành công!";

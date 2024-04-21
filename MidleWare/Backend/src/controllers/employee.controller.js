@@ -106,40 +106,102 @@ dotenv.config();
 
 
 export const getCombinedData = async (req, res) => {
-    let sqlData; // Define sqlData variable for MSSQL connection
-
     try {
         // Connect to MySQL
         await connectToMySQL();
-    
+
         // Lấy dữ liệu từ MySQL (bảng Employee)
         const [mysqlEmployees] = await pool.promise().query('SELECT * FROM Employee');
         const mysqlData = mysqlEmployees;
-    
+
         // Connect to SQL Server
         await sql.connect(sqlConfig);
 
         // Lấy dữ liệu từ SQL Server (bảng Personal)
         const result = await sql.query('SELECT * FROM Personal');
-        sqlData = result.recordset; // Assign result to sqlData
-    
-        const combinedData = {};
-    
-        // Duyệt qua từng nhân viên từ MySQL (bảng Employee)
-        for (let mysqlEmployee of mysqlData) {
-            // Tìm thông tin cá nhân tương ứng từ SQL Server (bảng Personal)
-            const personal = sqlData.find(personal => personal.Employee_ID === mysqlEmployee.idEmployee);
-    
-            if (personal) {
-                combinedData[mysqlEmployee.idEmployee] = {
-                    ...personal,
+        const sqlData = result.recordset;
+
+        // Tạo một đối tượng map để lưu trữ dữ liệu từ SQL Server dựa trên Employee_ID
+        const sqlDataMap = {};
+        sqlData.forEach(sqlEmployee => {
+            sqlDataMap[sqlEmployee.Employee_ID] = sqlEmployee;
+        });
+
+        // Tạo một đối tượng map để lưu trữ dữ liệu từ MySQL dựa trên idEmployee
+        const mysqlDataMap = {};
+        mysqlData.forEach(mysqlEmployee => {
+            mysqlDataMap[mysqlEmployee.idEmployee] = mysqlEmployee;
+        });
+
+        // Kết hợp dữ liệu từ cả hai nguồn
+        const combinedData = [];
+
+        // Duyệt qua dữ liệu từ SQL Server
+        sqlData.forEach(sqlEmployee => {
+            const mysqlEmployee = mysqlDataMap[sqlEmployee.Employee_ID];
+            if (mysqlEmployee) {
+                // Nếu id tồn tại trong cả hai nguồn
+                combinedData.push({
+                    ...sqlEmployee,
                     ...mysqlEmployee
-                };
+                });
             } else {
-                combinedData[mysqlEmployee.idEmployee] = {
+                // Nếu id chỉ tồn tại trong SQL Server
+                combinedData.push({
+                    ...sqlEmployee,
+                    // idEmployee: null,
+                    // First_Name: null,
+                    // Last_Name: null,
+                    // Middle_Initial:  null,
+                    // Address1: null,
+                    // Address2: null,
+                    // City: null,
+                    // State: null,
+                    // Zip: null,
+                    // Email: null,
+                    // Phone_Number: null,
+                    // Social_Security_Number: null,
+                    // Drivers_License: null,
+                    // Marital_Status: null,
+                    // Gender: 1,
+                    // Shareholder_Status: 0,
+                    // Benefit_Plans: null,
+                    // Ethnicity: null
+                    Vacation_Days: null,
+                    PayRates_id: null,
+                    SNN: null,
+                    Paid_To_Date: null,
+                    Paid_Last_Year: null,
+                    Pay_Rate: null,
+
+                });
+            }
+        });
+
+        // Duyệt qua dữ liệu từ MySQL
+        mysqlData.forEach(mysqlEmployee => {
+            if (!sqlDataMap[mysqlEmployee.idEmployee]) {
+                // Nếu id chỉ tồn tại trong MySQL
+                combinedData.push({
                     ...mysqlEmployee,
-                    First_Name: null,
-                    Last_Name: null,
+                    // Employee_ID: null,
+                    // Last_Name: null,
+                    // First_Name: null,
+                    // Middle_Initial:  null,
+                    // Address1: null,
+                    // Address2: null,
+                    // City: null,
+                    // State: null,
+                    // Zip: null,
+                    // Email: null,
+                    // Phone_Number: null,
+                    // Social_Security_Number: null,
+                    // Drivers_License: null,
+                    // Marital_Status: null,
+                    // Gender: null,
+                    // Shareholder_Status: null,
+                    // Benefit_Plans: null,
+                    // Ethnicity: null
                     Middle_Initial:  null,
                     Address1: null,
                     Address2: null,
@@ -151,34 +213,18 @@ export const getCombinedData = async (req, res) => {
                     Social_Security_Number: null,
                     Drivers_License: null,
                     Marital_Status: null,
-                    Gender: null,
-                    Shareholder_Status: null,
+                    Gender: 1,
+                    Shareholder_Status: 0,
                     Benefit_Plans: null,
                     Ethnicity: null
-                };
+                });
             }
-        }
-    
-        // Kiểm tra và thêm những thông tin cá nhân từ SQL Server mà không có trong MySQL
-        for (let personal of sqlData) {
-            if (!combinedData[personal.idEmployee]) {
-                combinedData[personal.idEmployee] = {
-                    ...personal,
-                    idEmployee: null,
-                    Last_Name: null,
-                    First_Name: null,
-                    SSN: null,
-                    Pay_Rate: null,
-                    PayRates_id: null,
-                    Vacation_Days: null,
-                    Paid_To_Date: null,
-                    Paid_Last_Year: null
-                };
-            }
-        }
-    
+        });
+
         // Trả về dữ liệu kết hợp
-        res.json({ success: true, data: Object.values(combinedData) });
+        res.json({ success: true, data: combinedData });
+
+        // Đóng kết nối
         await sql.close(sqlConfig);
     } catch (err) {
         console.error(err);
@@ -190,7 +236,8 @@ export const getCombinedData = async (req, res) => {
 
 
 
-export const createEmployeeData = async (req, res) => {
+
+export const createCombineData = async (req, res) => {
     try {
         const {
             First_Name,
@@ -216,89 +263,139 @@ export const createEmployeeData = async (req, res) => {
             Paid_To_Date,
             Paid_Last_Year
         } = req.body;
+
+        // Connect to SQL Server
+        await sql.connect(sqlConfig);
+
+        // Convert strings to appropriate data types
+        const numericZip = isNaN(parseInt(Zip)) ? 0 : parseInt(Zip);
+        const numericBenefit_Plans = isNaN(parseInt(Benefit_Plans)) ? 0 : parseInt(Benefit_Plans);
+        const numericPayRates_id = isNaN(parseInt(PayRates_id)) ? 0 : parseInt(PayRates_id);
+        const decimalPay_Rate = parseFloat(Pay_Rate);
+        const numericVacation_Days = isNaN(parseInt(Vacation_Days)) ? 0 : parseInt(Vacation_Days);
+        const decimalPaid_To_Date = parseFloat(Paid_To_Date);
+        const decimalPaid_Last_Year = parseFloat(Paid_Last_Year);
+
+        // Thêm bản ghi vào bảng Personal của SQL Server và lấy Employee_ID tự động tạo
+        const personalResult = await sql.query(`
+        DECLARE @First_Name nvarchar(255),
+                @Last_Name nvarchar(255),
+                @Middle_Initial nvarchar(255),
+                @Address1 nvarchar(255),
+                @Address2 nvarchar(255),
+                @City nvarchar(255),
+                @State nvarchar(255),
+                @Zip int,
+                @Email nvarchar(255),
+                @Phone_Number nvarchar(255),
+                @Social_Security_Number int,
+                @Drivers_License nvarchar(255),
+                @Marital_Status nvarchar(255),
+                @Gender bit,
+                @Shareholder_Status bit,
+                @Benefit_Plans int,
+                @Ethnicity nvarchar(255);
     
-        // Thêm bản ghi vào bảng Personal và lấy Employee_ID mà SQL Server tự động tạo
-        const personalResult = await sql.connect(sqlConfig).query(`
-            INSERT INTO Personal (
-                First_Name,
-                Last_Name,
-                Middle_Initial,
-                Address1,
-                Address2,
-                City,
-                State,
-                Zip,
-                Email,
-                Phone_Number,
-                Social_Security_Number,
-                Drivers_License,
-                Marital_Status,
-                Gender,
-                Shareholder_Status,
-                Benefit_Plans,
-                Ethnicity
-            ) 
-            OUTPUT INSERTED.Employee_ID
-            VALUES (
-                '${First_Name}',
-                '${Last_Name}',
-                '${Middle_Initial}',
-                '${Address1}',
-                '${Address2}',
-                '${City}',
-                '${State}',
-                '${Zip}',
-                '${Email}',
-                '${Phone_Number}',
-                '${Social_Security_Number}',
-                '${Drivers_License}',
-                '${Marital_Status}',
-                '${Gender}',
-                '${Shareholder_Status}',
-                ${Benefit_Plans},
-                '${Ethnicity}'
-            )
-        `);
+        SET @First_Name = '${First_Name}';
+        SET @Last_Name = '${Last_Name}';
+        SET @Middle_Initial = '${Middle_Initial}';
+        SET @Address1 = '${Address1}';
+        SET @Address2 = '${Address2}';
+        SET @City = '${City}';
+        SET @State = '${State}';
+        SET @Zip = ${numericZip};
+        SET @Email = '${Email}';
+        SET @Phone_Number = '${Phone_Number}';
+        SET @Social_Security_Number = ${Social_Security_Number};
+        SET @Drivers_License = '${Drivers_License}';
+        SET @Marital_Status = '${Marital_Status}';
+        SET @Gender = ${Gender ? 1 : 0};
+        SET @Shareholder_Status = ${Shareholder_Status ? 1 : 0};
+        SET @Benefit_Plans = ${numericBenefit_Plans};
+        SET @Ethnicity = '${Ethnicity}';
     
-        const { Employee_ID } = personalResult.recordset[0]; // Lấy Employee_ID
-    
-        // Thêm bản ghi vào bảng Employee và sử dụng Employee_ID từ bước trước
-        await pool.promise().query(`
-            INSERT INTO Employee (
+        INSERT INTO Personal (
+            First_Name,
+            Last_Name,
+            Middle_Initial,
+            Address1,
+            Address2,
+            City,
+            State,
+            Zip,
+            Email,
+            Phone_Number,
+            Social_Security_Number,
+            Drivers_License,
+            Marital_Status,
+            Gender,
+            Shareholder_Status,
+            Benefit_Plans,
+            Ethnicity
+        )
+        OUTPUT INSERTED.Employee_ID
+        VALUES (
+            @First_Name,
+            @Last_Name,
+            @Middle_Initial,
+            @Address1,
+            @Address2,
+            @City,
+            @State,
+            @Zip,
+            @Email,
+            @Phone_Number,
+            @Social_Security_Number,
+            @Drivers_License,
+            @Marital_Status,
+            @Gender,
+            @Shareholder_Status,
+            @Benefit_Plans,
+            @Ethnicity
+        )
+    `);    
+        const { Employee_ID } = personalResult.recordset[0]; // Lấy Employee_ID từ OUTPUT
+        // Thêm bản ghi vào bảng Employee của MySQL và sử dụng Employee_ID từ trên
+        const [mysqlResult] = await pool.promise().query(`
+            INSERT INTO employee (
                 idEmployee,
-                Last_Name, 
-                First_Name, 
-                SSN, 
-                Pay_Rate, 
-                PayRates_id, 
-                Vacation_Days, 
-                Paid_To_Date, 
+                Last_Name,
+                First_Name,
+                SSN,
+                Pay_Rate,
+                PayRates_id,
+                Vacation_Days,
+                Paid_To_Date,
                 Paid_Last_Year
             ) 
             VALUES (
                 ${Employee_ID},
-                '${Last_Name}', 
-                '${First_Name}', 
-                '${Social_Security_Number}', 
-                '${Pay_Rate}', 
-                ${PayRates_id}, 
-                ${Vacation_Days}, 
-                ${Paid_To_Date}, 
-                ${Paid_Last_Year}
+                ${pool.escape(Last_Name)},
+                ${pool.escape(First_Name)},
+                ${Social_Security_Number},
+                '${Pay_Rate}',
+                ${numericPayRates_id},
+                ${numericVacation_Days},
+                ${decimalPaid_To_Date},
+                ${decimalPaid_Last_Year}
             )
         `);
-    
-        // Trả về kết quả thành công
-        res.json({ success: true, message: 'Dữ liệu đã được thêm thành công.' });
+
+        // Kiểm tra và trả về kết quả thành công
+        if (mysqlResult.affectedRows > 0) {
+            res.json({ success: true, message: 'Dữ liệu đã được thêm thành công.' });
+            sendRefreshMessage();
+        } else {
+            res.json({ success: false, message: 'Không thể thêm dữ liệu vào MySQL.' });
+        }
     } catch (error) {
         console.error(error);
-        // Trả về thông báo lỗi nếu có
         res.status(500).json({ success: false, message: 'Đã xảy ra lỗi khi thêm dữ liệu.' });
     } finally {
-        sql.close(); // Đóng kết nối với SQL Server
+        sql.close(); // Đảm bảo đóng kết nối với SQL Server sau khi thêm xong
     }
-    
 };
+
 export const getDataByEmployeeID = async (req, res) => {
     try {
         const { Employee_ID } = req.params;
@@ -468,19 +565,45 @@ export const deleteCombinedData = async (req, res) => {
     try {
         const { Employee_ID } = req.params;
 
-        // Xóa bản ghi trong bảng Employee
-        await pool.promise().query(`DELETE FROM Employee WHERE idEmployee = ${Employee_ID}`);
+        // Connect to MySQL
+        await connectToMySQL();
 
-        // Xóa bản ghi trong bảng Personal
-        await sql.connect(sqlConfig).query(`DELETE FROM Personal WHERE Employee_ID = ${Employee_ID}`);
+        // Xóa bản ghi trong bảng Employee trong MySQL
+        const [mysqlResult] = await pool.promise().query(`DELETE FROM employee WHERE idEmployee = ${Employee_ID}`);
 
-        // Trả về kết quả thành công
-        res.json({ success: true, message: 'Dữ liệu đã được xóa thành công.' });
+        // Connect to SQL Server
+        await sql.connect(sqlConfig);
+
+        // Xóa bản ghi trong bảng Emergency_Contacts trong SQL Server trước
+        const requestEmergency = new sql.Request();
+        const queryEmergency = `DELETE FROM Emergency_Contacts WHERE Employee_ID = @Employee_ID`;
+        const sqlResultEmergency = await requestEmergency.input('Employee_ID', sql.Int, Employee_ID).query(queryEmergency);
+
+        const requestEmployment = new sql.Request();
+        const queryEployment = `DELETE FROM Employment WHERE Employee_ID = @Employee_ID`;
+        const sqlResultEmployment = await requestEmployment.input('Employee_ID', sql.Int, Employee_ID).query(queryEployment);
+
+        const requestJob_History = new sql.Request();
+        const queryJob_History = `DELETE FROM Job_History WHERE Employee_ID = @Employee_ID`;
+        const sqlResultJob_History = await requestJob_History.input('Employee_ID', sql.Int, Employee_ID).query(queryJob_History);
+
+        // Xóa bản ghi trong bảng Personal trong SQL Server
+        const requestPersonal = new sql.Request();
+        const queryPersonal = `DELETE FROM Personal WHERE Employee_ID = @Employee_ID`;
+        const sqlResultPersonal = await requestPersonal.input('Employee_ID', sql.Int, Employee_ID).query(queryPersonal);
+
+        // Kiểm tra kết quả và trả về thông báo
+        if (mysqlResult.affectedRows > 0 && sqlResultPersonal.rowsAffected[0] > 0) {
+            res.json({ success: true, message: 'Dữ liệu đã được xóa thành công.' });
+        } else {
+            res.status(404).json({ success: false, message: 'Không tìm thấy bản ghi để xóa.' });
+        }
     } catch (error) {
         console.error(error);
         // Trả về thông báo lỗi nếu có
         res.status(500).json({ success: false, message: 'Đã xảy ra lỗi khi xóa dữ liệu.' });
     } finally {
-        sql.close(); // Đóng kết nối với SQL Server
+        // Đóng kết nối với SQL Server
+        await sql.close();
     }
 };

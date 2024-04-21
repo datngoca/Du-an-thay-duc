@@ -163,15 +163,12 @@ import 'datatables.net';
                                         <thead>
                                         <tr>
                                             <th>Full Name</th>
-                                            <th>Middle Initial</th>
                                             <th>Address1</th>
                                             <th>city</th>
                                             <th>state</th>
                                             <th>Phone Number</th>
                                             {/* <th>Email</th> */}
                                             <th>Ethnicity</th>
-                                            <th>Vacation Days</th>
-                                            <th>Paid To Date</th>
                                             <th>Paid Last Year</th>
                                             <th>Drivers License</th>
                                             <th></th>
@@ -179,30 +176,27 @@ import 'datatables.net';
 
                                         </thead>
                                         <tbody>
-                                            { items && items.map((item,index) => (
-                                                     <tr className="odd gradeX">
-                                                    <td>{item.First_Name !== null ? item.First_Name : 'N/A'} {item.Last_Name !== null ? item.Last_Name : 'N/A'}</td>
-                                                    <td>{item.Middle_Initial !== null ? item.Middle_Initial : 'N/A'}</td>
-                                                    <td>{item.Address1 !== null ? item.Address1 : 'N/A'}</td>
-                                                    <td>{item.City !== null ? item.City : 'N/A'}</td>
-                                                    <td>{item.State !== null ? item.State : 'N/A'}</td>
-                                                    <td>{item.Phone_Number !== null ? item.Phone_Number : 'N/A'}</td>
-                                                    {/* <td>{item.Email !== null ? item.Email : 'N/A'}</td> */}
-                                                    <td>{item.Ethnicity !== null ? item.Ethnicity : 'N/A'}</td>
-                                                    <td>{item.Vacation_Days !== null ? item.Vacation_Days : 'N/A'}</td>
-                                                    <td>{item.Paid_To_Date !== null ? item.Paid_To_Date : 'N/A'}</td>
-                                                    <td>{item.Paid_Last_Year !== null ? item.Paid_Last_Year : 'N/A'}</td>
-                                                    <td>{item.Drivers_License !== null ? item.Drivers_License : 'N/A'}</td>
-                                                    <td>
-                                                        <div className='Edit-Detail-Delete'>
-                                                        <Link to={`/editEmployee/${item.Employee_ID}`}>Edit</Link>
-                                                        <Link to={`/detailEmployee/${item.Employee_ID}`}>Detail</Link>
-                                                        <Link to={`/deleteEmployee/${item.Employee_ID}`}>Delete</Link>
-                                                            
-                                                        </div>
-                                                    </td>
-                                                    </tr>
+                                        {items && items.map((item, index) => (
+                                            <tr key={item.Employee_ID} className="odd gradeX">
+                                                <td>{item.First_Name !== null ? item.First_Name : 'N/A'} {item.Last_Name !== null ? item.Last_Name : 'N/A'}</td>
+                                                <td>{item.Address1 !== null ? item.Address1 : 'N/A'}</td>
+                                                <td>{item.City !== null ? item.City : 'N/A'}</td>
+                                                <td>{item.State !== null ? item.State : 'N/A'}</td>
+                                                <td>{item.Phone_Number !== null ? item.Phone_Number : 'N/A'}</td>
+                                                {/* <td>{item.Email !== null ? item.Email : 'N/A'}</td> */}
+                                                <td>{item.Ethnicity !== null ? item.Ethnicity : 'N/A'}</td>
+                                                <td>{item.Paid_Last_Year !== null ? item.Paid_Last_Year : 'N/A'}</td>
+                                                <td>{item.Drivers_License !== null ? item.Drivers_License : 'N/A'}</td>
+                                                <td>
+                                                <div className='Edit-Detail-Delete'>
+                                                    <Link to={`/editEmployee/${item.Employee_ID}`}>Edit</Link>
+                                                    <Link to={`/detailEmployee/${item.Employee_ID}`}>Detail</Link>
+                                                    <Link to={`/deleteEmployee/${item.Employee_ID}`}>Delete</Link>
+                                                </div>
+                                                </td>
+                                            </tr>
                                             ))}
+
                                             
                                         </tbody>
                                     </table>

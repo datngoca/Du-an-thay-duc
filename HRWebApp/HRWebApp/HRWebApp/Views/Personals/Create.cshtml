@@ -21,14 +21,6 @@
             <div class="module-body">
                 @*<form class="form-horizontal row-fluid">*@
                 @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-                <div class="control-group">
-                    @*@Html.LabelFor(model => model.Employee_ID, htmlAttributes: new { @class = "control-label" })*@
-                    <label class="control-label" for="EmployeeID">Employee ID</label>
-                    <div class="controls">
-                        @Html.EditorFor(model => model.Employee_ID, new { htmlAttributes = new { @class = "span6" } })
-                        @Html.ValidationMessageFor(model => model.Employee_ID, "", new { @class = "text-danger" })
-                    </div>
-                </div>
 
                 <div class="control-group">
                     <label class="control-label" for="EmployeeID">First Name</label>

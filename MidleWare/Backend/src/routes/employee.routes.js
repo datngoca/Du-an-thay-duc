@@ -1,5 +1,5 @@
 import { Router } from "express";
-import {deleteCombinedData,updateCombinedData,getDataByEmployeeID,createEmployeeData,getCombinedData} from "../controllers/employee.controller.js";
+import {deleteCombinedData,updateCombinedData,getDataByEmployeeID,createCombineData,getCombinedData} from "../controllers/employee.controller.js";
 
 import { isAdmin, verifyToken } from "../middlewares/authJwt.js";
 import { checkExistingUser } from "../middlewares/verifySignup.js";
@@ -7,7 +7,7 @@ import { checkExistingUser } from "../middlewares/verifySignup.js";
 const router = Router();
 
 
-router.post("/", createEmployeeData);
+router.post("/", createCombineData);
 router.get("/combionedData", getCombinedData);
 
 router.delete("/:Employee_ID", deleteCombinedData); // Thêm router xoá nhân viên
