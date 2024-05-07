@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Du-an-thay-duc
 =======
 >>>>>>> 0296e808d227ada97ddbe7d4fbde7c6ea447636c
@@ -11,7 +11,8 @@ Vô folder Du-an-thay-duc
 git add .
 git commit -m "Điền những gì thay đổi vào đây"
 <<<<<<< HEAD
-git push --set-upstream origin master 
+git push --set-upstream origin master
+git push origin master
 =======
-git push --set-upstream origin master 
->>>>>>> 0296e808d227ada97ddbe7d4fbde7c6ea447636c
+
+
