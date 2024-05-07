@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 // import '../util/Content';
 import '../util/bootstrap/css/bootstrap-responsive.min.css';
 import '../util/bootstrap/css/bootstrap.min.css';
@@ -18,8 +18,34 @@ import '../util/images/icons/css/font-awesome.css';
 // import '../util/images/jquery-ui'
 // import '../util/jQuery.1.10.2/Content'
 // import '../util/jQuery.1.10.2/Tools'
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
 const Admin = () => {
+    const [items, setItems] = useState([]);
+    const [itemCount, setItemCount] = useState(0);
+
+        
+        useEffect(() => {
+            fetchEmployee();
+        },[])
+        const fetchEmployee = async () => {
+            try {
+              let response = await axios.get(
+                "http://localhost:4000/api/employee/combionedData"
+              );
+        
+              // Lấy số lượng đối tượng từ dữ liệu nhận được từ backend
+              const count = response.data.data.length;
+        
+              // Cập nhật giá trị của biến itemCount
+              setItemCount(count);
+            } catch (error) {
+              console.error("Lỗi khi lấy dữ liệu từ backend: ", error);
+            }
+          };
+        
+
     return (
         <div>
             <div className="navbar navbar-fixed-top">
@@ -116,7 +142,7 @@ const Admin = () => {
                                                 Growth
                                             </p>
                                         </a><a href="#" className="btn-box big span4">
-                                            <i className="icon-user"></i><b>15</b>
+                                            <i className="icon-user"></i><b>{itemCount}</b>
                                             <p className="text-muted">
                                                 New Users
                                             </p>

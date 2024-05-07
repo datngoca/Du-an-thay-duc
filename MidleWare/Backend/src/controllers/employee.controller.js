@@ -55,16 +55,42 @@ export const getCombinedData = async (req, res) => {
             } else {
                 // Nếu id chỉ tồn tại trong SQL Server
                 combinedData.push({
+<<<<<<< HEAD
                     idEmployee: null,
                     Last_Name: null,
                     First_Name:null,
+=======
+                    ...sqlEmployee,
+                    // idEmployee: null,
+                    // First_Name: null,
+                    // Last_Name: null,
+                    // Middle_Initial:  null,
+                    // Address1: null,
+                    // Address2: null,
+                    // City: null,
+                    // State: null,
+                    // Zip: null,
+                    // Email: null,
+                    // Phone_Number: null,
+                    // Social_Security_Number: null,
+                    // Drivers_License: null,
+                    // Marital_Status: null,
+                    // Gender: 1,
+                    // Shareholder_Status: 0,
+                    // Benefit_Plans: null,
+                    // Ethnicity: null
+>>>>>>> 0296e808d227ada97ddbe7d4fbde7c6ea447636c
                     Vacation_Days: null,
                     PayRates_id: null,
                     SNN: null,
                     Paid_To_Date: null,
                     Paid_Last_Year: null,
                     Pay_Rate: null,
+<<<<<<< HEAD
                     ...sqlEmployee,
+=======
+
+>>>>>>> 0296e808d227ada97ddbe7d4fbde7c6ea447636c
                 });
             }
         });
@@ -75,10 +101,32 @@ export const getCombinedData = async (req, res) => {
                 // Nếu id chỉ tồn tại trong MySQL
                 combinedData.push({
                     ...mysqlEmployee,
+<<<<<<< HEAD
                     Employee_ID:null,
                     First_Name:null,
                     Last_Name:null,
                     Middle_Initial: null,
+=======
+                    // Employee_ID: null,
+                    // Last_Name: null,
+                    // First_Name: null,
+                    // Middle_Initial:  null,
+                    // Address1: null,
+                    // Address2: null,
+                    // City: null,
+                    // State: null,
+                    // Zip: null,
+                    // Email: null,
+                    // Phone_Number: null,
+                    // Social_Security_Number: null,
+                    // Drivers_License: null,
+                    // Marital_Status: null,
+                    // Gender: null,
+                    // Shareholder_Status: null,
+                    // Benefit_Plans: null,
+                    // Ethnicity: null
+                    Middle_Initial:  null,
+>>>>>>> 0296e808d227ada97ddbe7d4fbde7c6ea447636c
                     Address1: null,
                     Address2: null,
                     City: null,
@@ -107,7 +155,16 @@ export const getCombinedData = async (req, res) => {
         res.status(500).send('Lỗi máy chủ getCombinedData');
     }
 };
+<<<<<<< HEAD
 //
+=======
+
+
+
+
+
+
+>>>>>>> 0296e808d227ada97ddbe7d4fbde7c6ea447636c
 export const createCombineData = async (req, res) => {
     try {
         const {
@@ -256,6 +313,7 @@ export const createCombineData = async (req, res) => {
         if (mysqlResult.affectedRows > 0) {
             io.emit('employeeCreated');
             res.json({ success: true, message: 'Dữ liệu đã được thêm thành công.' });
+            sendRefreshMessage();
         } else {
             res.json({ success: false, message: 'Không thể thêm dữ liệu vào MySQL.' });
         }
