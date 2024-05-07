@@ -170,7 +170,7 @@
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
+            <input type="submit" value="Delete" class="btn btn-default" onclick="deletePersonal(); deletePersonalHR()" /> |
             @Html.ActionLink("Back to List", "Index")
         </div>
     }
@@ -181,3 +181,20 @@
         </div>
     }
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.5/socket.io.js"></script>
+<script>
+    // Tạo kết nối với máy chủ Socket.io
+    const socket = io('http://localhost:4000');
+    const socketHR = io('http://localhost:5000');
+
+    socket.emit("HR")
+
+    function deletePersonal() {
+        socket.emit("deletedPersonal")
+    }
+    function deletePersonalHR() {
+        // Lấy giá trị của Social_Security_Number
+        const EmployeeID = "@Html.DisplayFor(model => model.Employee_ID)";
+        socketHR.emit("deletedPersonalHR", EmployeeID);
+    }
+</script>

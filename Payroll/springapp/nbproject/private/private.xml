@@ -3,22 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Administrator/Downloads/app2/springapp/src/java/springapp/web/model/PayRates.java</file>
-            <file>file:/C:/Users/Administrator/Downloads/app2/springapp/web/WEB-INF/jsp/admin/editPayRate.jsp</file>
-            <file>file:/C:/Users/Administrator/Downloads/app2/springapp/src/java/springapp/web/dao/UserDao.java</file>
-            <file>file:/C:/Users/Administrator/Downloads/app2/springapp/web/WEB-INF/jsp/admin/deletePayRate.jsp</file>
-            <file>file:/C:/Users/Administrator/Downloads/app2/springapp/web/WEB-INF/jsp/admin/listPayRate.jsp</file>
-            <file>file:/C:/Users/Administrator/Downloads/app2/springapp/web/WEB-INF/jsp/admin/dashboard.jsp</file>
-            <file>file:/C:/Users/Administrator/Downloads/app2/springapp/src/java/springapp/web/controller/SucccessController.java</file>
-            <file>file:/C:/Users/Administrator/Downloads/app2/springapp/web/WEB-INF/jsp/admin/deleteEmployee.jsp</file>
-            <file>file:/C:/Users/Administrator/Downloads/app2/springapp/web/WEB-INF/jsp/admin/editEmployee.jsp</file>
-            <file>file:/C:/Users/Administrator/Downloads/app2/springapp/src/java/springapp/web/controller/EmployeeController.java</file>
-            <file>file:/C:/Users/Administrator/Downloads/app2/springapp/web/WEB-INF/jsp/admin/listEmployee.jsp</file>
-            <file>file:/C:/Users/Administrator/Downloads/app2/springapp/web/WEB-INF/jsp/admin/addUser.jsp</file>
-            <file>file:/C:/Users/Administrator/Downloads/app2/springapp/web/WEB-INF/jsp/admin/addEmployee.jsp</file>
-            <file>file:/C:/Users/Administrator/Downloads/app2/springapp/src/java/springapp/web/model/Employee.hbm.xml</file>
-            <file>file:/C:/Users/Administrator/Downloads/app2/springapp/web/WEB-INF/jsp/admin/addPayRate.jsp</file>
-            <file>file:/C:/Users/Administrator/Downloads/app2/springapp/src/java/springapp/web/controller/PayRateController.java</file>
+            <file>file:/E:/test%20git/Du-an-thay-duc/Payroll/springapp/web/WEB-INF/jsp/admin/listEmployee.jsp</file>
         </group>
     </open-files>
 </project-private>

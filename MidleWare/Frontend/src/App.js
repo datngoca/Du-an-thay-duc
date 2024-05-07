@@ -3,10 +3,8 @@ import './App.css';
 import {
   createBrowserRouter,
   RouterProvider,
-  Outlet,
   createRoutesFromElements,
   Route,
-  ScrollRestoration,
 } from "react-router-dom";
 import Admin from './components/admin';
 import Employee from './components/employee';

@@ -137,7 +137,6 @@ namespace HRWebApp.Controllers
             db.SaveChanges();
 
            
-
             Emergency_Contacts emergency_Contacts = db.Emergency_Contacts.Find(id);
             if(emergency_Contacts != null) {
                 db.Emergency_Contacts.Remove(emergency_Contacts);

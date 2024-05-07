@@ -6,141 +6,79 @@ import sql from 'mssql'; // Import thư viện để kết nối với SQL Serve
 import dotenv from 'dotenv';
 import { pool } from "../mysqlConfig.js";
 import Employee from '../models/Employee.js';
-// import { sendNotification } from "../websocket.js";
-// import { io } from "../socket.js";
+import http from 'http';
+import { Server } from 'socket.io';
+import { io } from "../index.js"; 
+
 dotenv.config();
 
-
-
-// export const createEmployee = async (req, res) => {
-//     try {
-//         const { employeeId, firstName, lastName, vacationDays, paidToDate, paidLastYear, payRate, payRateId } = req.body;
-
-//         // creating a new Employee object
-//         const employee = new Employee({
-//             employeeId,
-//             firstName,
-//             lastName,
-//             vacationDays,
-//             paidToDate,
-//             paidLastYear,
-//             payRate,
-//             payRateId
-//         });
-
-//         // saving the new employee
-//         const savedUser = await employee.save();
-
-//         return res.status(200).json({
-//             success: true, data: {
-//                 _id: savedUser._id,
-//                 employeeId: savedUser.employeeId,
-//                 firstName: savedUser.firstName,
-//                 lastName: savedUser.lastName,
-//                 vacationDays: savedUser.vacationDays,
-//                 paidToDate: savedUser.paidToDate,
-//                 paidLastYear: savedUser.paidLastYear,
-//                 payRate: savedUser.payRate,
-//                 payRateId: savedUser.payRateId
-//             }
-//         });
-//     } catch (error) {
-//         console.error({success: true, data: error});
-//     }
-// };
-
-// export const getEmployee = async (req, res, next) => {
-
-//     const {employeeId}=req.params  
-//     const employee = await Employee.findById(employeeId);
-//     console.log(employee)
-//     return res.json({ success: true, data: employee });
-// };
-
-// export const getEmployeeByEmployeeID = async (req, res, next) => {
-
-//     const {Employee_ID}=req.params  
-//     const employee = await Employee.findOne({Employee_ID: Employee_ID});
-//     console.log(employee)
-//     return res.json({ success: true, data: employee });
-// };
-
-
-
-// export const getEmployees = async (req, res, next) => {
-//     const employees = await Employee.find();
-//     return res.json({ success: true, data: employees });
-// }
-
-// export const deleteEmployee = async (req, res, next) => {
-//     try {
-//         const employee = await Employee.findByIdAndDelete(req.params.employeeId);
-//         if (!employee) {
-//             console.log("backend: "+employee.employeeId)
-//             return res.status(404).json({ success: false, message: "Employee not found" });
-//         }
-//         return res.status(200).json({ success: true, message: "Employee deleted successfully" });
-//     } catch (error) {
-//         console.error({ success: false, data: error });
-//         return res.status(500).json({ success: false, message: "Internal Server Error" });
-//     }
-// };
-
-// export const updateEmployee = async (req, res, next) => {
-//     try {
-//         const { employeeId, firstName, lastName, vacationDays, paidToDate, paidLastYear, payRate, payRateId } = req.body;
-//         const updatedEmployee = await Employee.findByIdAndUpdate(
-//             req.params.employeeId,
-//             { employeeId, firstName, lastName, vacationDays, paidToDate, paidLastYear, payRate, payRateId },
-//             { new: true }
-//         );
-//         if (!updatedEmployee) {
-//             return res.status(404).json({ success: false, message: "Employee not found" });
-//         }
-//         return res.status(200).json({ success: true, data: updatedEmployee });
-//     } catch (error) {
-//         console.error({ success: false, data: error });
-//         return res.status(500).json({ success: false, message: "Internal Server Error" });
-//     }
-// }
-
-
 export const getCombinedData = async (req, res) => {
-    let sqlData; // Define sqlData variable for MSSQL connection
-
     try {
         // Connect to MySQL
         await connectToMySQL();
-    
+
         // Lấy dữ liệu từ MySQL (bảng Employee)
         const [mysqlEmployees] = await pool.promise().query('SELECT * FROM Employee');
         const mysqlData = mysqlEmployees;
-    
+
         // Connect to SQL Server
         await sql.connect(sqlConfig);
 
         // Lấy dữ liệu từ SQL Server (bảng Personal)
         const result = await sql.query('SELECT * FROM Personal');
-        sqlData = result.recordset; // Assign result to sqlData
-    
-        const combinedData = {};
-    
-        // Duyệt qua từng nhân viên từ MySQL (bảng Employee)
-        for (let mysqlEmployee of mysqlData) {
-            // Tìm thông tin cá nhân tương ứng từ SQL Server (bảng Personal)
-            const personal = sqlData.find(personal => personal.Employee_ID === mysqlEmployee.idEmployee);
-    
-            if (personal) {
-                combinedData[mysqlEmployee.idEmployee] = {
-                    ...personal,
+        const sqlData = result.recordset;
+
+        // Tạo một đối tượng map để lưu trữ dữ liệu từ SQL Server dựa trên Employee_ID
+        const sqlDataMap = {};
+        sqlData.forEach(sqlEmployee => {
+            sqlDataMap[sqlEmployee.Employee_ID] = sqlEmployee;
+        });
+
+        // Tạo một đối tượng map để lưu trữ dữ liệu từ MySQL dựa trên idEmployee
+        const mysqlDataMap = {};
+        mysqlData.forEach(mysqlEmployee => {
+            mysqlDataMap[mysqlEmployee.idEmployee] = mysqlEmployee;
+        });
+
+        // Kết hợp dữ liệu từ cả hai nguồn
+        const combinedData = [];
+
+        // Duyệt qua dữ liệu từ SQL Server
+        sqlData.forEach(sqlEmployee => {
+            const mysqlEmployee = mysqlDataMap[sqlEmployee.Employee_ID];
+            if (mysqlEmployee) {
+                // Nếu id tồn tại trong cả hai nguồn
+                combinedData.push({
+                    ...sqlEmployee,
                     ...mysqlEmployee
-                };
+                });
             } else {
-                combinedData[mysqlEmployee.idEmployee] = {
-                    ...mysqlEmployee,
-                    First_Name: null,
+                // Nếu id chỉ tồn tại trong SQL Server
+                combinedData.push({
+                    idEmployee: null,
                     Last_Name: null,
-                    Middle_Initial:  null,
+                    First_Name:null,
+                    Vacation_Days: null,
+                    PayRates_id: null,
+                    SNN: null,
+                    Paid_To_Date: null,
+                    Paid_Last_Year: null,
+                    Pay_Rate: null,
+                    ...sqlEmployee,
+                });
+            }
+        });
+
+        // Duyệt qua dữ liệu từ MySQL
+        mysqlData.forEach(mysqlEmployee => {
+            if (!sqlDataMap[mysqlEmployee.idEmployee]) {
+                // Nếu id chỉ tồn tại trong MySQL
+                combinedData.push({
+                    ...mysqlEmployee,
+                    Employee_ID:null,
+                    First_Name:null,
+                    Last_Name:null,
+                    Middle_Initial: null,
                     Address1: null,
                     Address2: null,
                     City: null,
@@ -151,44 +89,25 @@ export const getCombinedData = async (req, res) => {
                     Social_Security_Number: null,
                     Drivers_License: null,
                     Marital_Status: null,
-                    Gender: null,
-                    Shareholder_Status: null,
+                    Gender: 1,
+                    Shareholder_Status: 0,
                     Benefit_Plans: null,
                     Ethnicity: null
-                };
+                });
             }
-        }
-    
-        // Kiểm tra và thêm những thông tin cá nhân từ SQL Server mà không có trong MySQL
-        for (let personal of sqlData) {
-            if (!combinedData[personal.idEmployee]) {
-                combinedData[personal.idEmployee] = {
-                    ...personal,
-                    idEmployee: null,
-                    Last_Name: null,
-                    First_Name: null,
-                    SSN: null,
-                    Pay_Rate: null,
-                    PayRates_id: null,
-                    Vacation_Days: null,
-                    Paid_To_Date: null,
-                    Paid_Last_Year: null
-                };
-            }
-        }
-    
+        });
+
         // Trả về dữ liệu kết hợp
-        res.json({ success: true, data: Object.values(combinedData) });
+        res.json({ success: true, data: combinedData });
+
+        // Đóng kết nối
         await sql.close(sqlConfig);
     } catch (err) {
         console.error(err);
         res.status(500).send('Lỗi máy chủ getCombinedData');
     }
 };
-
-
-
-
+//
 export const createCombineData = async (req, res) => {
     try {
         const {
@@ -335,6 +254,7 @@ export const createCombineData = async (req, res) => {
 
         // Kiểm tra và trả về kết quả thành công
         if (mysqlResult.affectedRows > 0) {
+            io.emit('employeeCreated');
             res.json({ success: true, message: 'Dữ liệu đã được thêm thành công.' });
         } else {
             res.json({ success: false, message: 'Không thể thêm dữ liệu vào MySQL.' });
@@ -503,7 +423,7 @@ export const updateCombinedData = async (req, res) => {
     
         // Close SQL Server connection
         await sql.close();
-    
+        io.emit('employeeUpdated');
         // Return success response
         res.json({ success: true, message: 'Data updated successfully.' });
     } catch (error) {
@@ -542,12 +462,20 @@ export const deleteCombinedData = async (req, res) => {
         const requestPersonal = new sql.Request();
         const queryPersonal = `DELETE FROM Personal WHERE Employee_ID = @Employee_ID`;
         const sqlResultPersonal = await requestPersonal.input('Employee_ID', sql.Int, Employee_ID).query(queryPersonal);
-
+        io.emit('employeeDeleted');
         // Kiểm tra kết quả và trả về thông báo
         if (mysqlResult.affectedRows > 0 && sqlResultPersonal.rowsAffected[0] > 0) {
-            res.json({ success: true, message: 'Dữ liệu đã được xóa thành công.' });
+            res.json({ success: true, message: 'Dữ liệu đã được xóa thành công từ cả hai cơ sở dữ liệu.' });
+            console.log("Xoá thành công từ cả hai cơ sở dữ liệu");
+        } else if (mysqlResult.affectedRows > 0) {
+            res.json({ success: true, message: 'Dữ liệu đã được xóa thành công từ cơ sở dữ liệu MySQL.' });
+            console.log("Xoá thành công từ cơ sở dữ liệu MySQL");
+        } else if (sqlResultPersonal.rowsAffected[0] > 0) {
+            res.json({ success: true, message: 'Dữ liệu đã được xóa thành công từ cơ sở dữ liệu SQL Server.' });
+            console.log("Xoá thành công từ cơ sở dữ liệu SQL Server");
         } else {
             res.status(404).json({ success: false, message: 'Không tìm thấy bản ghi để xóa.' });
+            console.log("lỗi deleted");
         }
     } catch (error) {
         console.error(error);

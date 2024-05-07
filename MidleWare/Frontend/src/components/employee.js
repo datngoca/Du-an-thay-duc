@@ -1,68 +1,105 @@
 import '../util/bootstrap/css/bootstrap-responsive.min.css';
 import '../util/bootstrap/css/bootstrap.min.css';
-// import '../util/bootstrap/js/bootstrap.min.js';
-// import '../util/bootstrap/img'
 import '../util/bootstrap.3.0.0/content/Content/bootstrap.css';
 import '../util/bootstrap.3.0.0/content/Content/bootstrap.min.css';
-// import '../util/bootstrap.3.0.0/content/Scripts'
-// import '../util/bootstrap.3.0.0/content/fonts'
 import '../util/Content/bootstrap.css';
 import '../util/Content/bootstrap.min.css';
 import '../util/Content/Site.css';
 import '../util/css/theme.css';
-// import '../util/fonts'
 import '../util/images/icons/css/font-awesome.css';
-// import '../util/images/jquery-ui'
-// import '../util/jQuery.1.10.2/Content'
-// import '../util/jQuery.1.10.2/Tools'
 import './employee.scss';
-import { Routes, Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import io from 'socket.io-client';
 import $ from 'jquery';
-import 'datatables.net'; 
+import 'datatables.net';
 
-    const Employee = () => {
-        const [items, setItems] = useState([]);
-        useEffect(() => {
-            fetchEmployee();
-        },[])
-        const fetchEmployee = async() => {
-                let response = await axios.get('http://localhost:4000/api/employee/combionedData');
+const socket1 = io('http://localhost:4000');
+
+const Employee = () => {
+    const [items, setItems] = useState([]);
+
+    // Hàm fetch dữ liệu từ server
+    const fetchEmployee = async () => {
+        try {
+            const response = await axios.get('http://localhost:4000/api/employee/combionedData');
             console.log(">>>check data: ", response);
-            setItems(response.data.data)
+            setItems(response.data.data);
+        } catch (error) {
+            console.error("Error fetching employee data:", error);
         }
-    
-    
-    // dataEmployee = res.data.data;
+    }
+
+    // Effect này sẽ chạy khi component được render lần đầu tiên hoặc khi trang được load lại
+    useEffect(() => {
+        fetchEmployee(); // Gọi hàm fetchEmployee để lấy dữ liệu từ server
+    }, []);
+
+    // Effect này sẽ chạy khi items thay đổi
     useEffect(() => {
         let dataTable = null;
-    
+
+        // Socket lắng nghe sự kiện từ server và cập nhật dữ liệu khi có sự kiện xảy ra
+        socket1.on('employeeCreated', fetchEmployee);
+        socket1.on('employeeUpdated', fetchEmployee);
+        socket1.on('employeeDeleted', fetchEmployee);
+
+        socket1.on('Employee', fetchEmployee);
+        socket1.emit('payroll');
+
+        socket1.on('Personal', fetchEmployee);
+        socket1.emit('HR');
+
+
+
         if (items.length > 0) {
-            if ($.fn.DataTable.isDataTable('#employeeTable')) {
-                // DataTable đã được khởi tạo trước đó, vì vậy cần xóa trước khi khởi tạo lại
-                $('#employeeTable').DataTable().destroy();
-            }
-    
-            // Khởi tạo DataTable với tùy chọn dom
+            // Initialize or reinitialize DataTable
             dataTable = $('#employeeTable').DataTable({
+                data: items,
+                columns: [
+                    { data: 'First_Name', defaultContent: 'N/A' },
+                    { data: 'Address1', defaultContent: 'N/A' },
+                    { data: 'City', defaultContent: 'N/A' },
+                    { data: 'State', defaultContent: 'N/A' },
+                    { data: 'Phone_Number', defaultContent: 'N/A' },
+                    { data: 'Ethnicity', defaultContent: 'N/A' },
+                    { data: 'Paid_Last_Year', defaultContent: 'N/A' },
+                    { data: 'SSN', defaultContent: 'N/A' },
+                    { data: 'Drivers_License', defaultContent: 'N/A' },
+                    {
+                        data: null,
+                        render: function (data, type, row) {
+                            return `
+                                <div class='Edit-Detail-Delete'>
+                                <a href="/editEmployee/${row.Employee_ID ? row.Employee_ID : row.idEmployee}" class="btn btn-primary">Edit</a>
+                                <a href="/detailEmployee/${row.Employee_ID ? row.Employee_ID : row.idEmployee}" class="btn btn-info">Detail</a>
+                                <a href="/deleteEmployee/${row.Employee_ID ? row.Employee_ID : row.idEmployee}" class="btn btn-danger">Delete</a
+                                </div>
+                            `;
+                        }
+                    }
+                ],
                 lengthMenu: [
                     [5, 10, 50, -1],
                     [5, 10, 50, 'All']
                 ],
                 dom: "<'row'<'col-sm-6'l><'col-sm-6'f>>" +
-                     "<'row'<'col-sm-12'tr>>" +
-                     "<'row'<'col-sm-5'i><'col-sm-7'p>>", // Đặt ô tìm kiếm sang bên phải
+                    "<'row'<'col-sm-12'tr>>" +
+                    "<'row'<'col-sm-5'i><'col-sm-7'p>>",
             });
         }
-    
+
         return () => {
-            // Đảm bảo rằng DataTable được xóa khi component unmount
+            socket1.off();
+
+            // Destroy DataTable when unmounting component
             if (dataTable) {
                 dataTable.destroy();
             }
         };
     }, [items]);
+
     return (
         <div>
             <div className="navbar navbar-fixed-top container">
@@ -102,7 +139,6 @@ import 'datatables.net';
                         </div>
                     </div>
                 </div>
-
             </div>
             <div className="wrapper">
                 <div className="container">
@@ -159,46 +195,21 @@ import 'datatables.net';
                                     </h3>
                                 </div>
                                 <div className="module-body table">
-                                <table id="employeeTable" className="datatable-1 table table-bordered table-striped display" width="100%">
+                                    <table id="employeeTable" className="datatable-1 table table-bordered table-striped display" width="100%">
                                         <thead>
-                                        <tr>
-                                            <th>Full Name</th>
-                                            <th>Address1</th>
-                                            <th>city</th>
-                                            <th>state</th>
-                                            <th>Phone Number</th>
-                                            {/* <th>Email</th> */}
-                                            <th>Ethnicity</th>
-                                            <th>Paid Last Year</th>
-                                            <th>Drivers License</th>
-                                            <th></th>
-                                        </tr>
-
-                                        </thead>
-                                        <tbody>
-                                        {items && items.map((item, index) => (
-                                            <tr key={item.Employee_ID} className="odd gradeX">
-                                                <td>{item.First_Name !== null ? item.First_Name : 'N/A'} {item.Last_Name !== null ? item.Last_Name : 'N/A'}</td>
-                                                <td>{item.Address1 !== null ? item.Address1 : 'N/A'}</td>
-                                                <td>{item.City !== null ? item.City : 'N/A'}</td>
-                                                <td>{item.State !== null ? item.State : 'N/A'}</td>
-                                                <td>{item.Phone_Number !== null ? item.Phone_Number : 'N/A'}</td>
-                                                {/* <td>{item.Email !== null ? item.Email : 'N/A'}</td> */}
-                                                <td>{item.Ethnicity !== null ? item.Ethnicity : 'N/A'}</td>
-                                                <td>{item.Paid_Last_Year !== null ? item.Paid_Last_Year : 'N/A'}</td>
-                                                <td>{item.Drivers_License !== null ? item.Drivers_License : 'N/A'}</td>
-                                                <td>
-                                                <div className='Edit-Detail-Delete'>
-                                                    <Link to={`/editEmployee/${item.Employee_ID}`}>Edit</Link>
-                                                    <Link to={`/detailEmployee/${item.Employee_ID}`}>Detail</Link>
-                                                    <Link to={`/deleteEmployee/${item.Employee_ID}`}>Delete</Link>
-                                                </div>
-                                                </td>
+                                            <tr>
+                                                <th>Full Name</th>
+                                                <th>Address1</th>
+                                                <th>city</th>
+                                                <th>state</th>
+                                                <th>Phone Number</th>
+                                                <th>Ethnicity</th>
+                                                <th>Paid Last Year</th>
+                                                <th>SSN</th>
+                                                <th>Drivers License</th>
+                                                <th>Action</th>
                                             </tr>
-                                            ))}
-
-                                            
-                                        </tbody>
+                                        </thead>
                                     </table>
                                 </div>
                             </div>

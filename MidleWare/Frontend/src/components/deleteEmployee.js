@@ -70,7 +70,8 @@ const handleDeleteEmployee = async () => {
         // Hiển thị thông báo thành công
         alert('Employee deleted successfully');
         
-        // Có thể thực hiện các hành động khác sau khi xóa thành công
+        // Quay lại trang chính sau khi xoá
+        window.location.href = "http://localhost:3000/employee";
     } catch (error) {
         // Xử lý lỗi nếu có
         console.log('Error deleting employee:', error);

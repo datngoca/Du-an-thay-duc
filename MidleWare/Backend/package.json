@@ -6,7 +6,9 @@
   "type": "module",
   "scripts": {
     "dev": "nodemon src/index.js",
-    "start": "node src/index.js",
+    "start-index": "node src/index.js",
+    "start-socket": "node src/socket_hr_payroll.js",
+    "start": "concurrently \"npm run start-index\" \"npm run start-socket\"",
     "test": "jest"
   },
   "repository": {

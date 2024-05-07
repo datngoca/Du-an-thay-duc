@@ -155,7 +155,7 @@
 
                 <div class="control-group">
                     <div class="col-md-offset-2 controls">
-                        <input type="submit" value="Save" class="btn btn-default" />
+                        <input type="submit" value="Save" class="btn btn-default" onclick="editPersonal(), editPersonalHR()"/>
                         @Html.ActionLink("Back to List", "Index", "", new { @class = "btn btn-default" })
                     </div>
                 </div>
@@ -163,3 +163,29 @@
         }
     </div>
 </div><!--/.content-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.5/socket.io.js"></script>
+<script>
+    // Tạo kết nối với máy chủ Socket.io
+    const socket = io('http://localhost:4000'); // Địa chỉ máy chủ Socket.io của bạn
+    const socketHR = io('http://localhost:5000');
+    socket.emit("HR")
+
+    function editPersonal() {
+        socket.emit("createdPersonal")
+    }
+    async function editPersonalHR() {
+        const EmployeeID = "@Html.DisplayFor(model => model.Employee_ID)";
+        const SSN = "@Html.DisplayFor(model => model.Social_Security_Number)";
+        const FirstName =  "@Html.DisplayFor(model => model.First_Name)";
+        const LastName =  "@Html.DisplayFor(model => model.Last_Name)";
+        await sendEditPersonalHR(EmployeeID, SSN, FirstName, LastName);
+    }
+
+    async function sendEditPersonalHR(EmployeeID, SSN, FirstName, LastName ) {
+        try {
+            await socketHR.emit("editPersonalHR", EmployeeID, SSN, FirstName, LastName);
+        } catch (error) {
+            console.error("Lỗi khi gửi yêu cầu sửa đổi dữ liệu qua socketHR:", error);
+        }
+    }
+</script>

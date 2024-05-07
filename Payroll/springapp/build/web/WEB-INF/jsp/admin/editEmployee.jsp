@@ -15,16 +15,23 @@
         <div class="content">
             <div class="module">
                 <div class="module-head">
-                    <h3>=Edit Employee</h3>
+                    <h3>Edit Employee</h3>
                 </div>
-                
-                    <div class="module-body">
-                        <form:form method="POST" action="${contextPath}/admin/employee/edit.html?employeeNumber=${employee.employeeNumber}" commandName="employee" cssClass="form-horizontal row-fluid">
+
+                <div class="module-body">
+
+                    <c:if test="${not empty successMessage}">
+                        <div class="alert alert-success">${successMessage}</div>
+                    </c:if>
+                    <c:if test="${not empty errorMessage}">
+                        <div class="alert alert-danger">${errorMessage}</div>
+                    </c:if>
+                    <form:form method="POST" action="${contextPath}/admin/employee/edit.html?employeeNumber=${employee.employeeNumber}" commandName="employee" cssClass="form-horizontal row-fluid">
                         <!--<form class="form-horizontal row-fluid">-->
-                           
-                            <form:errors path="*" cssClass="text-danger"/>
+
+                        <form:errors path="*" cssClass="text-danger"/>
                         <!--<form class="form-horizontal row-fluid">-->
-                            <div class="control-group">
+                        <div class="control-group">
                             <label class="control-label" for="idEmployee">idEmployee</label>
                             <div class="controls">
                                 <form:input path="idEmployee" cssClass="span6" />
@@ -95,15 +102,42 @@
                                 <form:errors path="paidLastYear" cssClass="text-danger"/>
                             </div>
                         </div>
-                            <div class="control-group">
+                        <div class="control-group">
                             <div class="col-md-offset-2 controls">
-                                <input type="submit" value="Edit" class="btn btn-default" />
-                               <a href="${contextPath}/admin/employee/list.html" class="btn btn-default">Back to List</a>
+                                        <input type="button" value="Edit" class="btn btn-default" onclick="editEmployeeAndPayroll('${employee.idEmployee}','${employee.ssn}','${employee.firstName}','${employee.lastName}');"/>
+                                <a href="${contextPath}/admin/employee/list.html" class="btn btn-default">Back to List</a>
                             </div>
                         </div>
-                        </form:form>
-                    </div>
+                    </form:form>
+                </div>
             </div>
         </div><!--/.content-->
     </tiles:putAttribute>
 </tiles:insertDefinition>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.5/socket.io.js"></script>
+<script>
+                                    // Tạo kết nối với máy chủ Socket.io
+                                    const socket = io('http://localhost:4000'); // Địa chỉ máy chủ Socket.io của bạn
+                                    const socketPayroll = io('http://localhost:5000');
+                                    socket.emit("payroll")
+                                    function editEmployee() {
+                                        socket.emit("createdEmployee")
+                                        setTimeout(function () {
+                                            window.location.href = "${contextPath}/admin/employee/list.html";
+                                        }, 3000); // 5000 miliseconds = 5 giây
+                                    }
+                                    async function editEmployeeAndPayroll(employeeID, ssn, firstName, lastName) {
+                                        try {
+                                            await sendEditEmployeePayroll(employeeID, ssn, firstName, lastName);
+                                            editEmployee();
+                                        } catch (error) {
+                                            console.error("Lỗi khi gửi yêu cầu sửa đổi dữ liệu qua socketHR:", error);
+                                        }
+                                    }
+
+                                    async function sendEditEmployeePayroll(employeeID, ssn, firstName, lastName) {
+                                        await socketPayroll.emit("editEmployeePayroll", employeeID, ssn, firstName, lastName);
+                                    }
+
+
+</script>

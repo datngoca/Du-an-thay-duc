@@ -16,18 +16,16 @@
                 <div class="module-head">
                     <h3>Create Employee</h3>
                 </div>
-                
-                    <div class="module-body">
-                        <form:form method="POST" action="add.html" commandName="employee" cssClass="form-horizontal row-fluid">
-                            <form:errors path="*" cssClass="text-danger"/>
+                <div class="module-body">
+                    <c:if test="${not empty successMessage}">
+                        <div class="alert alert-success">${successMessage}</div>
+                    </c:if>
+                    <c:if test="${not empty errorMessage}">
+                        <div class="alert alert-danger">${errorMessage}</div>
+                    </c:if>
+                    <form:form method="POST" action="${contextPath}/admin/employee/add.html" commandName="employee" cssClass="form-horizontal row-fluid">
+                        <form:errors path="*" cssClass="text-danger"/>
                         <!--<form class="form-horizontal row-fluid">-->
-                            <div class="control-group">
-                            <label class="control-label" for="idEmployee">idEmployee</label>
-                            <div class="controls">
-                                <form:input path="idEmployee" cssClass="span6" />
-                                <form:errors path="idEmployee" cssClass="text-danger"/> 
-                            </div>
-                        </div>
 
                         <div class="control-group">
                             <label class="control-label" for="lastName">Last Name</label>
@@ -92,30 +90,34 @@
                                 <form:errors path="paidLastYear" cssClass="text-danger"/>
                             </div>
                         </div>
-                            <div class="control-group">
+                        <div class="control-group">
                             <div class="col-md-offset-2 controls">
-                                <input type="submit" value="Create" class="btn btn-default" />
+                                <input type="submit" value="Create" class="btn btn-default" onclick="createEmployee(); redirectToEmployeeList();"/>
                                 <a href="${contextPath}/admin/employee/list.html" class="btn btn-default">Back to List</a>
                             </div>
                         </div>
-                        </form:form>
-                    </div>
+                    </form:form>
+                </div>
             </div>
         </div><!--/.content-->
     </tiles:putAttribute>
 </tiles:insertDefinition>
-<!-- Thêm mã JavaScript để ẩn message box sau 3 giây -->
-<script type="text/javascript">
-    // Function to hide success message after 3 seconds
-    function hideSuccessMessage() {
-        var successMessage = document.getElementById("successMessage");
-        if (successMessage) {
-            setTimeout(function() {
-                successMessage.style.display = "none";
-            }, 3000); // 3 seconds
-        }
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.5/socket.io.js"></script>
+<script>
+    const socket = io('http://localhost:4000');
+    socket.emit("payroll");
+
+    function createEmployee() {
+        socket.emit("createdEmployee");
     }
 
-    // Call hideSuccessMessage function on page load
-    window.onload = hideSuccessMessage;
+    // Hàm chuyển hướng trang sau khi tạo nhân viên thành công
+    function redirectToEmployeeList() {
+        setTimeout(function () {
+            window.location.href = "${contextPath}/admin/employee/list.html";
+        }, 3000); // Chuyển hướng sau 3 giây
+    }
 </script>
+
+

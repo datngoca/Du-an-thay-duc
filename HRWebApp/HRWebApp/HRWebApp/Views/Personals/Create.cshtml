@@ -160,7 +160,7 @@
 
                 <div class="control-group">
                     <div class="col-md-offset-2 controls">
-                        <input type="submit" value="Create" class="btn btn-default" />
+                        <input type="submit" value="Create" class="btn btn-default"  onclick="createPersonal()"/>
                         @Html.ActionLink("Back to List", "Index", "", new { @class = "btn btn-default" })
 
                     </div>
@@ -170,3 +170,14 @@
         }
     </div>
 </div><!--/.content-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.5/socket.io.js"></script>
+<script>
+    // Tạo kết nối với máy chủ Socket.io
+    const socket = io('http://localhost:4000'); // Địa chỉ máy chủ Socket.io của bạn
+    socket.emit("HR")
+
+    function createPersonal() {
+        socket.emit("createdPersonal")
+    }
+
+</script>
